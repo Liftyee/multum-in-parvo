@@ -1,0 +1,23 @@
+{
+  "model": "R25=100k +/-1%, B25/50=4200K +/-1%; resistors +/-0.1%",
+  "reference_min_V": 2.164,
+  "offset_max_mV": 8,
+  "hysteresis_mV_typ": 7,
+  "hysteresis_25C_max_mV": 17,
+  "qualification": "17mV hysteresis bound is specified at 25C, not across temperature. Input bias has no guaranteed maximum. Use manufacturer R/T curve and chamber qualification; figures below are conditional engineering bounds, not certified safety thresholds.",
+  "cold": {
+    "nominal_C": 4.684952189300873,
+    "conditional_min_C": 3.046275896125678,
+    "conditional_max_C": 6.269913825036838,
+    "nominal_ratio": 0.7369196757553427,
+    "hysteresis_C_at_4V_typ": 0.16590328773918372
+  },
+  "hot": {
+    "nominal_C": 40.19462741530748,
+    "conditional_min_C": 38.46116350341413,
+    "conditional_max_C": 42.00711448125014,
+    "nominal_ratio": 0.33557046979865773,
+    "hysteresis_C_at_4V_typ": 0.1834854119058491
+  },
+  "solar_divider_uA_at_4V_25C": 24.289960582216
+}

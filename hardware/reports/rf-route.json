@@ -1,0 +1,10 @@
+[
+  {
+    "net": "MCU_RFIN",
+    "complete": true
+  },
+  {
+    "net": "SW_RX",
+    "complete": true
+  }
+]

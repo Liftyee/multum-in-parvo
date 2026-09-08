@@ -1,0 +1,1165 @@
+DATA SHEET
+
+
+SKY66423-11: 860 to 930 MHz RF Front-End Module
+Applications
+
+
+
+
+                                                                                                            PA_OUT
+•   LP-WAN devices
+
+
+
+
+                                                                                                                     TX_IN
+
+
+
+                                                                                                                             CSD
+                                                                                                                             CPS
+                                                                                                                             CTX
+•   Internet of Things
+•   Smart meters                                                                                                             Logic
+•   Industrial applications                                                                          PA
+                                                                                                                             Control
+
+•   Range extender
+                                                                                 TX
+Features                                                                                                                                      ANT
+
+•   Integrated PA with +27 dBm output power                                      RX                  LNA
+•   Integrated LNA with noise figure of 1.5 dB, typical
+•   Alternate TX input pin simplifies connection to                         ALT_TX
+
+    any SoC                                                                                            LNA_IN         RX_FLT     204566-001
+
+•   Transmit bypass path with low loss: < 1.5 dB                                      Figure 1. SKY66423-11 Block Diagram
+•   Single-ended 50 ohm transmit/receive
+    RF interface
+•   Fast turn-on/turn-off time: <4 µs Rx mode and
+                                                                      Description
+    <2 µs Tx mode                                                     The SKY66423-11 is a high-performance, highly inte-
+•   Supply voltage: 2.0 to 4.8 V                                      grated RF front-end module designed for high-power
+•   Sleep mode current: < 1 µA                                        Industrial, Scientific, Medical (ISM) band applications
+•   MCM (16-pin, 3.0 x 3.0 x 0.75 mm) NiPdAu plated                   operating in the 860 to 930 MHz frequency range.
+    package (MSL3, 260 °C per JEDEC J-STD-020)                        The SKY66423-11 is designed for ease of use and maxi-
+                                                                      mum flexibility with fully matched 50 Ù TX and RX
+                                                                      inputs and antenna outputs, and digital controls com-
+                                                                      patible with 1.6 to 3.6 V CMOS levels.
+                                                                      The RF blocks operate over a wide supply voltage
+                                                                      range from 2.0 to 4.8 V allowing the SKY66423-11 to
+                                                                      be used in battery powered applications over a wide
+                                                                      spectrum of the battery discharge curve.
+                                                                      The SKY66423-11 is packaged in a 16-pin Multi-Chip
+                                                                      Module (MCM) package.
+                                                                      A functional block diagram of the SKY66423-11 is pro-
+                                                                      vided in Figure 1. Figure 2 shows the pinout for the
+                                                                      SKY66423-11. Table 1 lists the pin assignments and sig-
+                                                                      nal descriptions.
+
+
+
+
+                  Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+           204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+1                                                                                                                                         June 9, 2023
+DATA SHEET                                                                                                                          SKY66423-11
+
+
+
+
+                                                                                          PA_OUT
+                                                         VCC1
+
+
+                                                                   VCC0
+
+
+                                                                                N/C
+                                                         16        15           14       13
+
+
+                                       TX      1                                                   12       GND
+
+
+                                       RX      2                                                   11       TX_IN
+                                                                          GND
+                                  TX_ALT       3                                                   10       GND
+
+
+                                      CSD      4                                                   9        ANT
+
+
+                                                             5     6            7         8
+                                                                                                   204566-002
+                                                             CPS
+
+
+                                                                   CTX
+
+
+                                                                                LNA_IN
+
+
+                                                                                          RX_FLT
+                                             Figure 2. SKY66423-11 Pinout (Top View)
+
+
+
+
+                                             Table 1. SKY66423-11 Signal Descriptions
+    Pin    Name                        Description                              Pin        Name                      Description
+    1     TX         Transmit mode RF input                                     10       GND        Connect to PCB ground
+    2     RX         Receive mode RF output                                     11       TX_IN      TX input signal to antenna (from OMN)
+    3     TX_ALT     Transmit mode RF input (alternate pin)                     12       GND        Connect to PCB ground
+    4     CSD        Shutdown control input                                     13       PA_OUT     PA output and positive power supply
+    5     CPS        Bypass mode select input                                   14       N/C        Not connected internally to the device
+    6     CTX        Transmit mode select input                                 15       VCC0       Positive power supply
+    7     LNA_IN     LNA input (from RX filter)                                 16       VCC1       Positive power supply
+                                                                                                    Exposed die paddle; electrical and thermal
+    8     RX_FLT     RX signal from antenna (to RX filter)                  Paddle       GND        ground. Connect to PCB ground
+    9     ANT        Connect to 50 ohm antenna
+
+
+
+
+                 Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+          204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+2                                                                                                                                          June 9, 2023
+DATA SHEET                                                                                                                                                  SKY66423-11
+
+
+Electrical and Mechanical Specifications
+The absolute maximum ratings of the SKY66423-11 are provided in Table 2. The recommended operating condi-
+tions are specified in Table 3, followed by electrical specifications, control logic tables, and typical performance
+characteristics for the Evaluation Boards.
+
+
+                                                     Table 2. SKY66423-11 Absolute Maximum Ratings1
+                                Parameter                                            Symbol                  Minimum                  Maximum                      Units
+Supply voltage on VCC0 (no RF)                                                VCC0                               –0.3                      5.5                       V
+Supply voltage on VCC1 and PA_OUT (no RF)                                     VCC                                –0.3                      5.5                       V
+Operating temperature                                                         TA                                 –40                        85                       °C
+Storage temperature                                                           TSTG                               –40                       125                       °C
+Tx input power at TX port                                                     PIN_TX_MAX                                                   +10                      dBm
+TX input power at TX port (bypass mode)                                       PIN_TX_BYP_MAX                                               +20                      dBm
+Rx input power at ANT port                                                    PIN_RX_MAX                                                   +10                      dBm
+Electrostatic discharge:                                                      ESD
+Human Body Model (HBM), Class 1C                                                                                                          1000                       V
+1. Exposure to maximum rating conditions for extended periods may reduce device reliability. There is no damage to device with only one parameter set at the limit and all
+   other parameters set at or below their nominal value. Exceeding any of the limits listed here may result in permanent damage to the device.
+
+
+
+
+ESD HANDLING: Industry-standard ESD handling precautions must be adhered to at all times to avoid damage to this device.
+
+
+
+
+                                              Table 3. SKY66423-11 Recommended Operating Conditions1
+                           Parameter                                     Symbol                   Min                    Typ                   Max                  Units
+Supply voltage on VCC0                                                      VCC0                   2.0                   3.3                     4.8                   V
+Supply voltage on VCC1 and PA_OUT                                           VCC                    2.0                   3.3                     4.8                   V
+Ambient temperature                                                          TA                    –40                   +25                     +85                   °C
+1. During production test, devices will be tested at 5 V.
+
+
+
+
+                                                      Table 4. SKY66423-11 DC Electrical Specifications1
+                                            (Vcc0 = Vcc1 = 3.3 V, f = 915 MHz, TA = +25 °C, Unless Otherwise Noted)
+
+                     Parameter                            Symbol                    Test Condition                      Min            Typ             Max            Units
+    Total supply current, transmit mode        ICC_TX27                  POUT = +27 dBm                                                 280                              mA
+    Total supply current, receive mode         ICC_RX                    No RF                                                           5                               mA
+    Total supply current, transmit bypass mode ICC_TXB                   No RF                                                          200                              uA
+    Quiescent current                          ICQ_TX                    No RF                                                          48                               mA
+    Sleep supply current                       ICC_OFF                   No RF                                                                         1.00              uA
+    1. Performance is guaranteed only under the conditions listed in this Table and is not guaranteed over the full operating or storage temperature ranges. Operation at ele-
+       vated temperatures may reduce reliability of the device.
+
+
+
+
+                          Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+                   204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+3                                                                                                                                                                    June 9, 2023
+DATA SHEET                                                                                                                                                       SKY66423-11
+
+
+
+
+                                          Table 5. SKY66423-11 AC Electrical Specifications: Transmit Mode1
+       (Vcc0 = Vcc1 = 3.3 V, TA = +25 °C, All Unused Ports Terminated at 50 ohms, Unless Otherwise Noted. Input Port TX, Output Port ANT,
+                                           Matching Network Connected between the PA_OUT and TX_IN)
+
+                    Parameter                             Symbol                  Test Condition                      Min               Typ            Max             Units
+    Frequency range                                 f                                                                  860                                 930          MHz
+                            2, 3                    POUT_915           f = 915 MHz                                                      +27                             dBm
+    Output power at ANT                             POUT_868           f = 868 MHz                                                      +27                             dBm
+
+    Small signal gain2, 3                           S21_915            f = 915 MHz                                                      29                               dB
+                                                    S21_868            f = 868 MHz                                                      29                               dB
+                                                                       Peak to peak gain variation across
+    Small signal gain variation2, 3                 S21               frequency band                                                                       1            dB
+
+    Input return loss2, 3                           S11                Into 50 ohm (TX port)                                            –10                              dB
+    Output return loss2, 3                          S22                Into 50 ohm (ANT port)                                           –10                              dB
+    Input 1 dB compression point, bypass            BYP_IP1dB          Bypass mode                                     +20                                              dBm
+    mode
+    2nd harmonic4                                   2fo                POUT = +27 dBm                                                                       +7          dBm
+    3rd to 10th harmonic4                           3fo to 10fo        POUT = +27 dBm                                                                      –42          dBm
+    Insertion loss (bypass mode)                    S21_BYP            TX to ANT                                                                           1.5           dB
+    Turn-on time5                                   tON                                                                                  1                  2            µs
+    Turn-off time6                                  tOFF                                                                                                    1            µs
+                                                                       CW, PIN = +6 dBm
+    Stability                                       STAB               0.1 GHz to 20 GHz                 All non-harmonically related outputs less than -42 dBm
+                                                                       load VSWR = 6:1
+                                                                       CW, POUT = +27 dBm into 50 ohms , No permanent damage
+    Ruggedness                                      RUG                load VSWR = 10:1
+    1. Performance is guaranteed only under the conditions listed in this Table and is not guaranteed over the full operating or storage temperature ranges. Operation at elevated
+       temperatures may reduce reliability of the device.
+    2. 900 to 930 MHz with specified matching network on the Evaluation Board.
+    3. 860 to 870 MHz with specified matching network on the Evaluation Board.
+    4. Measured with continuous wave signal.
+    5. From 50% of CTX edge to 90% of final RF output power.
+    6. From 50% of CTX edge to 10% of initial RF output power.
+
+
+
+
+                                           Table 6. SKY66423-11 AC Electrical Specifications: Receive Mode1
+(Vcc0 = Vcc1 = 3.3 V, TA = +25 C, All Unused Ports Terminated at 50 ohms, Unless Otherwise Noted. Input Port ANT, Output Port RX, 0 ohms
+                                                  Connected between RX_FLT and LNA_IN)
+
+                     Parameter                             Symbol             Test Condition                  Min                 Typ               Max                Units
+Frequency range                                               fIN                                              860                                   930                MHz
+Receive gain                                               RX_GAIN                                                                18                                     dB
+Receive noise figure                                          NF                                                                  1.5                 2.5                dB
+Input third order intercept                                  IIP3                                             –6.5                 –2                                   dBm
+Input 1-dB compression point                                IP1dB                                             –16.5               –12                                   dBm
+Antenna port return loss                                   S11ANT         Into 50 ohms (ANT port)                                 –12                                    dB
+RX port return loss                                         S22RX          Into 50 ohms (RX port)                                 –12                                    dB
+Turn-on time2                                                tON                                                                  2.5                                    us
+Turn-off time3                                               tOFF                                                                                      1                 us
+1. Performance is guaranteed only under the conditions listed in this Table and is not guaranteed over the full operating or storage temperature ranges. Operation at elevated
+   temperatures may reduce reliability of the device.
+2. From 50% of CTX edge to 90% of final RF output power.
+3. From 50% of CTX edge to 10% of initial RF output power.
+
+
+
+
+                           Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+                    204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+4                                                                                                                                                                     June 9, 2023
+DATA SHEET                                                                                                                                               SKY66423-11
+
+
+
+
+                                Table 7. SKY66423-11 Electrical Specifications: Control Logic Characteristics1
+                                                               (TA = +25 °C, Unless Otherwise Noted)
+
+                   Parameter                              Symbol          Test Condition              Min                     Typ             Max                 Units
+Control voltage:
+High                                                         VIH                                      1.62                                    VCC0                  V
+Low                                                          VIL                                       0                                      0.32                  V
+Input current:
+High                                                          IIH                                                                               1                   uA
+Low                                                           IIL                                                                               1                   uA
+1. Performance is guaranteed only under the conditions listed in this Table and is not guaranteed over the full operating or storage temperature ranges. Operation at elevated
+   temperatures may reduce reliability of the device.
+2. Logic inputs must be VCC0 or GND to achieve specified sleep currents.
+
+
+
+
+                                      Table 8. SKY66423-11 Electrical Specifications: Mode Control Logic1
+                                                                               (TA = +25 °C)
+
+                                             Mode                                  CSD                       CTX                     CPS
+                                                                                                               2
+                          Shutdown                                                  0                        X                        X2
+                          Receive LNA mode                                          1                        0                        X2
+                          Transmit bypass                                           1                        1                        0
+                          Transmit                                                  1                        1                        1
+                           1. Make sure each control logic has the proper pull-up and pull-down in the application circuit.
+                           2. X = (Don't care) inputs must be held at VCC0 or GND to achieve specified sleep current.
+
+
+
+
+                       Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+                204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+5                                                                                                                                                                June 9, 2023
+DATA SHEET                                                                                                                                                                                                                               SKY66423-11
+
+
+Typical Performance Characteristics for the SKY66423-11EK1 Evaluation Board (915 MHz)
+
+
+                          30                                                                                                350                                           32
+                                                                                                                                                                                                                                                    900 MHz
+                          25                                                                                                300                                           30                                                                        915 MHz
+                                                                                                                                                                                                                                                    930 MHz
+    POUT (dBm )
+
+
+
+
+                          20                                                                                                250                                           28
+
+
+
+
+                                                                                                                                   ICC (m A)
+
+                                                                                                                                                     Gain (dB)
+                          15                                                                                                200                                           26
+                          10                                                                                                150                                           24
+                                                                                                      POUT (dBm)
+
+
+
+
+                                                                                                                                                                                                                                                                      204566-004
+                            5                                                                         ICC (mA)              100                                           22
+
+                            0                                                                                               50                                            20
+                             -20 -18 -16 -14 -12 -10              -8    -6    -4   -2        0        2      4          6                                                      12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+                                                      Input Power (dBm)                                                       204566-003                                                          Output Power (dBm)
+                                            Figure 3. POUT and ICC vs PIN, CW                                                                                                              Figure 4. Gain vs POUT, CW
+                          34                                                                                                                                              350
+                          33
+                                                                                                                                                                          300
+                          32
+                                                                                                                                                                          250
+                          31
+                                                                                                                                                     ICC (m A)
+    Gain (dB)
+
+
+
+
+                          30                                                                                                                                              200
+                          29                                                                                                                                              150
+                          28                                                                                                                                                                                                                           900 MHz
+
+
+
+
+                                                                                                                                                                                                                                                                      204566-006
+                                                                                                                                                                          100                                                                          915 MHz
+                                                                                                                                        204566-005
+
+
+
+
+                          27                                                                                                                                                                                                                           930 MHz
+                          26                                                                                                                                               50
+                            900             905         910             915           920                  925                    930                                        12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+                                                               Frequency (MHz)                                                                                                                       Output Power (dBm)
+                                    Figure 5. Small Signal Gain vs Frequency, CW                                                                                                                Figure 6. ICC vs POUT
+                          60                                                                                                                                              34
+                                                                                                                                                                          32
+                          50                                                                                                                                              30
+                                                                                                                                                                          28
+    PAE (%)
+
+
+
+
+                                                                                                                                                     Gain (dB)
+
+
+
+
+                          40
+                                                                                                                                                                          26
+                          30                                                                                                                                              24
+                                                                                                                      2V                                                  22
+                                                                                                                      3.3 V                                               20                                                                            2V
+                          20
+                                                                                                                                        204566-007
+
+
+
+
+                                                                                                                                                                                                                                                                      204566-008
+                                                                                                                      4.8 V                                                                                                                             3.3 V
+                                                                                                                                                                          18                                                                            4.8 V
+                          10                                                                                                                                              16
+                               14      16         18    20         22         24        26            28           30              32                                          14    16    18        20        22        24        26        28    30            32
+                                                    Output Power (dBm)                                                                                                                            Output Power (dBm)
+                                        Figure 7. PAE vs POUT and VCC, CW                                                                                                             Figure 8. Gain vs POUT and VCC, CW
+                           0                                                                                                                                              -20
+                          -10                                                                                                                                             -30
+                                                                                                                                                     3rd Harmonic (dBm)
+    2nd Harm onic (dBm)
+
+
+
+
+                          -20                                                                                                                                             -40
+                          -30                                                                                                                                             -50
+                          -40                                                                                                                                             -60
+                          -50                                                                                                                                             -70
+                          -60                                                                                      900 MHz                                                -80                                                                      900 MHz
+                                                                                                                                                                                                                                                                      204566-010
+
+
+
+
+                                                                                                                                                                                                                                                   915 MHz
+                                                                                                                                        204566-009
+
+
+
+
+                                                                                                                   915 MHz                                                -90                                                                      930 MHz
+                          -70                                                                                      930 MHz
+                                                                                                                                                                    -100
+                          -80
+                             21        22          23         24       25        26              27              28               29                                            21    22        23        24        25        26        27        28             29
+                                                              Output Power (dBm)                                                                                                                   Output Power (dBm)
+                                      Figure 9. Second Harmonic vs POUT, CW                                                                                                          Figure 10. Third Harmonic vs POUT, CW
+
+
+
+
+                                               Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+                                        204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+6                                                                                                                                                                                                                                                 June 9, 2023
+DATA SHEET                                                                                                                                                                                                               SKY66423-11
+
+
+
+                                                                       0
+                                                                                                                                                                                  900 MHz
+                                                                     -10                                                                                                          915 MHz
+                                                                     -20                                                                                                          930 MHz
+                                                                     -30
+
+
+
+
+                                                            Level
+                                                                     -40
+                                                                     -50
+                                                                     -60
+                                                                     -70
+                                                                     -80
+
+
+
+
+                                                                                                                                                                                                  204566-011
+                                                                     -90
+                                                                    -100
+                                                                                #2    #3   #4             #5                #6                         #7    #8             #9        #10
+                                                                                                           # Harmonics
+                                                                                Figure 11. Harmonics at POUT = +27 dBm
+
+
+
+
+Typical Performance Characteristics for the SKY66423-11EK2 Evaluation Board with Ceramic Filter for
+ETSI and FCC Compliance (868 to 915 MHz)
+
+
+                          60                                                                                                                      22
+                          50
+                                                                                                                                                  20
+                                                                                                                                                  18
+    PAE (%)
+
+
+
+
+                                                                                                                            Gain (dB)
+
+
+
+
+                          40                                                                                                                      16
+                          30                                                                                                                      14
+                                                                                                868 MHz                                           12              868 MHz
+                          20                                                                    915 MHz                                                           915 MHz
+                                                                                                               204566-017
+
+
+
+
+                                                                                                930 MHz                                           10
+
+
+
+
+                                                                                                                                                                                                                                         204566-018
+                                                                                                                                                                  930 MHz
+                          10                                                                                                                       8
+                               14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32                                                                14 15 16 17 18 19 20 21 22 23 24 25 26 27 28
+                                                   Output Pow er (dBm)                                                                                                                      Output Power (dBm)
+                                    Figure 12. Gain vs POUT, CW @ 3.3 V                                                                                 Figure 13. PAE vs POUT and VCC, CW @ 3.3 V
+
+                          -20                                                                                                                     -20
+    2nd Harm onic (dBm)
+
+
+
+
+                                                                                                                            3rd Harm onic (dBm)
+
+
+
+
+                                                                                                                                                                                                                              868 MHz
+                          -30                                                                                                                     -30                                                                         915 MHz
+                                                                                                                                                                                                                              930 MHz
+
+                          -40                                                                                                                     -40
+                          -50                                                                                                                     -50
+                                                                                            868 MHz
+                          -60                                                               915 MHz                                               -60
+                                                                                                               204566-019
+
+
+
+
+                                                                                            930 MHz
+                                                                                                                                                                                                                                         204566-020
+
+
+
+
+                          -70                                                                                                                     -70
+                             21       22     23     24     25              26        27    28             29                                         21       22                 23          24                25   26   27   28        29
+                                                   Output Power (dBm)                                                                                                                       Output Power (dBm)
+                                  Figure 14. Second Harmonic vs POUT, CW                                                                                    Figure 15. Third Harmonic vs POUT, CW
+
+
+
+
+                                            Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+                                     204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+7                                                                                                                                                                                                                             June 9, 2023
+DATA SHEET                                                                                                               SKY66423-11
+
+
+Evaluation Board Description
+An Evaluation Board is used to test the performance of the SKY66423-11 FEM. It is optimized for evaluation,
+experimentation, and investigation, using CW (continuous wave) signals.
+
+SKY66423-11EK1 Evaluation Board, 915 MHz
+See Figure 16. The Evaluation Board schematic diagram for 915 MHz applications is provided in Figure 17. The Bill
+of Materials (BOM) is listed in Table 9.
+
+SKY66423-11EK2 Evaluation Board, 868 to 915 MHz with Ceramic Filter
+See Figure 18. Figure 19 shows the Evaluation Board schematic, and the BOM appears in Table 10.
+
+SKY66423-11EK3 Evaluation Board, 868 MHz
+See Figure 20. Ground via stitching is shown in Figure 21. Figure 22 shows that the SKY66423-11EK3 has no ther-
+mal relief pad. The schematic diagram is shown in Figure 23. The BOM is listed in Table 11.
+
+PCB Recommendations
+•   Top layer: Plan to add the footprint for a shield case over the RF section.
+•   Bottom layer: Lay out as much as possible for minimum traces on the bottom. Having a solid ground plane
+    under the shield case will complete the shielding.
+•   Avoid using thermal relief pads for ground connections of components and the shield case. Always place vias
+    close to each shunt connection.
+•   Spread ground vias equally in a manner that stitches the grounds together.
+•   Metal Layer 1 = RF traces (microstripes or coplanar) + control lines. Core thickness between top RF layer and
+    ground plane is critical.
+•   Metal Layer 2 = Solid ground plane. No trace routings.
+•   Metal Layer 3 = Control lines + VCC traces (no VCC plane).
+•   Metal Layer 4 = Solid ground plane under the shield case area.
+•   Pour copper on each layer connected to the ground plane.
+•   Use VCC traces in a star distribution pattern.
+
+
+
+
+                  Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+           204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+8                                                                                                                               June 9, 2023
+DATA SHEET                                                                                                                                                                                                          SKY66423-11
+
+
+
+
+                                              Figure 16. SKY66423-11-EK1 Evaluation Board, 915 MHz
+
+                                                                                                         C18
+                                                                                                         1nF
+    VCC
+           C4
+           4.7uF                                                                                          C3
+           0402                                                                                          33pF
+                                                                  FB1                                                        J4
+                                                                  0:                                                         DNI
+                                               C2
+                                              10nF                                                    L1
+                                                                                                      6.8nH
+                                                          VCC_10
+                                                                                                                                     L3
+                                                                                                                                   2.7nH
+                                                                  1
+
+
+
+
+                                                                                                         PA_OUT
+                                               C5              L2
+                                               82pF            0.6nH
+                                                                                                                                                 C7         C8
+                                                                                                                                                 10pF       DNI                   L4
+                                                                  2
+
+
+
+
+                                                                                                                                                                                  7.5nH
+                                                          17
+
+                                                                  16
+                                                                          15
+                                                                                  14
+                                                                                            13
+                                                                                   NC_14
+                                                                   VCC1
+                                                                           VCC0
+
+
+                                                                                             PA_OUT
+                                                           EPAD
+
+
+
+
+                   R1
+                   0:
+      J2                       TX              1                                                                12                                                       C9
+     SMA                                             TX                                               GND_12                          C14
+                                                                                                                                                                        2.4pF
+                               RX              2                                                                11                    DNI
+                                                     RX                 U1                             TX_IN
+                               TXALT           3                        SKY66423-11                             10                                   L6
+                                                     TX_ALT                                           GND_10
+                                                                                                                                                    4.7nH
+                                               4                                                                9    ANT_9                                                                ANT        J3
+                                                     CSD                                                 ANT                                                                                         SMA
+                                                                                             RX_FLT
+
+
+
+
+                                                                                                                                          L5
+                                                                                   LNA_IN
+
+
+
+
+      J1                                                                                                                                4.7nH
+                                                                   CPS
+                                                                           CTX
+
+
+
+
+     SMA
+                                                                                                                                    C12         C10               C13
+                                                                                                                                    DNI         1.8pF             DNI
+                                                                  5
+                                                                          6
+                                                                                  7
+                                                                                            8
+
+
+
+
+                                                                                                                                                                                                     P1 Vertical
+                                                                                                                                                                                                        connector
+                                        CSD
+
+
+
+
+      J5                                                                                                                                                                                         2            1      VCC
+     SMA                                                                                                                                                                        GND              4            3
+                   R2                                                                                                                                                      P1_4_NC               6            5
+                   DNI                                                                                                                                                      P1_6_NC              8            7
+                                                                  CPS
+                                                                          CTX
+
+
+
+
+                                                                                                                                                                            P1_8_NC VCC_CONT    10            9
+                                                                                                                                                                           CTX                  12            11
+                                                                                                                                                                                      VCC_CTX   14            13    P1_13_NC
+                                                                                                                                                                          CPS                   16            15
+                                                                                  Please keep CSD, CPS, CTX on TOP layer of EVB                                                       VCC_CPS   18            17    P1_17_NC
+                                                                                                                                                                            CSD                 20            19
+                                                                                  Physical arangement of connections to header                                                        VCC_CSD   22            21    P1_21_NC
+                                                                                  can be changed to ensure layout has no
+                                                                                  crossovers...
+                                                                                                                                                                                                     HEADER 11X2
+
+                                                                                                                                                                                                                           204566-013
+
+
+
+
+                                       Figure 17. SKY66423-11EK1 Evaluation Board Schematic for 915 MHz
+
+
+
+
+                           Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+                    204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+9                                                                                                                                                                                                                              June 9, 2023
+DATA SHEET                                                                                                                    SKY66423-11
+
+
+
+
+                              Table 9. SKY66423-11EK1 Evaluation Board Bill of Materials (915 MHz)
+ Component           Value           Manufacturer            Mfr Part Number               Size                      Description
+ C2             10 nF            Murata                   GRM155R71H103KA88         0402               Ceramic capacitor, 10000 pF, 50 V, X7R
+ C3             33 pF            Murata                   GRM1555C1H330JA01         0402               Ceramic capacitor, 33 pF, 50 V, C0G/NP0
+ C4             4.7 uF           Murata                   GRM155R61A475MEAA         0402               Ceramic capacitor, 4.7 uF, 10 V, X5R 0402
+ C5             82 pF            Murata                   GRM1555C1H820JA01         0402               Ceramic capacitor, 82 pF, 50 V, C0G/NP0
+ C7             10 pF            Murata                   GRM1555C1E100JA01D        0402               Ceramic capacitor, 10 pF, 25 V, C0G/NP0
+ R2,C8,C14      DNI                                                                 0402
+ C9             2.4 pF           Murata                   GRM1555C1H2R4CA01         0402               Ceramic capacitor, 2.4 pF, 50 V, C0G/NP0
+ C10            1.8 pF           Murata                   GRM1555C1H1R8CA01         0402               Ceramic capacitor, 1.8 pF, 50 V, C0G/NP0
+ C12,C13        DNI              Murata                                             0402
+ C18            1 nF             Murata                   GRM155R71H102KA01         0402               Ceramic capacitor, 1000 pF, 50 V X7R
+ FB1            0Ω                                        ERJ2GE0R00                0402
+ J1,J2,J3,J5    SMA              Johnson Components       142-0701-851              End launch         SMA end launch straight jack receptacle
+ J4             DNI              Amphenol                 AMPHENOL_132134                              Conn SMA jack str 50 Ω PCB
+ L1             6.8 nH           Murata                   LQW15AN6N8J00D            0402               Fixed inductor, 6.8 nH, 600 mA, 290 MΩ
+ L2             0.6 nH           Murata                   LQP03TN0N6B02D            0201               Fixed inductor, 0.6 nH, 850 mA, 70 MΩ
+ L3             2.7 nH           Murata                   LQG15WZ2N7S02D            0402               Fixed inductor, 2.7 nH, 900 mA, 70 MΩ
+ L4             7.5 nH           Murata                   LQG15HN7N5J02             0402               Fixed inductor, 7.5 nH, 500 mA, 310 MΩ
+ L5,L6          4.7 nH           Murata                   LQG15HN4N7S02             0402               Fixed inductor, 4.7 nH, 600 mA, 260 MΩ
+ PCB1           Z1185-C          Skyworks Solutions       Z1185-C                                      EVB
+ P1             HEADER 11X2      Molex                    10-89-1221                11X2               Header 11X2
+ R1             0Ω               Panasonic                ERJ2GE0R00                0402               Resistor, SMD, 0 Ω, jumper, 1/10 W
+ U1             SKY66423-11      Skyworks Solutions       SKY66423-11               MCM 16-Pin 3X3     860 to 930 MHz RF front-end module
+
+
+
+
+                      Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+               204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+10                                                                                                                                    June 9, 2023
+DATA SHEET                                                                                                            SKY66423-11
+
+
+
+
+                                                                                     204566-021
+
+
+                Figure 18. SKY66423-11EK2 Evaluation Board, 868 to 915 MHz, with Ceramic Filter
+
+
+
+
+                 Figure 19. SKY66423-11EK2 Evaluation Board, 868 to 915 MHz with Ceramic Filter
+
+
+
+
+               Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+        204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+11                                                                                                                           June 9, 2023
+DATA SHEET                                                                                                                    SKY66423-11
+
+
+
+
+                          Table 10. SKY66423-11EK2 Evaluation Board BOM, 868 to 915 MHz with Ceramic Filter
+ Item Qty           Ref            Value      Manufacturer          Part Number             Package                   Description
+     1    1   C1             10nF          Murata               GRM188R71H103KA01     603               Cap ceramic 10000 pF 50 V X7R 0603
+     2    1   C2             1nF           Murata               GRM155R71H102KA01     402               Cap ceramic 1000 pF 50 V X7R 0402
+     3    1   C3             33 pF         Murata               GRM0335C1E330JD01     201               Cap ceramic 33 pF 25 V C0G/NP0 0201
+     4    2   C4,C6          DNI                                                      402               DNI
+     5    1   C5             100 pF        Murata               GRM1555C1H101GA01     402               Cap ceramic 100 pF 50 V C0G/NP0 0402
+     6    1   C7             10 pF         Murata               GRM1555C1H100GA01D 402                  Cap ceramic 10 pF 50 V C0G/NP0 0402
+     7    2   C8             1.8 pF        Murata               GRM1555C1H1R8BA01D 402                  Cap ceramic 1.8 pF 50 V C0G/NP0 0402
+     8    1   C9             2.4 pF        Murata               GRM1555C1H2R4BA01D 402                 Cap ceramic 2.4 pF 50 V C0G/NP0 0402
+     9    1   J4             DNI           Amphenol             132134                                 Conn SMA jack STR 50 Ω PCB
+     10   4   J2,J3,J1,J5 SMA              Johnson Components 142-0701-851            SMA_EDGE         Conn SMA jack str 50 Ω edge mnt
+     11   1   L1             6.8 nH        Murata               LQG18HN6N8J00         603              Fixed ind 6.8 nH 430 mA 250 MΩ
+     12   1   L2             0.6 nH        Murata               LQP03TN0N6C00         201              Fixed ind 0.6 nH 840 mA 80 MΩ
+     13   1   L3             2.7 nH        Murata               LQG15HN2N7S02         402              Fixed ind 2.7 nH 800 mA 160 MΩ
+     14   1   L4             7.5 nH        Murata               LQG15HN7N5J02         402              Fixed ind 7.5 nH 500 mA 310 MΩ
+     15   1   PCB1           Z1177-A       Skyworks Solutions   Z1177-A                                EVB
+     16   1   P1             Header 11X2   Molex                10-89-1221            11X2             Header 11X2
+     17   2   R1,R2          0R            Panasonic            ERJ2GE0R00            402              Thick film chip resistor
+     18   1   FL1            0915LP15B026 Johanson                                    0915LP15B026     915 MHz low pass ceramic filter
+     19   1   U1             SKY66423-11   Skyworks Solutions   SKY66423-11           MCM 16-PIN 3X3 860 to 930 MHz RF front-end module
+
+
+
+
+                     Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+              204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+12                                                                                                                                  June 9, 2023
+DATA SHEET                                                                                                            SKY66423-11
+
+
+
+
+                                Figure 20. SKY66423-11EK3 Evaluation Board, 868 MHz
+
+
+
+
+                          Figure 21. SKY66423-11EK3 Evaluation Board Ground Via Stitching
+
+
+
+
+               Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+        204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+13                                                                                                                           June 9, 2023
+DATA SHEET                                                                                                            SKY66423-11
+
+
+
+
+                                          Use R1 or R2, But Not Both
+             Figure 22. SKY66423-11EK3 Evaluation Board Showing That No Thermal Relief Pad Is Used
+
+
+
+
+               Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+        204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+14                                                                                                                           June 9, 2023
+DATA SHEET                                                                                                                                                                              SKY66423-11
+
+
+
+                                                                                                         C18
+                                                                                                         1nF
+VCC
+       C4                                                                                                0402
+       4.7uF                                                                                                           J4
+       0402                                                                                              C3
+                                                                  FB1
+                                                                  0R
+
+
+
+
+                                                                                            1
+                                               C2                 0402                                    33pF
+                                              10nF                                                    L1 0402
+                                              0402                                                    6.8nH           DNI
+                                                          VCC_10                                      0402
+                                                                                                                                L3
+
+
+
+
+                                                                                            2
+                                                                                                                              2.7nH
+
+
+
+
+                                                                  1
+                                                                                                         PA_OUT
+                                               C5              L2
+                                               82pF            0.6nH
+                                               0402            0201                                                                           C7             C8
+                                                                                                                                              10pF           DNI
+                                                                                                                                                                                    L4
+
+
+
+
+                                                                  2
+                                                                                                                                                                                    7.5nH
+
+                                                                                                                                                                          C9
+
+                                                          17
+
+                                                                  16
+                                                                          15
+                                                                                  14
+                                                                                            13
+                                                                                                                                                                         2.4pF
+                R1
+
+
+
+
+                                                                                   NC_14
+                                                                   VCC1
+                                                                           VCC0
+
+
+                                                                                             PA_OUT
+                0R
+               0402                                        EPAD
+ J2                          TX                1                                                                 12              C14
+ SMA                                                 TX                                               GND_12
+                             RX                2                                                                 11              1.5pF
+                                                     RX                 U1                             TX_IN
+                             TXALT             3                        SKY66423-11                              10                                   L6
+                                                     TX_ALT                                           GND_10                                        5.6nH
+                                               4                                                                 9    ANT_9                                                                 ANT        J3
+                                                     CSD                                                 ANT                                                                                          SMA
+                                                                                             RX_FLT                                    L5
+                                                                                   LNA_IN
+
+ J1
+                                                                                                                                     5.6nH
+                                                                   CPS
+                                                                           CTX
+
+
+
+ SMA
+                                                                                                                               C12           C10                   C13
+                                                                                                                               DNI           2.2pF                 DNI
+                                                                  5
+                                                                          6
+                                                                                  7
+                                                                                            8
+                                     CSD
+
+
+
+
+ J5
+ SMA
+                 R2                                                                                                                                                              P1 Vertical
+                 DNI                                                                                                                                                                connector
+                                                                  CPS
+                                                                          CTX
+
+
+
+
+                0402
+                                                                                                                                                            GND             2               1       VCC
+                                                                                                                                                            P1_4_NC         4               3
+                                                                                                                                                            P1_6_NC         6               5
+                                                                                                                                                            P1_8_NC         8               7
+                                                                                                                                                            VCC_CONT       10               9
+                                                                                                                                               CTX                         12               11
+                                                                                                                                                            VCC_CTX        14               13     P1_13_NC
+                                                                                                                                              CPS                          16               15
+                                                                                                                                                            VCC_CPS        18               17     P1_17_NC
+                                                                                                                                                CSD                        20               19
+                                                                                                                                                            VCC_CSD        22               21     P1_21_NC
+
+
+
+                                                                                                                                                                                 HEADER 11X2
+                                                                                                                                                                                                          204566-022
+
+
+
+
+                                       Figure 23. SKY66423-11 EK3 Evaluation Board, 868 MHz
+
+
+
+
+                      Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+               204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+15                                                                                                                                                                                                June 9, 2023
+DATA SHEET                                                                                                                   SKY66423-11
+
+
+
+
+                                   Table 11. SKY66423-11EK3 Evaluation Board BOM, 868 MHz
+Component     Value           Manufacturer              Mfr Part Number           Size                Description
+C2            10 nF           Murata                    GRM155R71H103KA88         0402                Ceramic capacitor, 10000 pF, 50 V X7R
+C3            33 pF           Murata                    GRM1555C1H330JA01         0402                Ceramic capacitor, 33 pF, 50 V C0G/NP0
+C4            4.7 uF          Murata                    GRM155R61A475MEAA         0402                Ceramic capacitor, 4.7 uF, 10 V X5R
+C5            82 pF           Murata                    GRM1555C1H820JA01         0402                Ceramic capacitor, 82 pF, 50 V C0G/NP0
+C7            10 pF           Murata                    GRM1555C1E100JA01D        0402                Ceramic capacitor, 10 pF, 25 V C0G/NP0
+R2,C8         DNI                                                                 0402
+C9            2.4 pF          Murata                    GRM1555C1H2R4CA01         0402                Ceramic capacitor, 2.4 pf, 50 V C0G/NP0
+C10           2.2 pF          Murata                    GRM1555C1H2R2CA01         0402                Ceramic capacitor, 2.2 pf, 50 V C0G/NP0
+C12,C13       DNI             Murata                                              0402
+C14           1.5 pF          Murata                    GRM1555C1H1R5CA01         0402                Ceramic capacitor, 1.5 pF, 50 V C0G/NP0 0
+C18           1 nF            Murata                    GRM155R71H102KA01         0402                Ceramic capacitor, 1000 pF, 50 V X7R
+FB1           0Ω                                        ERJ2GE0R00                0402
+J1,J2,J3,J5   SMA             Johnson Components        142-0701-851              End launch          SMA end launch straight jack receptacle
+J4            DNI             Amphenol                  AMPHENOL_132134                               Conn SMA jack str 50 Ω PCB
+L1            6.8 nH          Murata                    LQW15AN6N8J00D            0402                Fixed inductor, 6.8 nH, 600 mA 290 MΩ
+L2            0.6 nH          Murata                    LQP03TN0N6B02D            0201                Fixed inductor, 0.6 nH, 850 mA 70 MΩ
+L3            2.7 nH          Murata                    LQG15WZ2N7S02D            0402                Fixed inductor, 2.7 nH, 900 mA 70 MΩ
+L4            7.5 nH          Murata                    LQG15HN7N5J02             0402                Fixed inductor, 7.5 nH, 500 mA 310 MΩ
+L5,L6         5.6 nH          Murata                    LQG15HN5N6S02D            0402                Fixed inductor, 5.6 nH, 600 mA 260 MΩ
+PCB1          Z1185-C         Skyworks                  Z1185-C                                       EVB
+P1            Header 11X2     Molex                     10-89-1221                11X2                Header 11x2
+R1            0Ω              Panasonic                 ERJ2GE0R00                0402                Resistor, SMD, 0 Ω jumper, 1/10 W
+U1            SKY66423-11     Skyworks Solutions        SKY66423-11               MCM 16-Pin 3X3      860 to 930 MHz RF front-end module
+
+
+
+
+                     Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+              204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+16                                                                                                                                  June 9, 2023
+DATA SHEET                                                                                                               SKY66423-11
+
+
+Package Dimensions
+Typical part marking for the SKY66423-11 is shown below, followed by the PCB layout footprint, package dimen-
+sions, and tape and reel information.
+
+Package and Handling Information
+Since the device package is sensitive to moisture absorption, it is baked and vacuum packed before shipping.
+Instructions on the shipping container label regarding exposure to moisture after the container seal is broken
+must be followed. Otherwise, problems related to moisture absorption may occur when the part is subjected
+to high temperature during solder assembly.
+The SKY66423-11 is rated to Moisture Sensitivity Level 3 (MSL3) at 260 °C. It can be used for lead or
+lead-free soldering. For additional information, refer to the Skyworks Application Note, Solder Reflow Informa-
+tion, document number 200164.
+Care must be taken when attaching this product, whether it is done manually or in a production solder reflow
+environment. Production quantities of this product are shipped in a standard tape and reel format.
+
+
+
+
+              Pin 1
+              Indicator
+
+                                                                                              Skyworks
+                                 66423                                                        Part Number
+
+                                 XXXXXXX                                                      Lot Code
+
+                                 YYWW CC                                                      Date/Country Code:
+                                                                                              YY = Calendar Year
+                                                              204566-024                      WW = Work Week
+                                                                                              CC = Country Code
+                                  Figure 24. SKY66423-11 Typical Part Markings (Top View)
+
+
+
+
+                  Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+           204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+17                                                                                                                              June 9, 2023
+DATA SHEET                                                                                                            SKY66423-11
+
+
+
+
+                                                                                                                             204566-023
+
+
+                               Figure 25. SKY66423-11 PCB Layout Footprint (Top View)
+
+
+
+
+               Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+        204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+18                                                                                                                           June 9, 2023
+DATA SHEET                                                                                                            SKY66423-11
+
+
+
+
+                                                                                                                               204566-025
+
+
+
+                                      Figure 26. SKY66423-11 Package Dimensions
+
+
+
+
+               Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+        204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+19                                                                                                                           June 9, 2023
+DATA SHEET                                                                                                            SKY66423-11
+
+
+
+
+                                                                                                                                204566-026
+
+
+
+                                   Figure 27. SKY66423-11 Tape and Reel Dimensions
+
+
+
+
+               Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+        204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+20                                                                                                                           June 9, 2023
+DATA SHEET                                                                                                                                SKY66423-11
+
+
+Ordering Information
+
+
+       Part Number                                                                   Description
+
+ SKY66423-11                    860 to 930 MHz RF Front-End Module
+
+ SKY66423-11EK1                 Evaluation Board, 915 MHz
+
+ SKY66423-11EK2                 Evaluation Board, 868 to 915 MHz with Ceramic Filter
+
+ SKY66423-11EK3                 Evaluation Board, 868 MHz
+
+
+
+
+Copyright © 2017-2018, 2020, 2023, Skyworks Solutions, Inc. All Rights Reserved.
+Information in this document is provided in connection with Skyworks Solutions, Inc. ("Skyworks") products or services. These materials, including the infor-
+mation contained herein, are provided by Skyworks as a service to its customers and may be used for informational purposes only by the customer. Skyworks
+assumes no responsibility for errors or omissions in these materials or the information contained herein. Skyworks may change its documentation, products,
+services, specifications or product descriptions at any time, without notice. Skyworks makes no commitment to update the materials or information and
+shall have no responsibility whatsoever for conflicts, incompatibilities, or other difficulties arising from any future changes.
+No license, whether express, implied, by estoppel or otherwise, is granted to any intellectual property rights by this document. Skyworks assumes no liability
+for any materials, products or information provided hereunder, including the sale, distribution, reproduction or use of Skyworks products, information or
+materials, except as may be provided in Skyworks' Terms and Conditions of Sale.
+THE MATERIALS, PRODUCTS AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR
+OTHERWISE, INCLUDING FITNESS FOR A PARTICULAR PURPOSE OR USE, MERCHANTABILITY, PERFORMANCE, QUALITY OR NON-INFRINGEMENT OF ANY
+INTELLECTUAL PROPERTY RIGHT; ALL SUCH WARRANTIES ARE HEREBY EXPRESSLY DISCLAIMED. SKYWORKS DOES NOT WARRANT THE ACCURACY OR COM-
+PLETENESS OF THE INFORMATION, TEXT, GRAPHICS OR OTHER ITEMS CONTAINED WITHIN THESE MATERIALS. SKYWORKS SHALL NOT BE LIABLE FOR ANY
+DAMAGES, INCLUDING BUT NOT LIMITED TO ANY SPECIAL, INDIRECT, INCIDENTAL, STATUTORY, OR CONSEQUENTIAL DAMAGES, INCLUDING WITHOUT LIM-
+ITATION, LOST REVENUES OR LOST PROFITS THAT MAY RESULT FROM THE USE OF THE MATERIALS OR INFORMATION, WHETHER OR NOT THE RECIPIENT OF
+MATERIALS HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Skyworks products are not intended for use in medical, lifesaving or life-sustaining applications, or other equipment in which the failure of the Skyworks
+products could lead to personal injury, death, physical or environmental damage. Skyworks customers using or selling Skyworks products for use in such
+applications do so at their own risk and agree to fully indemnify Skyworks for any damages resulting from such improper use or sale.
+Customers are responsible for their products and applications using Skyworks products, which may deviate from published specifications as a result of
+design defects, errors, or operation of products outside of published parameters or design specifications. Customers should include design and operating
+safeguards to minimize these and other risks. Skyworks assumes no liability for applications assistance, customer product design, or damage to any equip-
+ment resulting from the use of Skyworks products outside of Skyworks' published specifications or parameters.
+Skyworks, the Skyworks symbol, Sky5®, SkyOne®, SkyBlue™, Skyworks Green™, ClockBuilder®, DSPLL®, ISOmodem®, ProSLIC®, SiPHY®, and RFeIC® are trade-
+marks or registered trademarks of Skyworks Solutions, Inc. or its subsidiaries in the United States and other countries. Third-party brands and names are for
+identification purposes only and are the property of their respective owners. Additional information, including relevant terms and conditions, posted at
+www.skyworksinc.com, are incorporated by reference.
+
+
+
+
+                       Skyworks Solutions, Inc. • Phone [949] 231-3000 • sales@skyworksinc.com • www.skyworksinc.com
+                204566K • Skyworks Proprietary Information • Products and Product Information are Subject to Change without Notice
+21                                                                                                                                               June 9, 2023
+

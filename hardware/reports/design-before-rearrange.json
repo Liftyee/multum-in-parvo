@@ -1,0 +1,4232 @@
+[
+  {
+    "ref": "U101",
+    "symbol": "STM32WLE5CCUx",
+    "value": "STM32WLE5CCU6",
+    "footprint": "Node:STM32WLE5_QFN48",
+    "nets": {
+      "11": "3V3_AON",
+      "44": "3V3_AON",
+      "37": "3V3_AON",
+      "41": "VDDA",
+      "49": "GND",
+      "46": "3V3_AON",
+      "47": "MCU_LX",
+      "45": "RF1V55",
+      "48": "GND",
+      "29": "RF1V55",
+      "25": "RF1V55",
+      "28": "3V3_AON",
+      "24": "VR_PA",
+      "23": null,
+      "22": "MCU_RFO_LP",
+      "20": "MCU_RFIP",
+      "21": "MCU_RFIN",
+      "26": "HSE_IN",
+      "27": "HSE_OUT",
+      "30": null,
+      "39": "LSE_IN",
+      "40": "LSE_OUT",
+      "18": "NRST",
+      "19": "BOOT0",
+      "42": "SWDIO",
+      "43": "SWCLK",
+      "4": "UART_TX",
+      "5": "UART_RX",
+      "7": "CHG_INHIBIT",
+      "8": "FEM_CSD",
+      "9": "FEM_CTX",
+      "10": "FEM_CPS",
+      "12": "PERIPH_EN",
+      "13": "GAUGE_ALERT",
+      "15": "I2C_SCL",
+      "16": "I2C_SDA",
+      "38": "RF_SW",
+      "34": "RF_SW_SUPPLY"
+    },
+    "sheet": "01-mcu",
+    "x": 100.33,
+    "y": 101.6,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      51,
+      29,
+      180
+    ],
+    "group": "",
+    "mpn": "STM32WLE5CCU6",
+    "uuid": "d1670e27-1e22-551b-bf4d-a18475e048e9"
+  },
+  {
+    "ref": "C101",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 190.5,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      48,
+      33,
+      0
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "f4be6c82-f7bd-5c5f-aeef-7c9af0340a79"
+  },
+  {
+    "ref": "C102",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 220.98,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      54,
+      25,
+      0
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "b1adeabe-a4fb-584e-82f7-53d17b2acc80"
+  },
+  {
+    "ref": "C103",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 251.46,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      49,
+      24,
+      0
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "45b7b512-2077-5ddc-91dd-a275bcc799cb"
+  },
+  {
+    "ref": "C104",
+    "symbol": "C",
+    "value": "4.7uF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 281.94,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      48,
+      35,
+      0
+    ],
+    "group": "",
+    "mpn": "4.7uF",
+    "uuid": "66f283b6-5530-587b-afd6-23ff20d8621c"
+  },
+  {
+    "ref": "C105",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "VDDA",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 190.5,
+    "y": 91.44,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      55,
+      25,
+      0
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "c7149a81-1fb8-5527-9b65-6598dfdbbf4e"
+  },
+  {
+    "ref": "C106",
+    "symbol": "C",
+    "value": "4.7uF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "VDDA",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 220.98,
+    "y": 91.44,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      56,
+      23,
+      0
+    ],
+    "group": "",
+    "mpn": "4.7uF",
+    "uuid": "a2b68b35-5ae6-5662-8608-2068c3735ce4"
+  },
+  {
+    "ref": "C107",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 251.46,
+    "y": 91.44,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      55,
+      32,
+      0
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "50adb45b-1286-554a-99b1-2f83d9ba5cb0"
+  },
+  {
+    "ref": "C108",
+    "symbol": "C",
+    "value": "4.7uF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 281.94,
+    "y": 91.44,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      56,
+      34,
+      0
+    ],
+    "group": "",
+    "mpn": "4.7uF",
+    "uuid": "efd9509d-9f5a-5f2c-b1a5-5f04962e0fcb"
+  },
+  {
+    "ref": "L101",
+    "symbol": "L",
+    "value": "600R@100MHz",
+    "footprint": "Node:L0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "VDDA"
+    },
+    "sheet": "01-mcu",
+    "x": 243.84,
+    "y": 129.54,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      55,
+      27,
+      0
+    ],
+    "group": "",
+    "mpn": "BLM18AG601SN1D",
+    "uuid": "37aed92a-6faf-504e-8594-567407a1b6d2"
+  },
+  {
+    "ref": "L102",
+    "symbol": "L",
+    "value": "15uH",
+    "footprint": "Node:L2520",
+    "nets": {
+      "1": "MCU_LX",
+      "2": "RF1V55"
+    },
+    "sheet": "01-mcu",
+    "x": 213.36,
+    "y": 165.1,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      54.5,
+      33,
+      90
+    ],
+    "group": "",
+    "mpn": "LQM2MPN150MEHL",
+    "uuid": "654ac12a-4988-5af5-9631-7aa6ef46255c"
+  },
+  {
+    "ref": "C109",
+    "symbol": "C",
+    "value": "470nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "RF1V55",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 243.84,
+    "y": 175.26,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      56.5,
+      31.5,
+      90
+    ],
+    "group": "",
+    "mpn": "470nF",
+    "uuid": "0ef0e932-3f1c-58e7-a036-1c85af4b44d0"
+  },
+  {
+    "ref": "C110",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "RF1V55",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 269.24,
+    "y": 175.26,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      54.5,
+      30.8,
+      90
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "a43ee3dc-70af-5c90-abc4-36ca8fc2c978"
+  },
+  {
+    "ref": "C111",
+    "symbol": "C",
+    "value": "33pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 299.72,
+    "y": 175.26,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      54.5,
+      29.8,
+      90
+    ],
+    "group": "",
+    "mpn": "33pF",
+    "uuid": "b165c1c5-8e3a-565f-975e-c0ad76ce78fa"
+  },
+  {
+    "ref": "C112",
+    "symbol": "C",
+    "value": "33pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "RF1V55",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 325.12,
+    "y": 175.26,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      56.1,
+      29.8,
+      90
+    ],
+    "group": "",
+    "mpn": "33pF",
+    "uuid": "56cdb44a-6008-55c4-a714-f602e128aff5"
+  },
+  {
+    "ref": "R101",
+    "symbol": "R",
+    "value": "100k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "BOOT0",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 45.72,
+    "y": 165.1,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      47,
+      28,
+      90
+    ],
+    "group": "",
+    "mpn": "100k",
+    "uuid": "65c3637b-fdf8-590f-a8b5-48e312459de5"
+  },
+  {
+    "ref": "C113",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "NRST",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 45.72,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      48,
+      25,
+      90
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "4998a510-e55a-5c73-86aa-1aae8c78c792"
+  },
+  {
+    "ref": "Y101",
+    "symbol": "Crystal_GND24",
+    "value": "32MHz CL=10pF",
+    "footprint": "Node:Crystal3225",
+    "nets": {
+      "1": "HSE_IN",
+      "3": "HSE_OUT",
+      "2": "GND",
+      "4": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 203.2,
+    "y": 228.6,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      57,
+      28,
+      90
+    ],
+    "group": "",
+    "mpn": "ABM8-32.000MHZ-10-D1G-T",
+    "uuid": "19acf5ae-dbd8-5aae-a0e4-cc03fee8d59c"
+  },
+  {
+    "ref": "C114",
+    "symbol": "C",
+    "value": "6.8pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "HSE_IN",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 172.72,
+    "y": 233.68,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      55.5,
+      27.2,
+      90
+    ],
+    "group": "",
+    "mpn": "6.8pF",
+    "uuid": "ba9e54c1-8316-56a0-8034-683989395745"
+  },
+  {
+    "ref": "C115",
+    "symbol": "C",
+    "value": "6.8pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "HSE_OUT",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 233.68,
+    "y": 233.68,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      55.5,
+      28.8,
+      90
+    ],
+    "group": "",
+    "mpn": "6.8pF",
+    "uuid": "4c3813dc-9ec6-57c7-8a65-faa04b1de7b3"
+  },
+  {
+    "ref": "Y102",
+    "symbol": "Crystal",
+    "value": "32.768kHz CL=7pF",
+    "footprint": "Node:Crystal3215",
+    "nets": {
+      "1": "LSE_IN",
+      "2": "LSE_OUT"
+    },
+    "sheet": "01-mcu",
+    "x": 294.64,
+    "y": 228.6,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      45.5,
+      25,
+      90
+    ],
+    "group": "",
+    "mpn": "ABS07-32.768KHZ-7-T",
+    "uuid": "c72539b5-f244-5f4a-8193-9c2c0007f366"
+  },
+  {
+    "ref": "C116",
+    "symbol": "C",
+    "value": "6.8pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "LSE_IN",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 269.24,
+    "y": 233.68,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      46.8,
+      23.5,
+      90
+    ],
+    "group": "",
+    "mpn": "6.8pF",
+    "uuid": "2ffbf5d8-367b-5051-bde3-a8f2be65d2e9"
+  },
+  {
+    "ref": "C117",
+    "symbol": "C",
+    "value": "6.8pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "LSE_OUT",
+      "2": "GND"
+    },
+    "sheet": "01-mcu",
+    "x": 320.04,
+    "y": 233.68,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      46.8,
+      25.2,
+      90
+    ],
+    "group": "",
+    "mpn": "6.8pF",
+    "uuid": "3912a2fb-8541-5e7f-8b37-b46422e23043"
+  },
+  {
+    "ref": "J101",
+    "symbol": "Conn_01x06",
+    "value": "SWD / UART",
+    "footprint": "Node:Header1x6",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND",
+      "3": "SWDIO",
+      "4": "SWCLK",
+      "5": "NRST",
+      "6": "UART_TX"
+    },
+    "sheet": "01-mcu",
+    "x": 353.06,
+    "y": 78.74,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      44,
+      43,
+      90
+    ],
+    "group": "",
+    "mpn": "SWD / UART",
+    "uuid": "c181234c-8e39-5c3f-96aa-32fae6f692a5"
+  },
+  {
+    "ref": "TP101",
+    "symbol": "TestPoint",
+    "value": "SWDIO",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "SWDIO"
+    },
+    "sheet": "01-mcu",
+    "x": 350.52,
+    "y": 119.38,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      47,
+      40,
+      0
+    ],
+    "group": "",
+    "mpn": "SWDIO",
+    "uuid": "e283e873-74d6-5135-9c33-3633956115c1"
+  },
+  {
+    "ref": "TP102",
+    "symbol": "TestPoint",
+    "value": "SWCLK",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "SWCLK"
+    },
+    "sheet": "01-mcu",
+    "x": 350.52,
+    "y": 134.62,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      50,
+      40,
+      0
+    ],
+    "group": "",
+    "mpn": "SWCLK",
+    "uuid": "b500171b-5cb9-59f3-83f1-91ecb94751b1"
+  },
+  {
+    "ref": "TP103",
+    "symbol": "TestPoint",
+    "value": "NRST",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "NRST"
+    },
+    "sheet": "01-mcu",
+    "x": 350.52,
+    "y": 149.85999999999999,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      53,
+      40,
+      0
+    ],
+    "group": "",
+    "mpn": "NRST",
+    "uuid": "281bd580-ed8d-5780-9d3f-f6d2fb95bed3"
+  },
+  {
+    "ref": "TP104",
+    "symbol": "TestPoint",
+    "value": "UART_TX",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "UART_TX"
+    },
+    "sheet": "01-mcu",
+    "x": 350.52,
+    "y": 165.1,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      56,
+      40,
+      0
+    ],
+    "group": "",
+    "mpn": "UART_TX",
+    "uuid": "6a6c4b46-2196-591e-8b5e-acaab11eddba"
+  },
+  {
+    "ref": "TP105",
+    "symbol": "TestPoint",
+    "value": "UART_RX",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "UART_RX"
+    },
+    "sheet": "01-mcu",
+    "x": 350.52,
+    "y": 180.34,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      59,
+      40,
+      0
+    ],
+    "group": "",
+    "mpn": "UART_RX",
+    "uuid": "d293688f-f746-56c1-923f-b6063dc07113"
+  },
+  {
+    "ref": "J201",
+    "symbol": "Conn_01x02",
+    "value": "SOLAR + / -",
+    "footprint": "Node:JST_PH_2",
+    "nets": {
+      "1": "SOLAR_P",
+      "2": "GND"
+    },
+    "sheet": "02-solar",
+    "x": 35.56,
+    "y": 78.74,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      10,
+      60,
+      180
+    ],
+    "group": "",
+    "mpn": "B2B-PH-K-S(LF)(SN)",
+    "uuid": "a2b40a40-74e4-5cf3-8fde-6a8ab4ee9a80"
+  },
+  {
+    "ref": "U201",
+    "symbol": "AEM10300",
+    "value": "AEM10300",
+    "footprint": "Node:AEM10300_QFN28",
+    "nets": {
+      "2": "SOLAR_P",
+      "28": null,
+      "4": "AEM_BUF",
+      "5": "AEM_LIN",
+      "6": "AEM_LOUT",
+      "1": null,
+      "8": "VINT",
+      "9": "GND",
+      "11": "GND",
+      "22": "GND",
+      "20": "VINT",
+      "14": "PACK_P",
+      "10": "VINT",
+      "12": "CHG_ENABLE",
+      "26": "AEM_STATUS",
+      "21": "GND",
+      "19": "VINT",
+      "18": "GND",
+      "25": "GND",
+      "24": "GND",
+      "23": "GND",
+      "17": null,
+      "16": null,
+      "15": null,
+      "13": "GND",
+      "3": "GND",
+      "7": "GND",
+      "27": "GND",
+      "29": "GND"
+    },
+    "sheet": "02-solar",
+    "x": 152.4,
+    "y": 116.84,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      20,
+      53,
+      0
+    ],
+    "group": "",
+    "mpn": "AEM10300",
+    "uuid": "9d52a13e-8684-567d-9e7c-40e7e89f6c59"
+  },
+  {
+    "ref": "L201",
+    "symbol": "L",
+    "value": "10uH",
+    "footprint": "Node:L2520",
+    "nets": {
+      "1": "AEM_LIN",
+      "2": "AEM_LOUT"
+    },
+    "sheet": "02-solar",
+    "x": 71.12,
+    "y": 132.08,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      16,
+      53.5,
+      90
+    ],
+    "group": "",
+    "mpn": "DFE252010F-100M",
+    "uuid": "c0e03c10-fc3b-5cbe-9e1d-6c51b2ab11de"
+  },
+  {
+    "ref": "C201",
+    "symbol": "C",
+    "value": "22uF 10V",
+    "footprint": "Node:C0805",
+    "nets": {
+      "1": "AEM_BUF",
+      "2": "GND"
+    },
+    "sheet": "02-solar",
+    "x": 71.12,
+    "y": 106.68,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      16.8,
+      50.3,
+      90
+    ],
+    "group": "",
+    "mpn": "GRM21BR61A226ME44L",
+    "uuid": "e73b7235-f029-58b1-a93c-69531373263a"
+  },
+  {
+    "ref": "C202",
+    "symbol": "C",
+    "value": "10uF 6.3V",
+    "footprint": "Node:C0805",
+    "nets": {
+      "1": "VINT",
+      "2": "GND"
+    },
+    "sheet": "02-solar",
+    "x": 223.52,
+    "y": 96.52,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      20.5,
+      56.5,
+      0
+    ],
+    "group": "",
+    "mpn": "10uF 6.3V",
+    "uuid": "c7e64aff-e694-517b-b945-962645934862"
+  },
+  {
+    "ref": "C203",
+    "symbol": "C",
+    "value": "100uF 10V",
+    "footprint": "Node:C1210",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "02-solar",
+    "x": 264.16,
+    "y": 86.36,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      26,
+      49,
+      90
+    ],
+    "group": "",
+    "mpn": "GRM32ER61A107ME20L",
+    "uuid": "bb8b4fb4-5ae5-5001-b082-149c5a6bd131"
+  },
+  {
+    "ref": "C204",
+    "symbol": "C",
+    "value": "100uF 10V",
+    "footprint": "Node:C1210",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "02-solar",
+    "x": 294.64000000000004,
+    "y": 86.36,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      30,
+      49,
+      90
+    ],
+    "group": "",
+    "mpn": "GRM32ER61A107ME20L",
+    "uuid": "78f1bf44-e843-5aaa-99c2-adbf810644d6"
+  },
+  {
+    "ref": "C205",
+    "symbol": "C",
+    "value": "100uF 10V",
+    "footprint": "Node:C1210",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "02-solar",
+    "x": 325.12,
+    "y": 86.36,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      34,
+      49,
+      90
+    ],
+    "group": "",
+    "mpn": "GRM32ER61A107ME20L",
+    "uuid": "a3dc21ef-0395-5d38-bbb4-356fe9e86a1b"
+  },
+  {
+    "ref": "C206",
+    "symbol": "C",
+    "value": "100uF 10V",
+    "footprint": "Node:C1210",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "02-solar",
+    "x": 355.6,
+    "y": 86.36,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      38,
+      49,
+      90
+    ],
+    "group": "",
+    "mpn": "GRM32ER61A107ME20L",
+    "uuid": "f4c55450-f89c-51df-8640-2d79b7ec234e"
+  },
+  {
+    "ref": "TP201",
+    "symbol": "TestPoint",
+    "value": "SOLAR_P",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "SOLAR_P"
+    },
+    "sheet": "02-solar",
+    "x": 40.64,
+    "y": 246.38,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      12,
+      66,
+      0
+    ],
+    "group": "",
+    "mpn": "SOLAR_P",
+    "uuid": "5ae9f3c6-8ef5-58ee-a09c-efa3ea8a3b85"
+  },
+  {
+    "ref": "TP202",
+    "symbol": "TestPoint",
+    "value": "PACK_P",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "PACK_P"
+    },
+    "sheet": "02-solar",
+    "x": 101.6,
+    "y": 246.38,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      16,
+      66,
+      0
+    ],
+    "group": "",
+    "mpn": "PACK_P",
+    "uuid": "81987129-2f03-5103-8ac7-3af8121cf84e"
+  },
+  {
+    "ref": "TP203",
+    "symbol": "TestPoint",
+    "value": "VINT",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "VINT"
+    },
+    "sheet": "02-solar",
+    "x": 162.56,
+    "y": 246.38,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      20,
+      66,
+      0
+    ],
+    "group": "",
+    "mpn": "VINT",
+    "uuid": "9ac943ff-14ac-5ca2-9761-b5ed6ea7a826"
+  },
+  {
+    "ref": "TP204",
+    "symbol": "TestPoint",
+    "value": "CHG_ENABLE",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "CHG_ENABLE"
+    },
+    "sheet": "02-solar",
+    "x": 223.51999999999998,
+    "y": 246.38,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      24,
+      66,
+      0
+    ],
+    "group": "",
+    "mpn": "CHG_ENABLE",
+    "uuid": "1dc17403-a7a6-50cf-8359-0b4f1bb41c96"
+  },
+  {
+    "ref": "TP205",
+    "symbol": "TestPoint",
+    "value": "AEM_STATUS",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "AEM_STATUS"
+    },
+    "sheet": "02-solar",
+    "x": 284.48,
+    "y": 246.38,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      28,
+      66,
+      0
+    ],
+    "group": "",
+    "mpn": "AEM_STATUS",
+    "uuid": "29a90d9e-9995-5fd4-ad14-b0871a3f34c6"
+  },
+  {
+    "ref": "J301",
+    "symbol": "Conn_01x02",
+    "value": "BAT + / CELL-",
+    "footprint": "Node:JST_PH_2",
+    "nets": {
+      "1": "PACK_P",
+      "2": "CELL_N"
+    },
+    "sheet": "03-battery",
+    "x": 40.64,
+    "y": 81.28,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      10,
+      39,
+      180
+    ],
+    "group": "",
+    "mpn": "B2B-PH-K-S(LF)(SN)",
+    "uuid": "13413b2a-01d2-500b-8c5d-7a5e566f15f2"
+  },
+  {
+    "ref": "U301",
+    "symbol": "BQ29700",
+    "value": "BQ29700DSET",
+    "footprint": "Node:BQ29700_WSON6",
+    "nets": {
+      "5": "BMS_BAT",
+      "6": "BMS_VM",
+      "3": "DSG_GATE",
+      "2": "CHG_GATE",
+      "4": "CELL_N"
+    },
+    "sheet": "03-battery",
+    "x": 147.32,
+    "y": 101.6,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      17,
+      40,
+      0
+    ],
+    "group": "PROTECT",
+    "mpn": "BQ29700DSET",
+    "uuid": "b82a0496-f84d-589d-b770-b1e28bc225f2"
+  },
+  {
+    "ref": "R301",
+    "symbol": "R",
+    "value": "330R",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "PACK_P",
+      "2": "BMS_BAT"
+    },
+    "sheet": "03-battery",
+    "x": 93.98,
+    "y": 71.12,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      16,
+      37,
+      0
+    ],
+    "group": "PROTECT",
+    "mpn": "330R",
+    "uuid": "4ac130be-6e52-5844-a63f-3d8bb9d33f8d"
+  },
+  {
+    "ref": "C301",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "BMS_BAT",
+      "2": "CELL_N"
+    },
+    "sheet": "03-battery",
+    "x": 119.38,
+    "y": 78.74,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      18,
+      38,
+      0
+    ],
+    "group": "PROTECT",
+    "mpn": "100nF",
+    "uuid": "297890e3-2441-5325-9b44-8b2a207bd264"
+  },
+  {
+    "ref": "R302",
+    "symbol": "R",
+    "value": "2.2k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "BMS_VM",
+      "2": "GND"
+    },
+    "sheet": "03-battery",
+    "x": 99.06,
+    "y": 111.76,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      19,
+      42,
+      0
+    ],
+    "group": "PROTECT",
+    "mpn": "2.2k",
+    "uuid": "09bb1e80-4244-5102-9873-e5c2bdb931ef"
+  },
+  {
+    "ref": "Q301",
+    "symbol": "Q_NMOS_GSD",
+    "value": "AO3400A / DSG",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "DSG_GATE",
+      "2": "CELL_N",
+      "3": "FET_MID"
+    },
+    "sheet": "03-battery",
+    "x": 177.8,
+    "y": 160.02,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      14.5,
+      43.5,
+      0
+    ],
+    "group": "PROTECT",
+    "mpn": "AO3400A",
+    "uuid": "16bcc576-d018-5103-b5a0-72386296210f"
+  },
+  {
+    "ref": "Q302",
+    "symbol": "Q_NMOS_GSD",
+    "value": "AO3400A / CHG",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "CHG_GATE",
+      "2": "GND",
+      "3": "FET_MID"
+    },
+    "sheet": "03-battery",
+    "x": 228.6,
+    "y": 160.02,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      18,
+      45.5,
+      180
+    ],
+    "group": "PROTECT",
+    "mpn": "AO3400A",
+    "uuid": "f56a0172-39f1-5e04-865f-e9d0352fffa3"
+  },
+  {
+    "ref": "R303",
+    "symbol": "R",
+    "value": "0R BYPASS - DNP",
+    "footprint": "Node:R1206",
+    "nets": {
+      "1": "CELL_N",
+      "2": "GND"
+    },
+    "sheet": "03-battery",
+    "x": 203.2,
+    "y": 205.74,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      12,
+      47.5,
+      0
+    ],
+    "group": "PROTECTED_PACK_ONLY",
+    "mpn": "0R BYPASS - DNP",
+    "uuid": "13e35ca4-c3c9-5c35-b50f-b04eee06e7e6"
+  },
+  {
+    "ref": "TP301",
+    "symbol": "TestPoint",
+    "value": "PACK_P",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "PACK_P"
+    },
+    "sheet": "03-battery",
+    "x": 45.72,
+    "y": 152.4,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      10,
+      34,
+      0
+    ],
+    "group": "",
+    "mpn": "PACK_P",
+    "uuid": "385b7e98-42ef-51dd-8f25-5182a824350e"
+  },
+  {
+    "ref": "TP302",
+    "symbol": "TestPoint",
+    "value": "GND",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "GND"
+    },
+    "sheet": "03-battery",
+    "x": 71.12,
+    "y": 152.4,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      22,
+      39,
+      0
+    ],
+    "group": "",
+    "mpn": "GND",
+    "uuid": "bf063a26-1025-5e47-a3f9-54385fecefcf"
+  },
+  {
+    "ref": "U501",
+    "symbol": "TPS63900",
+    "value": "TPS63900DSKR",
+    "footprint": "Node:TPS63900_WSON10",
+    "nets": {
+      "10": "PACK_P",
+      "1": "PACK_P",
+      "2": "GND",
+      "3": "CFG1",
+      "4": "CFG2",
+      "5": "CFG3",
+      "6": "3V3_AON",
+      "9": "TPS_LX1",
+      "7": "TPS_LX2",
+      "8": "GND",
+      "11": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 101.6,
+    "y": 91.44,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      32,
+      37,
+      0
+    ],
+    "group": "",
+    "mpn": "TPS63900DSKR",
+    "uuid": "6513e4c8-dc98-596f-a6e7-354d64255b96"
+  },
+  {
+    "ref": "L501",
+    "symbol": "L",
+    "value": "2.2uH",
+    "footprint": "Node:L2520",
+    "nets": {
+      "1": "TPS_LX1",
+      "2": "TPS_LX2"
+    },
+    "sheet": "04-rails",
+    "x": 162.56,
+    "y": 101.6,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      35.3,
+      37,
+      90
+    ],
+    "group": "",
+    "mpn": "DFE252012F-2R2M",
+    "uuid": "ae78d4f7-1dc2-582e-a0b5-02e88cca54a2"
+  },
+  {
+    "ref": "C501",
+    "symbol": "C",
+    "value": "22uF 10V",
+    "footprint": "Node:C0805",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 40.64,
+    "y": 78.74,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      32,
+      33.5,
+      0
+    ],
+    "group": "",
+    "mpn": "22uF 10V",
+    "uuid": "51e7bb01-e471-5339-b17b-b7f6f3c3cf5d"
+  },
+  {
+    "ref": "C502",
+    "symbol": "C",
+    "value": "22uF 10V",
+    "footprint": "Node:C0805",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 208.28,
+    "y": 78.74,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      32,
+      40.5,
+      0
+    ],
+    "group": "",
+    "mpn": "22uF 10V",
+    "uuid": "ef63f946-9b9e-5e6c-a14b-73f3a0772f06"
+  },
+  {
+    "ref": "C503",
+    "symbol": "C",
+    "value": "22uF 10V",
+    "footprint": "Node:C0805",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 238.76,
+    "y": 78.74,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      35,
+      40.5,
+      0
+    ],
+    "group": "",
+    "mpn": "22uF 10V",
+    "uuid": "d353db2e-5858-5189-92f1-f68e00fa2cb9"
+  },
+  {
+    "ref": "R501",
+    "symbol": "R",
+    "value": "36.5k 1%",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CFG1",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 40.64,
+    "y": 142.24,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      29,
+      35,
+      90
+    ],
+    "group": "",
+    "mpn": "36.5k 1%",
+    "uuid": "094afe2b-80a8-5838-9441-89338dd95dc2"
+  },
+  {
+    "ref": "R502",
+    "symbol": "R",
+    "value": "0R",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CFG2",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 66.03999999999999,
+    "y": 142.24,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      29,
+      37,
+      90
+    ],
+    "group": "",
+    "mpn": "0R",
+    "uuid": "d95cddec-a090-5352-9e6e-a6268a86a9f7"
+  },
+  {
+    "ref": "R503",
+    "symbol": "R",
+    "value": "16.2k 1%",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CFG3",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 91.44,
+    "y": 142.24,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      29,
+      39,
+      90
+    ],
+    "group": "",
+    "mpn": "16.2k 1%",
+    "uuid": "6c41481d-f555-55b3-869d-7a636bfffbf6"
+  },
+  {
+    "ref": "U502",
+    "symbol": "MAX17048",
+    "value": "MAX17048G+ OPTIONAL",
+    "footprint": "Node:MAX17048_TDFN8",
+    "nets": {
+      "3": "PACK_P",
+      "2": "PACK_P",
+      "6": "GND",
+      "7": "I2C_SCL",
+      "8": "I2C_SDA",
+      "5": "GAUGE_ALERT",
+      "1": "GND",
+      "4": "GND",
+      "9": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 101.6,
+    "y": 208.28,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      29,
+      45,
+      0
+    ],
+    "group": "GAUGE",
+    "mpn": "MAX17048G+",
+    "uuid": "9cd5b960-983f-5411-b579-cec7c5309182"
+  },
+  {
+    "ref": "C504",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 50.8,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      29,
+      42.5,
+      0
+    ],
+    "group": "GAUGE",
+    "mpn": "100nF",
+    "uuid": "723b2384-e730-5d9e-ac57-8ac514946299"
+  },
+  {
+    "ref": "R504",
+    "symbol": "R",
+    "value": "10k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "I2C_SCL"
+    },
+    "sheet": "04-rails",
+    "x": 157.48,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      32,
+      45,
+      90
+    ],
+    "group": "GAUGE",
+    "mpn": "10k",
+    "uuid": "31924a21-b859-5c1a-93d0-cddd2c00eafb"
+  },
+  {
+    "ref": "R505",
+    "symbol": "R",
+    "value": "10k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "I2C_SDA"
+    },
+    "sheet": "04-rails",
+    "x": 182.88,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      34,
+      45,
+      90
+    ],
+    "group": "GAUGE",
+    "mpn": "10k",
+    "uuid": "3cfbf442-1cce-55c8-9f5e-2d0e357439ad"
+  },
+  {
+    "ref": "R506",
+    "symbol": "R",
+    "value": "100k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GAUGE_ALERT"
+    },
+    "sheet": "04-rails",
+    "x": 208.27999999999997,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      36,
+      45,
+      90
+    ],
+    "group": "GAUGE",
+    "mpn": "100k",
+    "uuid": "eb6a3601-d6bc-5d73-a248-5be95f7c4ee8"
+  },
+  {
+    "ref": "U503",
+    "symbol": "TPS22919",
+    "value": "TPS22919DCKR",
+    "footprint": "Node:SC70_6",
+    "nets": {
+      "1": "3V3_AON",
+      "3": "PERIPH_EN",
+      "6": "3V3_SW",
+      "5": "3V3_SW",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 304.8,
+    "y": 106.68,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      40,
+      46,
+      0
+    ],
+    "group": "PERIPH",
+    "mpn": "TPS22919DCKR",
+    "uuid": "196d238a-0fd6-5866-9a4c-5be3b314b0a5"
+  },
+  {
+    "ref": "R507",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "PERIPH_EN",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 269.24,
+    "y": 137.16,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      37.5,
+      46,
+      90
+    ],
+    "group": "PERIPH",
+    "mpn": "1M",
+    "uuid": "4143cf8a-4cf5-50bf-b74a-4f835d3befd2"
+  },
+  {
+    "ref": "C505",
+    "symbol": "C",
+    "value": "1uF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "3V3_AON",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 271.78,
+    "y": 81.28,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      40,
+      43.5,
+      0
+    ],
+    "group": "PERIPH",
+    "mpn": "1uF",
+    "uuid": "2500e0b2-dc72-5db6-9a52-017e260374b3"
+  },
+  {
+    "ref": "C506",
+    "symbol": "C",
+    "value": "1uF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "3V3_SW",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 353.06,
+    "y": 96.52,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      40,
+      48.5,
+      0
+    ],
+    "group": "PERIPH",
+    "mpn": "1uF",
+    "uuid": "afa36171-eaa6-5b33-bafd-bea8543e0270"
+  },
+  {
+    "ref": "J501",
+    "symbol": "Conn_01x02",
+    "value": "3V3_SW / GND",
+    "footprint": "Node:Header1x2",
+    "nets": {
+      "1": "3V3_SW",
+      "2": "GND"
+    },
+    "sheet": "04-rails",
+    "x": 365.76,
+    "y": 144.78,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      44,
+      48,
+      0
+    ],
+    "group": "PERIPH",
+    "mpn": "3V3_SW / GND",
+    "uuid": "7903dc4f-340c-51ff-8ac2-d1413884b10f"
+  },
+  {
+    "ref": "TP501",
+    "symbol": "TestPoint",
+    "value": "3V3_AON",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "3V3_AON"
+    },
+    "sheet": "04-rails",
+    "x": 294.64,
+    "y": 238.76,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      37,
+      33,
+      0
+    ],
+    "group": "",
+    "mpn": "3V3_AON",
+    "uuid": "d81dc4a9-305c-5dc9-809d-2935f0127b96"
+  },
+  {
+    "ref": "TP502",
+    "symbol": "TestPoint",
+    "value": "3V3_SW",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "3V3_SW"
+    },
+    "sheet": "04-rails",
+    "x": 337.82,
+    "y": 238.76,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      43,
+      50,
+      0
+    ],
+    "group": "",
+    "mpn": "3V3_SW",
+    "uuid": "c2b0c7e4-d591-5c14-8f90-20a03f2bb3fa"
+  },
+  {
+    "ref": "R401",
+    "symbol": "R",
+    "value": "100k 0.1%",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "SOLAR_VALID",
+      "2": "NTC_SENSE"
+    },
+    "sheet": "05-temperature",
+    "x": 45.72,
+    "y": 76.2,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      10,
+      55,
+      90
+    ],
+    "group": "",
+    "mpn": "100k 0.1%",
+    "uuid": "53e0dbcb-c3ae-5876-86c8-a6422203f286"
+  },
+  {
+    "ref": "J401",
+    "symbol": "Conn_01x02",
+    "value": "100k NTC AT CELL",
+    "footprint": "Node:Header1x2",
+    "nets": {
+      "1": "NTC_SENSE",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 45.72,
+    "y": 124.46,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      10,
+      51,
+      0
+    ],
+    "group": "",
+    "mpn": "External NTC NCP18WF104F12RB mounted on cell tab",
+    "uuid": "8e959463-89e2-5ec3-a81e-e853f18290c0"
+  },
+  {
+    "ref": "C401",
+    "symbol": "C",
+    "value": "1nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "NTC_SENSE",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 76.2,
+    "y": 121.92,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      12,
+      54,
+      90
+    ],
+    "group": "",
+    "mpn": "1nF",
+    "uuid": "95a2050f-ef41-5e3a-b239-36e00684d3cd"
+  },
+  {
+    "ref": "R402",
+    "symbol": "R",
+    "value": "357k 0.1%",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "SOLAR_VALID",
+      "2": "COLD_REF"
+    },
+    "sheet": "05-temperature",
+    "x": 116.84,
+    "y": 73.66,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      14,
+      56,
+      90
+    ],
+    "group": "",
+    "mpn": "357k 0.1%",
+    "uuid": "e9dffabf-a4ad-551d-a0f5-42170e33111c"
+  },
+  {
+    "ref": "R403",
+    "symbol": "R",
+    "value": "1M 0.1%",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "COLD_REF",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 116.84,
+    "y": 111.76,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      14,
+      58,
+      90
+    ],
+    "group": "",
+    "mpn": "1M 0.1%",
+    "uuid": "328e0bb4-fb1c-5360-bae6-4491ab9f89de"
+  },
+  {
+    "ref": "R404",
+    "symbol": "R",
+    "value": "1.98M 0.1%",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "SOLAR_VALID",
+      "2": "HOT_REF"
+    },
+    "sheet": "05-temperature",
+    "x": 157.48,
+    "y": 73.66,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      16,
+      56,
+      90
+    ],
+    "group": "",
+    "mpn": "1.98M 0.1%",
+    "uuid": "981ee211-e536-58d2-99d8-527f5afda338"
+  },
+  {
+    "ref": "R405",
+    "symbol": "R",
+    "value": "1M 0.1%",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "HOT_REF",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 157.48,
+    "y": 111.76,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      16,
+      58,
+      90
+    ],
+    "group": "",
+    "mpn": "1M 0.1%",
+    "uuid": "d16e98ce-60f6-5a9f-ad0d-17168ec4b0d6"
+  },
+  {
+    "ref": "U401",
+    "symbol": "TLV7031S",
+    "value": "TLV7031SDCKR COLD",
+    "footprint": "Node:SC70_5",
+    "nets": {
+      "1": "COLD_REF",
+      "3": "NTC_SENSE",
+      "4": "COLD_OK",
+      "5": "SOLAR_P",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 218.44,
+    "y": 76.2,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      14,
+      61,
+      0
+    ],
+    "group": "",
+    "mpn": "TLV7031SDCKR COLD",
+    "uuid": "0f8ce21b-7f4f-5c8c-8e83-b4d98d5a283d"
+  },
+  {
+    "ref": "U402",
+    "symbol": "TLV7031S",
+    "value": "TLV7031SDCKR HOT",
+    "footprint": "Node:SC70_5",
+    "nets": {
+      "1": "NTC_SENSE",
+      "3": "HOT_REF",
+      "4": "HOT_OK",
+      "5": "SOLAR_P",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 218.44,
+    "y": 124.46,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      18,
+      61,
+      0
+    ],
+    "group": "",
+    "mpn": "TLV7031SDCKR HOT",
+    "uuid": "4417c849-676f-5fc4-ae8c-e67728af0804"
+  },
+  {
+    "ref": "U403",
+    "symbol": "TPS3839",
+    "value": "TPS3839L30DBZR",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "GND",
+      "2": "SOLAR_VALID",
+      "3": "SOLAR_P"
+    },
+    "sheet": "05-temperature",
+    "x": 330.2,
+    "y": 76.2,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      21,
+      56,
+      0
+    ],
+    "group": "",
+    "mpn": "TPS3839L30DBZR",
+    "uuid": "f27ae3fb-1606-5270-a7b8-0ac1b68c2869"
+  },
+  {
+    "ref": "C404",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "SOLAR_P",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 375.92,
+    "y": 81.28,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      24,
+      56,
+      0
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "7a2147ca-b62c-5f2a-a992-859c55b87fef"
+  },
+  {
+    "ref": "Q405",
+    "symbol": "Q_NMOS_GSD",
+    "value": "2N7002 / UV INTERLOCK",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "SOLAR_VALID",
+      "2": "GND",
+      "3": "TEMP_UV"
+    },
+    "sheet": "05-temperature",
+    "x": 172.72,
+    "y": 210.82,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      25,
+      59,
+      0
+    ],
+    "group": "",
+    "mpn": "2N7002 / UV INTERLOCK",
+    "uuid": "0ec03ddb-e1a9-5c26-a225-7ce4f00a4721"
+  },
+  {
+    "ref": "R412",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "SOLAR_VALID",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 375.92,
+    "y": 124.46,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      24,
+      54,
+      90
+    ],
+    "group": "",
+    "mpn": "1M",
+    "uuid": "272534b4-1add-58b8-953b-865d60707092"
+  },
+  {
+    "ref": "C402",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "SOLAR_P",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 269.24,
+    "y": 76.2,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      14,
+      63,
+      0
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "5fd8fd64-4f28-515b-92a7-cd0e55e989f5"
+  },
+  {
+    "ref": "C403",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0603",
+    "nets": {
+      "1": "SOLAR_P",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 269.24,
+    "y": 124.46000000000001,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      18,
+      63,
+      0
+    ],
+    "group": "",
+    "mpn": "100nF",
+    "uuid": "63c62ef7-5fb2-568e-a15e-03e374ff64cf"
+  },
+  {
+    "ref": "Q401",
+    "symbol": "Q_NMOS_GSD",
+    "value": "2N7002",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "COLD_OK",
+      "2": "TEMP_AND",
+      "3": "TEMP_PG"
+    },
+    "sheet": "05-temperature",
+    "x": 76.2,
+    "y": 190.5,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      23,
+      62,
+      0
+    ],
+    "group": "",
+    "mpn": "2N7002",
+    "uuid": "f696d494-a927-5a35-8271-aa09a7d3429d"
+  },
+  {
+    "ref": "Q402",
+    "symbol": "Q_NMOS_GSD",
+    "value": "2N7002",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "HOT_OK",
+      "2": "TEMP_UV",
+      "3": "TEMP_AND"
+    },
+    "sheet": "05-temperature",
+    "x": 116.84,
+    "y": 190.5,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      26,
+      62,
+      0
+    ],
+    "group": "",
+    "mpn": "2N7002",
+    "uuid": "39b82a1c-3c49-598b-a0a9-70077ed5ce57"
+  },
+  {
+    "ref": "R406",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "COLD_OK",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 40.64,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      23,
+      65,
+      90
+    ],
+    "group": "",
+    "mpn": "1M",
+    "uuid": "1fe0b8f6-4661-5d5f-9781-b05ddebdc30c"
+  },
+  {
+    "ref": "R407",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "HOT_OK",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 147.32,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      26,
+      65,
+      90
+    ],
+    "group": "",
+    "mpn": "1M",
+    "uuid": "21875423-5622-59f0-b0a7-a55fb75aff07"
+  },
+  {
+    "ref": "Q403",
+    "symbol": "Q_PMOS_GSD",
+    "value": "BSS84",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "TEMP_PG",
+      "2": "VINT",
+      "3": "TEMP_PASS"
+    },
+    "sheet": "05-temperature",
+    "x": 218.44,
+    "y": 187.96,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      29,
+      61,
+      0
+    ],
+    "group": "",
+    "mpn": "BSS84",
+    "uuid": "fb915db4-53d7-5a1e-be1c-42e7c475184c"
+  },
+  {
+    "ref": "R408",
+    "symbol": "R",
+    "value": "100k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "VINT",
+      "2": "TEMP_PG"
+    },
+    "sheet": "05-temperature",
+    "x": 177.8,
+    "y": 172.72,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      29,
+      58.5,
+      90
+    ],
+    "group": "",
+    "mpn": "100k",
+    "uuid": "408f9a75-4590-52ea-9f57-69fc9b3f95ba"
+  },
+  {
+    "ref": "R409",
+    "symbol": "R",
+    "value": "10k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "TEMP_PASS",
+      "2": "CHG_ENABLE"
+    },
+    "sheet": "05-temperature",
+    "x": 269.24,
+    "y": 180.34,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      31.5,
+      61,
+      0
+    ],
+    "group": "",
+    "mpn": "10k",
+    "uuid": "8212f468-40b6-5649-ba09-be34162709f8"
+  },
+  {
+    "ref": "R410",
+    "symbol": "R",
+    "value": "100k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CHG_ENABLE",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 304.8,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      33,
+      63,
+      90
+    ],
+    "group": "",
+    "mpn": "100k",
+    "uuid": "284cef70-563b-5a38-9d6b-02ecc2f27e91"
+  },
+  {
+    "ref": "Q404",
+    "symbol": "Q_NMOS_GSD",
+    "value": "2N7002 / INHIBIT",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "CHG_INHIBIT",
+      "2": "GND",
+      "3": "CHG_ENABLE"
+    },
+    "sheet": "05-temperature",
+    "x": 345.44,
+    "y": 190.5,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      35.5,
+      61,
+      0
+    ],
+    "group": "",
+    "mpn": "2N7002 / INHIBIT",
+    "uuid": "16ef9f70-9bcc-597d-a514-6c4245cd12ac"
+  },
+  {
+    "ref": "R411",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CHG_INHIBIT",
+      "2": "GND"
+    },
+    "sheet": "05-temperature",
+    "x": 375.92,
+    "y": 205.74,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      35.5,
+      64,
+      90
+    ],
+    "group": "",
+    "mpn": "1M",
+    "uuid": "cf78d8c2-abba-535f-aac2-0da1a655dec8"
+  },
+  {
+    "ref": "L601",
+    "symbol": "L",
+    "value": "47nH",
+    "footprint": "Node:L0402",
+    "nets": {
+      "1": "VR_PA",
+      "2": "PA_MATCH"
+    },
+    "sheet": "06-radio",
+    "x": 40.64,
+    "y": 66.04,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      59,
+      22,
+      0
+    ],
+    "group": "",
+    "mpn": "47nH",
+    "uuid": "ec7639e9-2c5d-52d7-99b5-8d00c6ea8ab1"
+  },
+  {
+    "ref": "C601",
+    "symbol": "C",
+    "value": "47nF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "VR_PA",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 20.32,
+    "y": 81.28,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      57.5,
+      22,
+      90
+    ],
+    "group": "",
+    "mpn": "47nF",
+    "uuid": "bd226f89-7a76-5663-a600-2104bb7a99ea"
+  },
+  {
+    "ref": "C602",
+    "symbol": "C",
+    "value": "68pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "VR_PA",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 40.64,
+    "y": 91.44,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      59,
+      23.5,
+      90
+    ],
+    "group": "",
+    "mpn": "68pF",
+    "uuid": "0510ff98-8677-599f-bf39-35d587fe07d5"
+  },
+  {
+    "ref": "R601",
+    "symbol": "R",
+    "value": "0R",
+    "footprint": "Node:R0402",
+    "nets": {
+      "1": "MCU_RFO_LP",
+      "2": "PA_MATCH"
+    },
+    "sheet": "06-radio",
+    "x": 40.64,
+    "y": 119.38,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      58.5,
+      25,
+      0
+    ],
+    "group": "",
+    "mpn": "0R",
+    "uuid": "ff106348-7fe1-5083-b339-584c83977c8f"
+  },
+  {
+    "ref": "C603",
+    "symbol": "C",
+    "value": "0.7pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "PA_MATCH",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 60.96,
+    "y": 139.7,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      60,
+      26.5,
+      90
+    ],
+    "group": "",
+    "mpn": "0.7pF",
+    "uuid": "f87ea794-6b38-5a85-8338-c3810dd034c7"
+  },
+  {
+    "ref": "L602",
+    "symbol": "L",
+    "value": "2.6nH",
+    "footprint": "Node:L0402",
+    "nets": {
+      "1": "PA_MATCH",
+      "2": "PA_NOTCH"
+    },
+    "sheet": "06-radio",
+    "x": 83.82,
+    "y": 119.38,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      62,
+      25,
+      0
+    ],
+    "group": "",
+    "mpn": "2.6nH",
+    "uuid": "1b9d264f-9b4d-51df-954d-f7e61c2b9689"
+  },
+  {
+    "ref": "C604",
+    "symbol": "C",
+    "value": "3pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "PA_MATCH",
+      "2": "PA_NOTCH"
+    },
+    "sheet": "06-radio",
+    "x": 83.82,
+    "y": 91.44,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      62,
+      23.8,
+      0
+    ],
+    "group": "",
+    "mpn": "3pF",
+    "uuid": "6c531c8f-0d11-5e3c-b384-4802d2bb442e"
+  },
+  {
+    "ref": "C605",
+    "symbol": "C",
+    "value": "8pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "PA_NOTCH",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 106.68,
+    "y": 139.7,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      64,
+      26.5,
+      90
+    ],
+    "group": "",
+    "mpn": "8pF",
+    "uuid": "d14584e1-cd5a-5ab9-a75c-9bdc26f9a917"
+  },
+  {
+    "ref": "C606",
+    "symbol": "C",
+    "value": "68pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "PA_NOTCH",
+      "2": "PA_DC"
+    },
+    "sheet": "06-radio",
+    "x": 129.54,
+    "y": 119.38,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      65.5,
+      25,
+      0
+    ],
+    "group": "",
+    "mpn": "68pF",
+    "uuid": "43b33c62-adc3-5cf4-8110-2c58f5a79946"
+  },
+  {
+    "ref": "L603",
+    "symbol": "L",
+    "value": "10nH",
+    "footprint": "Node:L0402",
+    "nets": {
+      "1": "PA_DC",
+      "2": "RF_TX50"
+    },
+    "sheet": "06-radio",
+    "x": 162.56,
+    "y": 119.38,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      68,
+      25,
+      0
+    ],
+    "group": "",
+    "mpn": "10nH",
+    "uuid": "d27879f2-32a4-58c5-8f54-1627b79d59f1"
+  },
+  {
+    "ref": "C607",
+    "symbol": "C",
+    "value": "3pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "RF_TX50",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 182.88,
+    "y": 139.7,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      69.5,
+      26.5,
+      90
+    ],
+    "group": "",
+    "mpn": "3pF",
+    "uuid": "c7f3f789-0bc6-50c0-bd66-f7637024574e"
+  },
+  {
+    "ref": "L604",
+    "symbol": "L",
+    "value": "11nH",
+    "footprint": "Node:L0402",
+    "nets": {
+      "1": "MCU_RFIP",
+      "2": "MCU_RFIN"
+    },
+    "sheet": "06-radio",
+    "x": 40.64,
+    "y": 187.96,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      57.7,
+      32.3,
+      90
+    ],
+    "group": "",
+    "mpn": "11nH",
+    "uuid": "b85f4f73-b948-5ca8-8e63-85d9f593dde9"
+  },
+  {
+    "ref": "C608",
+    "symbol": "C",
+    "value": "4.7pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "MCU_RFIN",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 40.64,
+    "y": 226.06,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      57.7,
+      34.2,
+      90
+    ],
+    "group": "",
+    "mpn": "4.7pF",
+    "uuid": "4c7b52c0-db62-5ded-9c70-11370fee1e5b"
+  },
+  {
+    "ref": "C609",
+    "symbol": "C",
+    "value": "3pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "MCU_RFIP",
+      "2": "RF_RX50"
+    },
+    "sheet": "06-radio",
+    "x": 78.74,
+    "y": 172.72,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      60,
+      31.5,
+      0
+    ],
+    "group": "",
+    "mpn": "3pF",
+    "uuid": "06363c60-88d9-5173-aab1-eb38472d51d6"
+  },
+  {
+    "ref": "C610",
+    "symbol": "C",
+    "value": "DNP RF_TUNE",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "RF_RX50",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 109.22,
+    "y": 193.04,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      62,
+      33,
+      90
+    ],
+    "group": "TUNE",
+    "mpn": "DNP RF_TUNE",
+    "uuid": "2eb6d7dd-3b6a-530c-b518-4651116fab42"
+  },
+  {
+    "ref": "R602",
+    "symbol": "R",
+    "value": "0R NORMAL TX",
+    "footprint": "Node:R0402",
+    "nets": {
+      "1": "RF_TX50",
+      "2": "SW_TX"
+    },
+    "sheet": "06-radio",
+    "x": 218.44,
+    "y": 83.82,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      72,
+      26,
+      0
+    ],
+    "group": "NORM",
+    "mpn": "0R NORMAL TX",
+    "uuid": "3d2578d8-9cc7-5ede-9ca6-f48c7fb019f1"
+  },
+  {
+    "ref": "R603",
+    "symbol": "R",
+    "value": "0R NORMAL RX",
+    "footprint": "Node:R0402",
+    "nets": {
+      "1": "RF_RX50",
+      "2": "SW_RX"
+    },
+    "sheet": "06-radio",
+    "x": 218.44,
+    "y": 116.84,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      71,
+      29.5,
+      0
+    ],
+    "group": "NORM",
+    "mpn": "0R NORMAL RX",
+    "uuid": "472ebb26-2f2a-5101-8dd9-6435d9e9a82b"
+  },
+  {
+    "ref": "U601",
+    "symbol": "BGS12SN6",
+    "value": "BGS12SN6 / NORMAL",
+    "footprint": "Node:BGS12SN6",
+    "nets": {
+      "3": "SW_TX",
+      "1": "SW_RX",
+      "6": "RF_SW_FILTER",
+      "5": "SW_ANT",
+      "4": "RF_SW_SUPPLY",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 269.24,
+    "y": 101.6,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      74.5,
+      28,
+      0
+    ],
+    "group": "NORM",
+    "mpn": "BGS12SN6 / NORMAL",
+    "uuid": "e0d20833-a764-5b72-94cf-d77ea383433a"
+  },
+  {
+    "ref": "R604",
+    "symbol": "R",
+    "value": "100R",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "RF_SW",
+      "2": "RF_SW_FILTER"
+    },
+    "sheet": "06-radio",
+    "x": 236.22,
+    "y": 157.48,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      74,
+      31,
+      0
+    ],
+    "group": "NORM",
+    "mpn": "100R",
+    "uuid": "ebdad470-5fc2-5f67-9ded-a875273dff27"
+  },
+  {
+    "ref": "C611",
+    "symbol": "C",
+    "value": "1nF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "RF_SW_FILTER",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 269.24,
+    "y": 172.72,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      76,
+      31,
+      90
+    ],
+    "group": "NORM",
+    "mpn": "1nF",
+    "uuid": "f842d56d-f0bb-5108-b4bf-b1f05000a790"
+  },
+  {
+    "ref": "C612",
+    "symbol": "C",
+    "value": "1nF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "RF_SW_SUPPLY",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 307.34,
+    "y": 76.2,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      74.5,
+      25.5,
+      90
+    ],
+    "group": "NORM",
+    "mpn": "1nF",
+    "uuid": "c79decf7-c96b-563d-b1d6-082a19b3fae5"
+  },
+  {
+    "ref": "R623",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "RF_SW_SUPPLY",
+      "2": "GND"
+    },
+    "sheet": "06-radio",
+    "x": 307.34,
+    "y": 142.24,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      77.5,
+      31,
+      90
+    ],
+    "group": "NORM",
+    "mpn": "1M",
+    "uuid": "9bbbb267-62b5-5008-bc5d-2c18a72027d5"
+  },
+  {
+    "ref": "R605",
+    "symbol": "R",
+    "value": "0R NORMAL ANT",
+    "footprint": "Node:R0402",
+    "nets": {
+      "1": "SW_ANT",
+      "2": "ANT_TUNE_IN"
+    },
+    "sheet": "06-radio",
+    "x": 335.28,
+    "y": 101.6,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      78,
+      28,
+      0
+    ],
+    "group": "NORM",
+    "mpn": "0R NORMAL ANT",
+    "uuid": "a569a384-cff9-536c-9bfa-d1466a8a4a72"
+  },
+  {
+    "ref": "R606",
+    "symbol": "R",
+    "value": "0R FEM TX",
+    "footprint": "Node:R0402",
+    "nets": {
+      "1": "RF_TX50",
+      "2": "FEM_TX"
+    },
+    "sheet": "06-radio",
+    "x": 203.2,
+    "y": 223.52,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      70.5,
+      23.8,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "0R FEM TX",
+    "uuid": "a553454e-7752-5f51-b576-ad70e340441f"
+  },
+  {
+    "ref": "R607",
+    "symbol": "R",
+    "value": "0R FEM RX",
+    "footprint": "Node:R0402",
+    "nets": {
+      "1": "RF_RX50",
+      "2": "FEM_RX"
+    },
+    "sheet": "06-radio",
+    "x": 241.3,
+    "y": 223.52,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      64,
+      30,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "0R FEM RX",
+    "uuid": "147777c4-9899-54f8-84c8-be2ab939b17a"
+  },
+  {
+    "ref": "U602",
+    "symbol": "SKY66423-11",
+    "value": "SKY66423-11 OPTIONAL",
+    "footprint": "Node:SKY66423_MCM16",
+    "nets": {
+      "1": "FEM_TX",
+      "2": "FEM_RX",
+      "3": null,
+      "4": "CSD_PACK",
+      "5": "CPS_PACK",
+      "6": "CTX_PACK",
+      "13": "FEM_PA",
+      "11": "FEM_TXIN",
+      "9": "FEM_ANT",
+      "7": "FEM_RXLOOP",
+      "8": "FEM_RXLOOP",
+      "15": "FEM_VCC0",
+      "16": "FEM_VCC1",
+      "10": "GND",
+      "12": "GND",
+      "17": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 101.6,
+    "y": 137.16,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      72,
+      18,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "SKY66423-11 OPTIONAL",
+    "uuid": "5e8b83c9-dbc6-5d4b-8820-ba02a89b0138"
+  },
+  {
+    "ref": "R608",
+    "symbol": "R",
+    "value": "0R",
+    "footprint": "Node:R0805",
+    "nets": {
+      "1": "PACK_P",
+      "2": "FEM_VCC0"
+    },
+    "sheet": "07-fem",
+    "x": 40.64,
+    "y": 71.12,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      70.5,
+      13,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "0R",
+    "uuid": "a4bac14b-a3bb-5923-b026-da4a433f7c7f"
+  },
+  {
+    "ref": "L605",
+    "symbol": "L",
+    "value": "0.6nH EK3 0201",
+    "footprint": "Node:L0201",
+    "nets": {
+      "1": "FEM_VCC0",
+      "2": "FEM_VCC1"
+    },
+    "sheet": "07-fem",
+    "x": 81.28,
+    "y": 71.12,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      71.25,
+      15.7,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "LQP03TN0N6B02D",
+    "uuid": "66b843fd-76ad-589e-815f-97e42f2f75e5"
+  },
+  {
+    "ref": "L606",
+    "symbol": "L",
+    "value": "6.8nH",
+    "footprint": "Node:L0402",
+    "nets": {
+      "1": "PACK_P",
+      "2": "FEM_PA"
+    },
+    "sheet": "07-fem",
+    "x": 142.24,
+    "y": 73.66,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      72.75,
+      14.5,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "6.8nH",
+    "uuid": "d31ce4a8-786e-5fe3-8004-ccbf5cdce1cb"
+  },
+  {
+    "ref": "C613",
+    "symbol": "C",
+    "value": "100nF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 20.32,
+    "y": 213.36,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      65,
+      13,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "100nF",
+    "uuid": "956db210-0542-5b4d-93be-08d80568eeea"
+  },
+  {
+    "ref": "C614",
+    "symbol": "C",
+    "value": "1uF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 55.88,
+    "y": 213.36,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      66.5,
+      13,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1uF",
+    "uuid": "a80f2076-ac87-5cb4-964c-dfca56658f7f"
+  },
+  {
+    "ref": "C615",
+    "symbol": "C",
+    "value": "47uF 10V",
+    "footprint": "Node:C0805",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 91.44,
+    "y": 213.36,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      64,
+      16,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "47uF 10V",
+    "uuid": "1a5f8a24-f374-52fd-875f-297ccb89e7af"
+  },
+  {
+    "ref": "C616",
+    "symbol": "C",
+    "value": "4.7uF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 127.0,
+    "y": 213.36,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      67,
+      16,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "4.7uF",
+    "uuid": "6aee20ec-14e2-57ed-9051-f703ea50bd5c"
+  },
+  {
+    "ref": "C617",
+    "symbol": "C",
+    "value": "33pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 20.32,
+    "y": 251.46,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      74,
+      13,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "33pF",
+    "uuid": "a5abe281-094b-53c1-a64d-2b4096bceb60"
+  },
+  {
+    "ref": "C618",
+    "symbol": "C",
+    "value": "1nF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "PACK_P",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 55.88,
+    "y": 251.46,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      75.5,
+      13,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1nF",
+    "uuid": "74d7ede8-95c6-5d22-88ba-1604cfd5a911"
+  },
+  {
+    "ref": "C619",
+    "symbol": "C",
+    "value": "10nF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "FEM_VCC0",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 91.44,
+    "y": 251.46,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      69,
+      14,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "10nF",
+    "uuid": "17931c17-0e80-59be-b80a-a677127d2b64"
+  },
+  {
+    "ref": "C620",
+    "symbol": "C",
+    "value": "82pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "FEM_VCC0",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 127.0,
+    "y": 251.46,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      69,
+      15.5,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "82pF",
+    "uuid": "de1536c9-ee52-5af3-8341-81d01d7c1500"
+  },
+  {
+    "ref": "L607",
+    "symbol": "L",
+    "value": "2.7nH",
+    "footprint": "Node:L0402",
+    "nets": {
+      "1": "FEM_PA",
+      "2": "OMN1"
+    },
+    "sheet": "07-fem",
+    "x": 177.8,
+    "y": 93.98,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      75,
+      16,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "2.7nH",
+    "uuid": "76315cb5-b51b-5e26-8195-458ac74c5865"
+  },
+  {
+    "ref": "C621",
+    "symbol": "C",
+    "value": "10pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "OMN1",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 193.04,
+    "y": 116.84,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      77,
+      15,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "10pF",
+    "uuid": "6cc5fd2e-3959-5d70-9606-118a3741578a"
+  },
+  {
+    "ref": "C622",
+    "symbol": "C",
+    "value": "DNP RF_TUNE",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "OMN1",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 215.9,
+    "y": 116.84,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      78.5,
+      15,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "DNP RF_TUNE",
+    "uuid": "1975034e-9450-5b3d-97ab-c2c8a2f6c198"
+  },
+  {
+    "ref": "L608",
+    "symbol": "L",
+    "value": "7.5nH",
+    "footprint": "Node:L0402",
+    "nets": {
+      "1": "OMN1",
+      "2": "FEM_TXIN"
+    },
+    "sheet": "07-fem",
+    "x": 241.3,
+    "y": 93.98,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      77,
+      17,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "7.5nH",
+    "uuid": "00120cc2-c04d-545e-b105-2fc222962c54"
+  },
+  {
+    "ref": "C623",
+    "symbol": "C",
+    "value": "2.4pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "FEM_TXIN",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 269.24,
+    "y": 116.84,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      76,
+      19,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "2.4pF",
+    "uuid": "efe1991b-a14b-5519-9a80-0b0f02fadaf8"
+  },
+  {
+    "ref": "L609",
+    "symbol": "L",
+    "value": "5.6nH",
+    "footprint": "Node:L0402",
+    "nets": {
+      "1": "FEM_ANT",
+      "2": "FEM_FILTER"
+    },
+    "sheet": "07-fem",
+    "x": 190.5,
+    "y": 162.56,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      76,
+      22,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "5.6nH",
+    "uuid": "306531d1-e00a-59b6-b148-aacc59482769"
+  },
+  {
+    "ref": "C624",
+    "symbol": "C",
+    "value": "1.5pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "FEM_ANT",
+      "2": "FEM_FILTER"
+    },
+    "sheet": "07-fem",
+    "x": 190.5,
+    "y": 144.78,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      76,
+      23.2,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "1.5pF",
+    "uuid": "7114e4b2-3fdd-5e5e-93b2-20589a170d91"
+  },
+  {
+    "ref": "C625",
+    "symbol": "C",
+    "value": "2.2pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "FEM_FILTER",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 223.52,
+    "y": 187.96,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      78,
+      23.5,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "2.2pF",
+    "uuid": "cc3031d1-c126-567d-99c1-a6ce41110a01"
+  },
+  {
+    "ref": "L610",
+    "symbol": "L",
+    "value": "5.6nH",
+    "footprint": "Node:L0402",
+    "nets": {
+      "1": "FEM_FILTER",
+      "2": "FEM_FINAL"
+    },
+    "sheet": "07-fem",
+    "x": 256.54,
+    "y": 162.56,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      80,
+      22,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "5.6nH",
+    "uuid": "e6af2b27-55d0-50d4-8461-c20bfb79a184"
+  },
+  {
+    "ref": "C626",
+    "symbol": "C",
+    "value": "DNP RF_TUNE",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "FEM_FINAL",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 279.4,
+    "y": 187.96,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      81.5,
+      23.5,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "DNP RF_TUNE",
+    "uuid": "1c20bef9-b09d-5acd-a86a-b709ac1f9894"
+  },
+  {
+    "ref": "R609",
+    "symbol": "R",
+    "value": "0R FEM ANT",
+    "footprint": "Node:R0402",
+    "nets": {
+      "1": "FEM_FINAL",
+      "2": "ANT_TUNE_IN"
+    },
+    "sheet": "07-fem",
+    "x": 307.34,
+    "y": 162.56,
+    "rot": 90,
+    "dnp": true,
+    "pcb": [
+      83,
+      22,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "0R FEM ANT",
+    "uuid": "7699fe0d-be96-5e46-8332-afec54411939"
+  },
+  {
+    "ref": "C627",
+    "symbol": "C",
+    "value": "68pF",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "ANT_TUNE_IN",
+      "2": "ANT_PI"
+    },
+    "sheet": "07-fem",
+    "x": 335.28,
+    "y": 205.74,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      85,
+      22,
+      0
+    ],
+    "group": "",
+    "mpn": "68pF",
+    "uuid": "fe478cda-2ae3-5d59-84a5-9952496d468b"
+  },
+  {
+    "ref": "C628",
+    "symbol": "C",
+    "value": "DNP RF_TUNE",
+    "footprint": "Node:C0402",
+    "nets": {
+      "1": "ANT_PI",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 307.34,
+    "y": 243.84,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      87,
+      23.5,
+      90
+    ],
+    "group": "TUNE",
+    "mpn": "DNP RF_TUNE",
+    "uuid": "e47eb3d8-11ad-5853-96d0-1aaf11857755"
+  },
+  {
+    "ref": "R610",
+    "symbol": "R",
+    "value": "0R RF_TUNE",
+    "footprint": "Node:R0402",
+    "nets": {
+      "1": "ANT_PI",
+      "2": "ANT"
+    },
+    "sheet": "07-fem",
+    "x": 353.06,
+    "y": 243.84,
+    "rot": 90,
+    "dnp": false,
+    "pcb": [
+      89,
+      22,
+      0
+    ],
+    "group": "",
+    "mpn": "0R RF_TUNE",
+    "uuid": "c4af3ea1-9552-5fb6-8b41-ad3d8941d968"
+  },
+  {
+    "ref": "J601",
+    "symbol": "UFL",
+    "value": "ANT / 50R",
+    "footprint": "Node:UFL",
+    "nets": {
+      "1": "ANT",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 383.54,
+    "y": 208.28,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      94,
+      22,
+      180
+    ],
+    "group": "",
+    "mpn": "U.FL-R-SMT-1(10)",
+    "uuid": "801ec26d-101a-5227-95b1-2e0d6a06e947"
+  },
+  {
+    "ref": "D601",
+    "symbol": "RF_ESD",
+    "value": "AQ3118E-01ETG 18V 0.3pF",
+    "footprint": "Node:ESD0402",
+    "nets": {
+      "1": "ANT",
+      "2": "GND"
+    },
+    "sheet": "07-fem",
+    "x": 383.54,
+    "y": 251.46,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      92,
+      23.2,
+      90
+    ],
+    "group": "",
+    "mpn": "AQ3118E-01ETG",
+    "uuid": "a2c99b01-ed70-5044-ad2c-aae27270d260"
+  },
+  {
+    "ref": "Q601",
+    "symbol": "Q_NMOS_GSD",
+    "value": "2N7002",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "FEM_CSD",
+      "2": "GND",
+      "3": "CSD_PACK_INV"
+    },
+    "sheet": "08-fem-controls",
+    "x": 60.96,
+    "y": 101.6,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      60,
+      50,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "2N7002",
+    "uuid": "f984133c-5394-5a9f-b75d-bdde20b7ab6c"
+  },
+  {
+    "ref": "Q602",
+    "symbol": "Q_PMOS_GSD",
+    "value": "BSS84",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "CSD_PACK_INV",
+      "2": "PACK_P",
+      "3": "CSD_PACK_DRV"
+    },
+    "sheet": "08-fem-controls",
+    "x": 101.6,
+    "y": 157.48,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      64,
+      50,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "BSS84",
+    "uuid": "c219d708-9045-5edf-b20f-9216eba44067"
+  },
+  {
+    "ref": "R611",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "FEM_CSD",
+      "2": "GND"
+    },
+    "sheet": "08-fem-controls",
+    "x": 35.56,
+    "y": 142.24,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      60,
+      53,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1M",
+    "uuid": "33a48f5b-c676-5cd4-a1d6-bc516bdf05c9"
+  },
+  {
+    "ref": "R612",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "PACK_P",
+      "2": "CSD_PACK_INV"
+    },
+    "sheet": "08-fem-controls",
+    "x": 81.28,
+    "y": 73.66,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      62,
+      47,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1M",
+    "uuid": "bbb97d64-4f48-581e-8e47-a596b38b5af1"
+  },
+  {
+    "ref": "R613",
+    "symbol": "R",
+    "value": "1k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CSD_PACK_DRV",
+      "2": "CSD_PACK"
+    },
+    "sheet": "08-fem-controls",
+    "x": 106.68,
+    "y": 119.38,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      64,
+      47,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1k",
+    "uuid": "0b706160-9f19-5e1e-b1c4-6205a18a4217"
+  },
+  {
+    "ref": "R614",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CSD_PACK",
+      "2": "GND"
+    },
+    "sheet": "08-fem-controls",
+    "x": 106.68,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      64,
+      53,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1M",
+    "uuid": "e52a0293-b0b6-5e4a-95a8-403ec5136c02"
+  },
+  {
+    "ref": "TP601",
+    "symbol": "TestPoint",
+    "value": "CSD_PACK",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "CSD_PACK"
+    },
+    "sheet": "08-fem-controls",
+    "x": 81.28,
+    "y": 233.68,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      66,
+      55,
+      0
+    ],
+    "group": "",
+    "mpn": "CSD_PACK",
+    "uuid": "fecbc975-6504-52b9-af24-133f15f189f1"
+  },
+  {
+    "ref": "Q603",
+    "symbol": "Q_NMOS_GSD",
+    "value": "2N7002",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "FEM_CTX",
+      "2": "GND",
+      "3": "CTX_PACK_INV"
+    },
+    "sheet": "08-fem-controls",
+    "x": 177.8,
+    "y": 101.6,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      69,
+      50,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "2N7002",
+    "uuid": "2d2f42f9-b721-533d-8a1f-121e2d1f309b"
+  },
+  {
+    "ref": "Q604",
+    "symbol": "Q_PMOS_GSD",
+    "value": "BSS84",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "CTX_PACK_INV",
+      "2": "PACK_P",
+      "3": "CTX_PACK_DRV"
+    },
+    "sheet": "08-fem-controls",
+    "x": 218.44,
+    "y": 157.48,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      73,
+      50,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "BSS84",
+    "uuid": "09aada47-fdb7-52a4-896e-5845f31c2821"
+  },
+  {
+    "ref": "R615",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "FEM_CTX",
+      "2": "GND"
+    },
+    "sheet": "08-fem-controls",
+    "x": 152.4,
+    "y": 142.24,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      69,
+      53,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1M",
+    "uuid": "7860615d-bc45-523a-8140-2da85f47143c"
+  },
+  {
+    "ref": "R616",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "PACK_P",
+      "2": "CTX_PACK_INV"
+    },
+    "sheet": "08-fem-controls",
+    "x": 198.12,
+    "y": 73.66,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      71,
+      47,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1M",
+    "uuid": "142342b2-9643-5f9c-9bad-a977624d3c41"
+  },
+  {
+    "ref": "R617",
+    "symbol": "R",
+    "value": "1k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CTX_PACK_DRV",
+      "2": "CTX_PACK"
+    },
+    "sheet": "08-fem-controls",
+    "x": 223.52,
+    "y": 119.38,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      73,
+      47,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1k",
+    "uuid": "da7004db-a362-5a5b-895c-be99a2d921ef"
+  },
+  {
+    "ref": "R618",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CTX_PACK",
+      "2": "GND"
+    },
+    "sheet": "08-fem-controls",
+    "x": 223.52,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      73,
+      53,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1M",
+    "uuid": "9f3f282f-8302-50ce-88e0-00890345fee2"
+  },
+  {
+    "ref": "TP602",
+    "symbol": "TestPoint",
+    "value": "CTX_PACK",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "CTX_PACK"
+    },
+    "sheet": "08-fem-controls",
+    "x": 198.12,
+    "y": 233.68,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      75,
+      55,
+      0
+    ],
+    "group": "",
+    "mpn": "CTX_PACK",
+    "uuid": "ae47dfca-4118-554e-af3b-5eee1c841deb"
+  },
+  {
+    "ref": "Q605",
+    "symbol": "Q_NMOS_GSD",
+    "value": "2N7002",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "FEM_CPS",
+      "2": "GND",
+      "3": "CPS_PACK_INV"
+    },
+    "sheet": "08-fem-controls",
+    "x": 294.64,
+    "y": 101.6,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      78,
+      50,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "2N7002",
+    "uuid": "61178f1b-ef59-5925-80af-4060739ecd1a"
+  },
+  {
+    "ref": "Q606",
+    "symbol": "Q_PMOS_GSD",
+    "value": "BSS84",
+    "footprint": "Node:SOT23",
+    "nets": {
+      "1": "CPS_PACK_INV",
+      "2": "PACK_P",
+      "3": "CPS_PACK_DRV"
+    },
+    "sheet": "08-fem-controls",
+    "x": 335.28,
+    "y": 157.48,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      82,
+      50,
+      0
+    ],
+    "group": "FEM",
+    "mpn": "BSS84",
+    "uuid": "1cbe5c88-6e65-52c2-a141-2b101623a458"
+  },
+  {
+    "ref": "R619",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "FEM_CPS",
+      "2": "GND"
+    },
+    "sheet": "08-fem-controls",
+    "x": 269.24,
+    "y": 142.24,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      78,
+      53,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1M",
+    "uuid": "07c6a334-dd0a-585e-9dd6-a024081d7ef2"
+  },
+  {
+    "ref": "R620",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "PACK_P",
+      "2": "CPS_PACK_INV"
+    },
+    "sheet": "08-fem-controls",
+    "x": 314.96,
+    "y": 73.66,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      80,
+      47,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1M",
+    "uuid": "7a3a53bc-17b9-5e1d-9276-1b9463270fbf"
+  },
+  {
+    "ref": "R621",
+    "symbol": "R",
+    "value": "1k",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CPS_PACK_DRV",
+      "2": "CPS_PACK"
+    },
+    "sheet": "08-fem-controls",
+    "x": 340.36,
+    "y": 119.38,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      82,
+      47,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1k",
+    "uuid": "003a503a-b85c-5ed0-b072-f217c78d715a"
+  },
+  {
+    "ref": "R622",
+    "symbol": "R",
+    "value": "1M",
+    "footprint": "Node:R0603",
+    "nets": {
+      "1": "CPS_PACK",
+      "2": "GND"
+    },
+    "sheet": "08-fem-controls",
+    "x": 340.36,
+    "y": 203.2,
+    "rot": 0,
+    "dnp": true,
+    "pcb": [
+      82,
+      53,
+      90
+    ],
+    "group": "FEM",
+    "mpn": "1M",
+    "uuid": "3e2b5606-2ea9-5c31-92ef-3c3514ac19e0"
+  },
+  {
+    "ref": "TP603",
+    "symbol": "TestPoint",
+    "value": "CPS_PACK",
+    "footprint": "Node:TestPad",
+    "nets": {
+      "1": "CPS_PACK"
+    },
+    "sheet": "08-fem-controls",
+    "x": 314.96,
+    "y": 233.68,
+    "rot": 0,
+    "dnp": false,
+    "pcb": [
+      84,
+      55,
+      0
+    ],
+    "group": "",
+    "mpn": "CPS_PACK",
+    "uuid": "3e5ee724-6c86-54bb-a200-26f64bce5394"
+  },
+  {
+    "ref": "#FLG172",
+    "symbol": "PWR_FLAG",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "VDDA"
+    },
+    "sheet": "01-mcu",
+    "x": 355.6,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": null,
+    "group": "",
+    "mpn": "PWR_FLAG",
+    "uuid": "d64eefbb-7756-55d7-9413-761cce974035"
+  },
+  {
+    "ref": "#FLG173",
+    "symbol": "PWR_FLAG",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "RF1V55"
+    },
+    "sheet": "01-mcu",
+    "x": 368.3,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": null,
+    "group": "",
+    "mpn": "PWR_FLAG",
+    "uuid": "a65668e3-e92b-56f8-b38b-3f18289e686f"
+  },
+  {
+    "ref": "#FLG174",
+    "symbol": "PWR_FLAG",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "SOLAR_P"
+    },
+    "sheet": "02-solar",
+    "x": 355.6,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": null,
+    "group": "",
+    "mpn": "PWR_FLAG",
+    "uuid": "a503a363-4180-54ab-b8a5-c7463485a783"
+  },
+  {
+    "ref": "#FLG175",
+    "symbol": "PWR_FLAG",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "PACK_P"
+    },
+    "sheet": "02-solar",
+    "x": 368.3,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": null,
+    "group": "",
+    "mpn": "PWR_FLAG",
+    "uuid": "7c076a18-fb9a-5ec6-afe6-9e374a92c902"
+  },
+  {
+    "ref": "#FLG176",
+    "symbol": "PWR_FLAG",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "GND"
+    },
+    "sheet": "02-solar",
+    "x": 381.0,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": null,
+    "group": "",
+    "mpn": "PWR_FLAG",
+    "uuid": "9d80d1ae-1b04-5033-937d-6494e9c62aed"
+  },
+  {
+    "ref": "#FLG177",
+    "symbol": "PWR_FLAG",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "CELL_N"
+    },
+    "sheet": "03-battery",
+    "x": 355.6,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": null,
+    "group": "",
+    "mpn": "PWR_FLAG",
+    "uuid": "1ec3308d-72fa-5e4e-b80d-24c363a27b44"
+  },
+  {
+    "ref": "#FLG178",
+    "symbol": "PWR_FLAG",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "BMS_BAT"
+    },
+    "sheet": "03-battery",
+    "x": 368.3,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": null,
+    "group": "",
+    "mpn": "PWR_FLAG",
+    "uuid": "d81e47a5-cb8f-550a-a27b-3bca33d9f143"
+  },
+  {
+    "ref": "#FLG179",
+    "symbol": "PWR_FLAG",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "FEM_VCC0"
+    },
+    "sheet": "07-fem",
+    "x": 355.6,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": null,
+    "group": "",
+    "mpn": "PWR_FLAG",
+    "uuid": "9a791738-8376-55ed-bc5b-c972787e50e3"
+  },
+  {
+    "ref": "#FLG180",
+    "symbol": "PWR_FLAG",
+    "value": "PWR_FLAG",
+    "footprint": "",
+    "nets": {
+      "1": "FEM_VCC1"
+    },
+    "sheet": "07-fem",
+    "x": 368.3,
+    "y": 55.88,
+    "rot": 0,
+    "dnp": false,
+    "pcb": null,
+    "group": "",
+    "mpn": "PWR_FLAG",
+    "uuid": "d71d4897-b38e-580c-8a34-db8abaa21913"
+  }
+]

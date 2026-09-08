@@ -1,0 +1,1873 @@
+                                                                            DATASHEET                                 AEM10300
+
+    Feature                                                                       Description
+      Ultra-low power start-up                                                    The AEM10300 is an integrated energy management circuit
+         - Cold start from 275 mV input voltage and 3 µW input                    that extracts DC power from an ambient energy harvesting
+           power (typical).                                                       source to store energy in a storage element. The AEM10300
+                                                                                  allows to extend battery lifetime and ultimately eliminates
+      Very efficient energy extraction
+                                                                                  the primary energy storage element in a large range of
+         - Open-circuit voltage sensing for Maximum Power
+                                                                                  applications.
+           Point Tracking (MPPT).
+         - Selectable open-circuit voltage ratios from 60% to                     Thanks to its Maximum Power Point Tracking system, the
+           90% or fixed impedance.                                                AEM10300 extracts the maximum energy available from the
+         - Programmable MPPT sensing period.                                      source. It integrates an ultra-low power DCDC converter
+         - MPPT voltage operation range from 100 mV to 4.5 V.                     which operates with input voltages ranging from 100 mV to
+      Adaptive and smart energy management                                        4.5 V.
+         - DCDC switches automatically between boost, buck-                       With its unique cold start circuit, the AEM10300 can start
+           boost and buck operation, according to input and                       harvesting with an input voltage as low as 275 mV and from
+           output voltages, to maximize energy transfer.                          an input power of 3 μW. The preset protection levels
+      Battery protection features                                                 determine the storage element voltages protection
+         - Selectable    over-charge      and     over-discharge                  thresholds to avoid over-charging and over-discharging the
+           protection for any type of rechargeable battery or                     storage element and thus, avoiding damaging it. Those are set
+           (super-)capacitor.                                                     through configuration pins. Moreover, custom threshold
+         - Fast super-capacitor charging.                                         voltages can be obtained at the expense of a few
+         - Dual cell super-capacitor balancing circuit.                           configuration resistors.
+      Smallest footprint, smallest BOM                                            The chip integrates all active elements for powering a typical
+         - Only three external components are required.                           wireless sensor. Only two capacitors and one inductor are
+             - One 10 µH inductor.                                                required.
+             - Two capacitors: 10 µF and 22 µF.
+                                                                                  Device Information
+    Applications                                                                    Part Number             Package         Body size
+     Smart home                       Industrial sensor                             10AEM10300C0000         QFN 28-pin      4x4mm
+     Smart building                   Retail
+     Edge IoT                         PC accessories                              Evaluation Board
+                                                                                    Part Number
+                                      CSRC     LDCDC
+                                      22uF         10uH                             2AAEM10300C001
+                                             LIN
+                             BUFSRC
+
+
+
+
+                                                          LOUT
+
+
+
+
+            SOURCE     SRC
+                                                                     VINT
+
+                                  AEM10300                   VINT
+                                                                        CINT
+                                                                        10uF
+                VSTO
+                       STO
+                                       GND
+             Li-Ion
+            Battery
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                                 Copyright © YEAR
+                                                                             2026 e-peas SA                                     Confidential       1
+                                                                      DATASHEET                                             AEM10300
+
+    Table of Contents
+    1. Introduction                                                                                                                                   6
+    2. Pin Configuration and Functions                                                                                                                7
+    3. Specifications                                                                                                                                 9
+          3.1. Absolute Maximum Ratings ....................................................................................................9
+          3.2. ESD Ratings .............................................................................................................................9
+          3.3. Thermal Resistance .................................................................................................................9
+          3.4. Typical Electrical Characteristics at 25 °C ..............................................................................10
+          3.5. Recommended Operating Conditions ...................................................................................11
+          3.6. Typical Characteristics ..........................................................................................................12
+    4. Functional Block Diagram                                                                                                                     14
+    5. Theory of Operation                                                                                                                          15
+          5.1. DCDC Converter ....................................................................................................................15
+          5.2. Cold-Start Circuit ...................................................................................................................15
+          5.3. AEM10300 States Description ..............................................................................................16
+          5.4. Maximum Power Point Tracking ...........................................................................................16
+          5.5. Balancing for Dual-Cell Supercapacitor ................................................................................17
+    6. System Configuration                                                                                                                         18
+          6.1. Storage Element Configuration .............................................................................................18
+          6.2. Custom Mode Configuration ................................................................................................19
+          6.3. Disable Storage Element Charging ........................................................................................19
+          6.4. High Power / Low Power Mode ............................................................................................19
+          6.5. MPPT Configuration ..............................................................................................................20
+          6.6. ZMPP Configuration ..............................................................................................................20
+          6.7. Source to Storage Element Feed-Through ............................................................................20
+          6.8. External Components ............................................................................................................21
+    7. Typical Application Circuits                                                                                                                 22
+          7.1. Example Circuit 1 ..................................................................................................................22
+          7.2. Example Circuit 2 ..................................................................................................................23
+    8. Circuit Behavior                                                                                                                             24
+          8.1. Wake-up state and Supply state ...........................................................................................24
+          8.2. Supply state ..........................................................................................................................25
+          8.3. Supply state and Reset state .................................................................................................26
+    9. Schematic                                                                                                                                    27
+    10. Layout                                                                                                                                      28
+          10.1. Guidelines ...........................................................................................................................28
+          10.2. Layout Example ...................................................................................................................29
+    11. Package Information                                                                                                                         30
+          11.1. Moisture Sensitivity Level ...................................................................................................30
+          11.2. RoHS Compliance ................................................................................................................30
+          11.3. REACH Compliance .............................................................................................................30
+          11.4. Tape and Reel Dimensions ..................................................................................................30
+          11.5. Package Dimensions ...........................................................................................................31
+          11.6. Board Layout .......................................................................................................................32
+
+
+
+
+DS-AEM10300-v1.5                                         Copyright © 2026 e-peas SA                                                                         2
+                                    DATASHEET           AEM10300
+
+    12. Glossary                                             33
+    13. Revision History                                     34
+
+
+
+
+DS-AEM10300-v1.5           Copyright © 2026 e-peas SA              3
+                                                                     DATASHEET                                            AEM10300
+
+    List of Figures
+       Figure 1: Simplified Schematic View .....................................................................................................6
+       Figure 2: Pinout Diagram QFN 28-pin ...................................................................................................7
+       Figure 3: DCDC efficiency from SRC to STO in low power mode ..........................................................12
+       Figure 4: DCDC efficiency from SRC to STO in high power mode .........................................................13
+       Figure 5: Functional Block Diagram ......................................................................................................14
+       Figure 6: Simplified Schematic View of the AEM10300 ........................................................................15
+       Figure 7: Diagram of the AEM10300 States .........................................................................................16
+       Figure 8: MPPT evaluation behavior (with TMPPT,WAIT of 4.4 ms) ........................................................17
+       Figure 9: Custom Mode Settings ..........................................................................................................19
+       Figure 10: RZMPP Connection to the AEM10300 ...................................................................................20
+       Figure 11: Typical Application Circuit 1 ................................................................................................22
+       Figure 12: Typical Application Circuit 2 ................................................................................................23
+       Figure 13: Wake-up state and Supply state ..........................................................................................24
+       Figure 14: Supply state .........................................................................................................................25
+       Figure 15: Supply state and Reset state ...............................................................................................26
+       Figure 16: Schematic Example ..............................................................................................................27
+       Figure 17: Layout Example for the AEM10300 and its Passive Components .......................................29
+       Figure 18: Tape and reel dimensions ....................................................................................................30
+       Figure 19: QFN 28-pin 4x4mm Drawing (All Dimensions in mm) .........................................................31
+       Figure 20: Recommended Board Layout (All Dimensions in mm) ........................................................32
+
+
+
+
+DS-AEM10300-v1.5                                         Copyright © 2026 e-peas SA                                                                          4
+                                                                       DATASHEET                                            AEM10300
+
+    List of Tables
+       Table 1: Power and Status Pins ............................................................................................................7
+       Table 2: Configuration and Ground Pins ...............................................................................................8
+       Table 3: Absolute Maximum Ratings ....................................................................................................9
+       Table 4: ESD ratings ..............................................................................................................................9
+       Table 5: Thermal Resistance .................................................................................................................9
+       Table 6: Typical Electrical Characteristics .............................................................................................10
+       Table 7: Recommended Operation Conditions ....................................................................................11
+       Table 8: DCDC Converter Modes ..........................................................................................................15
+       Table 9: Storage Element Configuration Pins .......................................................................................18
+       Table 10: MPPT Ratio Configuration Pins .............................................................................................20
+       Table 11: MPPT Timing Configuration Pins ..........................................................................................20
+       Table 12: Minimal Bill of Materials .......................................................................................................27
+       Table 13: Moisture sensitivity level ......................................................................................................30
+       Table 14: Revision History ....................................................................................................................34
+
+
+
+
+DS-AEM10300-v1.5                                          Copyright © 2026 e-peas SA                                                                          5
+                                                            DATASHEET                                        AEM10300
+
+
+                                                      AEM10300                                      Storage Element
+                                                                                            x   Li-ion cell
+                                     SRC                                            STO
+               Source             100mV - 4.5V
+                                                                                            x
+                                                                                            x
+                                                                                                 LiFePO4 cell
+                                                                                                 NiMH cell
+                                     MAX                                                    x   Dual-cell supercapacitor
+                                                                                            x   Single-cell supercapacitor
+                                                                                            x   Other...
+
+
+
+                                                  Figure 1: Simplified Schematic View
+
+    1. Introduction
+    The AEM10300 is a full-featured energy efficient power           Status pin ST_STO provides information about the voltage
+    management circuit able to harvest energy from an energy         levels of the storage element.
+    source (connected to SRC) to charge a storage element            ST_STO is HIGH when the voltage of the storage element VSTO
+    (connected to STO). This is done with a minimal bill of          is above VCHRDY and is reset when the voltage drops below
+    material: only 2 capacitors and one inductor are needed for a    VOVDIS.
+    basic setup.
+                                                                     The Maximum Power Point (MPP) ratio is configurable thanks
+    The heart of the AEM10300 is a regulated switching DCDC          to three configuration pins (R_MPP[2:0]) and ensures an
+    converter with high power conversion efficiency.                 optimum biasing of the harvester to maximize power
+    At first start-up, as soon as a required cold-start voltage of   extraction. Depending on the harvester, it is possible to adapt
+    275 mV and a sparse amount of power of at least 3 μW is          the timings of the MPP evaluations with the two configuration
+    available at the source, the AEM10300 coldstarts. After the      pins (T_MPP[1:0]) that sets the periodicity and the duration of
+    cold start, the AEM extracts the power available from the        the MPP evaluation.
+    source if the working input voltage is at least 100 mV.          The AEM10300’s DCDC converter can work in two modes:
+    Through four configuration pins (STO_CFG[3:0]), the user can     LOW POWER MODE and HIGH POWER MODE, each one of
+    select a specific operating mode out of 15 modes that cover      these being optimized for a power range on SRC.
+    most application requirements without any dedicated              The charging of the storage element can be prevented by
+    external component. Those operating modes define the             pulling EN_STO_CH to GND, typically to protect the storage
+    protection levels of the storage element. If none of those 15    element if the temperature is too low/high to safely charge it.
+    modes fit the user’s storage element, a custom mode is also
+    available to allow the user to define a mode with custom
+    specifications.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                 Copyright © YEAR
+                                                             2026 e-peas SA                                                   Confidential   6
+                                                          DATASHEET                                       AEM10300
+
+    2. Pin Configuration and Functions
+
+
+
+
+                                                         STO_CFG[2]
+                                                         STO_CFG[1]
+                                                         STO_CFG[0]
+                                                         T_MPP[1]
+                                                         ST_STO
+                                                         CS_IN
+                                                         GND
+                                                         28 27 26 25 24 23 22
+
+
+
+                                        ZMPP     1                               21 EN_STO_FT
+                                           SRC   2                               20 T_MPP[0]
+                                          GND    3                               19 EN_HP
+                                       BUFSRC
+                                           LIN
+                                                 4
+                                                 5
+                                                           QFN28
+                                                            Top view
+                                                                                 18 STO_CFG[3]
+                                                                                 17 STO_OVCH
+                                         LOUT    6                               16 STO_RDY
+                                          GND    7                               15 STO_OVDIS
+
+
+                                                         8 9 10 11 12 13 14
+                                                           R_MPP[2]
+                                                           R_MPP[1]
+
+                                                           R_MPP[0]
+                                                               VINT
+
+
+                                                                BAL
+                                                         EN_STO_CH
+
+                                                                STO
+
+                                              Figure 2: Pinout Diagram QFN 28-pin
+
+                       PIN
+      NAME                    FUNCTION
+                     NUMBER
+      Power Pins
+      CS_IN            28     Input to connect an external cold start circuit.
+      ZMPP             1      Used for the configuration of the ZMPP (optional). Must be left floating if not used.
+      SRC              2      Connection to the harvested energy source.
+      BUFSRC           4      Connection to an external capacitor buffering the DCDC converter input.
+      LIN              5      DCDC inductance connection.
+      LOUT             6      DCDC inductance connection.
+      VINT             10     Internal voltage supply.
+                              Connection to mid-point of a dual-cell supercapacitor (optional).
+      BAL              13
+                              Must be connected to GND if not used.
+                              Connection to the energy storage element - battery or (super-)capacitor.
+      STO              14     Cannot be left floating. Must be connected to a minimum capacitance of 100 μF or to a rechargeable
+                              battery.
+                                                 Table 1: Power and Status Pins
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                             Copyright © YEAR
+                                                         2026 e-peas SA                                               Confidential   7
+                                                             DATASHEET                                     AEM10300
+
+                         PIN      LOGIC LEVEL
+  NAME                                              FUNCTION
+                       NUMBER     LOW     HIGH
+  Configuration Pins
+  R_MPP[0]               11
+                                                    Used to configure the MPPT ratio.
+  R_MPP[1]                9       GND     VINT
+                                                    Read as HIGH if left floating.
+  R_MPP[2]                8
+  T_MPP[0]               20                         Used to configure the MPPT timings.
+                                  GND     VINT
+  T_MPP[1]               22                         Read as HIGH if left floating.
+  STO_CFG[0]             23
+  STO_CFG[1]             24                         Used to configure the storage element protection thresholds VOVDIS, VCHRDY and VOVCH.
+                                  GND     VINT
+  STO_CFG[2]             25                         Read as HIGH if left floating.
+  STO_CFG[3]             18
+  STO_OVCH               17                         Used to configure the storage element protection thresholds (VOVDIS, VCHRDY and VOVCH)
+  STO_RDY                16        Analog pins      when STO_CFG[3:0] are set to custom mode (optional).
+  STO_OVDIS              15                         Must be left floating if not used.
+
+                                                    Used to configure the storage element feed-through feature.
+                                                          - HIGH: allows charges to flow directly from SRC to STO when SRC is above 5V.
+  EN_STO_FT              21       GND     VINT
+                                                          - LOW: normal operation.
+                                                    Read as HIGH if left floating.
+                                                    Used to configure the charge of the storage element.
+                                                          - HIGH: storage element charge enabled.
+  EN_STO_CH              12       GND     VINT
+                                                          - LOW: storage element charge disabled.
+                                                    Read as HIGH if left floating.
+                                                    Used to configure the high power mode.
+                                                          - HIGH: HIGH POWER MODE enabled.
+  EN_HP                  19       GND     VINT
+                                                          - LOW: HIGH POWER MODE disabled.
+                                                    Read as HIGH if left floating.
+  Status Pins
+                                                    Logic output.
+  ST_STO                 26       GND     LOAD            - HIGH when VSTO rises above VCHRDY.
+                                                          - LOW when VSTO drops below VOVDIS.
+  Other
+                       3, 7, 27
+  GND                  Exposed                      Ground connection, best possible connection to PCB ground plane.
+                         pad
+                                                 Table 2: Configuration and Ground Pins
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                  Copyright © YEAR
+                                                              2026 e-peas SA                                            Confidential        8
+                                                              DATASHEET                                    AEM10300
+
+    3. Specifications
+    3.1. Absolute Maximum Ratings
+     Parameter                                                                                   Min           Max           Unit
+     Operating junction temperature TJ                                                           -40            85            °C
+     Storage temperature Tstg                                                                    -65           150            °C
+                                    STO, SRC, BUFSRC, LIN, LOUT, ZMPP, BAL, CS_IN                -0.3           5.5            V
+     Input voltage                  VINT, T_MPP[1:0], R_MPP[2:0],STO_CFG[3:0],
+                                                                                                 -0.3          2.75            V
+                                    STO_OVCH, STO_OVDIS, STO_RDY, EN_HP, EN_STO_CH
+                                                   Table 3: Absolute Maximum Ratings
+
+    3.2. ESD Ratings
+     Parameter                                                                                                Value          Unit
+                                       Human-Body Model (HBM) according to JEDEC JS001                         2000            V
+     Electrostatic discharge VESD
+                                       Charged-Device Model (CDM) according to JEDEC JS002                     500             V
+                                                            Table 4: ESD ratings
+
+     ESD CAUTION
+
+                     ESD (ELECTROSTATIC DISCHARGE) SENSITIVE DEVICE
+                     These devices have limited built-in ESD protection and damage may thus occur on devices subjected to high-energy
+                     ESD. Therefore, proper ESD precautions should be taken to avoid performance degradation or loss of functionality
+
+
+    3.3. Thermal Resistance
+                                                Package       θJA         θJC          Unit
+                                              QFN 28-pin
+                                                               60          6          °C/W
+                                               4x4mm
+                                                       Table 5: Thermal Resistance
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                   Copyright © YEAR
+                                                               2026 e-peas SA                                          Confidential     9
+                                                                    DATASHEET                                   AEM10300
+
+    3.4. Typical Electrical Characteristics at 25 °C
+    Symbol              Parameter                              Conditions           Min            Typ            Max               Unit
+    Power Conversion
+                        Minimum source power required               VSTO > VCHRDY                         3                             µW
+    PSRC,CS
+                        for cold start                              VSTO < VCHRDY                         6                             µW
+    VSRC,CS             Minimum source input voltage required for cold start                             275                               mV
+                                                                During cold start     VSRC,CS                           4.5                V
+    VSRC                Input voltage of the energy source
+                                                                After cold start          0.1                           4.5                V
+                        MPP Tracker module VMPP / VOC                               60, 65, 70, 75, 80, 85 or 90, depending on
+    RMPPT                                                           See Table 10                                                           %
+                        ratio.                                                              R_MPP[2:0] configuration
+    Timing
+                        Wait time before VOC measurement begins during MPP            50% of                        200% of
+    TMPPT,WAIT                                                                                                                             ms
+                        evaluation (see Section 5.4).                                Table 11                       Table 11
+    TMPPT,MEASURE       Duration of VOC measurement during MPP evaluation.                               0.82                              ms
+                                                                                      50% of                        200% of
+    TMPPT,PERIOD        Time between two MPP evaluations                                                                                   s
+                                                                                     Table 11                       Table 11
+    TGPIO,MON           GPIO monitoring rate                                                             1.3                               s
+    TSTO,MON            STO monitoring rate                                                              167                               µs
+    Storage element
+                        Maximum voltage accepted on the
+    VOVCH               storage element before disabling its                                                                               V
+                        charging
+                        Minimum voltage required on the
+    VCHRDY              storage element before asserting             See Table 9     Depends on STO_CFG[3:0] configuration                 V
+                        ST_STO
+                        Minimum voltage accepted on the
+    VOVDIS              storage element before reseting                                                                                    V
+                        ST_STO
+                        Minimum voltage required on the BAL pin for the
+    VBAL,MIN                                                                                             0.9                               V
+                        balancing circuit to operate
+    Internal supply & Quiescent Current
+    VVINT               Internal voltage supply                                                          2.2                               V
+
+                                                                    VSTO = 3.7 V
+    IQ                  Quiescent current on STO                                                         5.9                               nA
+                                                                     EN_HP = L
+
+    Symbol              Logic Level                                                             LOW                            HIGH
+    Logic output pins
+    ST_STO              Logic output levels on the status STO pin                                GND                             VSTO
+                                                   Table 6: Typical Electrical Characteristics
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                      Copyright © YEAR
+                                                                  2026 e-peas SA                                              Confidential      10
+                                                                      DATASHEET                                              AEM10300
+
+    3.5. Recommended Operating Conditions
+         Symbol                         Parameter                                                       Min          Typ         Max             Unit
+         External Components
+         LDCDC                          Inductor of the DCDC converter                                               10                          µH
+         CSRC                           Capacitor decoupling the SRC terminal                           131          22                          µF
+                                                                                                          1
+         CINT                           Capacitor decoupling the VINT terminal                           5           10                          µF
+                                        Optional - Capacitor on STO if no storage element
+         CSTO                                                                                          1001                                      µF
+                                        is connected (see Section 6.8.1)
+                                        Optional - Used for the configuration of the ZMPP                          Section
+         RZMPP                                                                                           10                      100K             Ω
+                                        tracking function                                                            6.6
+         STO_OVCH                       Configuration of VOVCH in custom mode
+                                                                                                                   Section
+         STO_OVDIS                      Configuration of VOVDIS in custom mode                           1                        100            MΩ
+                                                                                                                     6.2
+         STO_RDY                        Configuration of VCHRDY in custom mode
+                                                   Table 7: Recommended Operation Conditions
+        1.Consider all component tolerance and deratings. Typically, DC-bias derating has a major impact on capacitance on ceramic capacitors.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                         Copyright © YEAR
+                                                                     2026 e-peas SA                                                     Confidential    11
+                                                                                                                       DATASHEET                                                                                                 AEM10300
+
+    3.6. Typical Characteristics
+    3.6.1. DCDC Conversion Efficiency From SRC to STO in Low Power Mode
+                                                 LP mode, ISRC = 100 μA                                                                                                                             LP mode, ISRC = 1 mA
+                         100                                                                                                                             100
+
+                          90                                                                                                                              90
+
+                          80                                                                                                                              80
+
+                          70                                                                                                                              70
+
+                          60                                                                                                                              60
+          Eﬃciency [%]
+
+
+
+
+                                                                                                                                          Eﬃciency [%]
+                          50                                                                                                                              50
+
+                          40                                                                                                                              40
+
+                          30                                                                                                                              30
+                                                                                                           VST O = 1.25 V                                                                                                                    VST O = 1.25 V
+                          20                                                                               VST O = 2.30 V                                 20                                                                                 VST O = 2.30 V
+                                                                                                           VST O = 3.60 V                                                                                                                    VST O = 3.60 V
+                          10                                                                                                                              10
+                                                                                                           VST O = 4.10 V                                                                                                                    VST O = 4.10 V
+                           0                                                                                                                               0
+                               0.0   0.5   1.0   1.5   2.0      2.5                      3.0         3.5         4.0         4.5                               0.0         0.5         1.0         1.5         2.0      2.5      3.0   3.5      4.0    4.5
+                                                             VSRC [V ]                                                                                                                                               VSRC [V ]
+
+                                                                                                                       LP mode, ISRC = 10 mA
+                                                                             100
+
+                                                                              90
+
+                                                                              80
+
+                                                                              70
+
+                                                                              60
+                                                              Eﬃciency [%]
+
+
+
+
+                                                                              50
+
+                                                                              40
+
+                                                                              30
+                                                                                                                                                                                       VST O = 1.25 V
+                                                                              20                                                                                                       VST O = 2.30 V
+                                                                                                                                                                                       VST O = 3.60 V
+                                                                              10
+                                                                                                                                                                                       VST O = 4.10 V
+                                                                               0
+                                                                                   0.0         0.5         1.0         1.5         2.0      2.5                      3.0         3.5         4.0         4.5
+                                                                                                                                         VSRC [V ]
+
+                                                         Figure 3: DCDC efficiency from SRC to STO in low power mode
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                                                               Copyright © YEAR
+                                                                                                           2026 e-peas SA                                                                                                                      Confidential   12
+                                                                                      DATASHEET                                                     AEM10300
+
+    3.6.2. DCDC Conversion Efficiency From SRC to STO in High Power Mode
+                                                HP mode, ISRC = 100 μA                                                              HP mode, ISRC = 1 mA
+                        100                                                                                 100
+                         90                                                                                  90
+                         80                                                                                  80
+                         70                                                                                  70
+         Eﬃciency [%]
+
+
+
+
+                                                                                             Eﬃciency [%]
+                         60                                                                                  60
+                         50                                                                                  50
+                         40                                                                                  40
+                         30                                                 VST O = 1.25 V                   30                                                VST O = 1.25 V
+                         20                                                 VST O = 2.30 V                   20                                                VST O = 2.30 V
+                                                                            VST O = 3.60 V                                                                     VST O = 3.60 V
+                         10                                                                                  10
+                                                                            VST O = 4.10 V                                                                     VST O = 4.10 V
+                          0                                                                                   0
+                              0.0   0.5   1.0   1.5   2.0   2.5    3.0    3.5   4.0   4.5                         0.0   0.5   1.0   1.5   2.0   2.5    3.0   3.5    4.0   4.5
+                                                         VSRC [V ]                                                                           VSRC [V ]
+
+
+
+                                                HP mode, ISRC = 10 mA                                                               HP mode, ISRC = 50 mA
+                        100                                                                                 100
+                         90                                                                                  90
+                         80                                                                                  80
+                         70                                                                                  70
+         Eﬃciency [%]
+
+
+
+
+                                                                                             Eﬃciency [%]
+
+
+
+
+                         60                                                                                  60
+                         50                                                                                  50
+                         40                                                                                  40
+                         30                                                 VST O = 1.25 V                   30                                                VST O = 1.25 V
+                         20                                                 VST O = 2.30 V                   20                                                VST O = 2.30 V
+                                                                            VST O = 3.60 V                                                                     VST O = 3.60 V
+                         10                                                                                  10
+                                                                            VST O = 4.10 V                                                                     VST O = 4.10 V
+                          0                                                                                   0
+                              0.0   0.5   1.0   1.5   2.0   2.5    3.0    3.5   4.0   4.5                         0.0   0.5   1.0   1.5   2.0   2.5    3.0   3.5    4.0   4.5
+                                                         VSRC [V ]                                                                           VSRC [V ]
+                                                         Figure 4: DCDC efficiency from SRC to STO in high power mode
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                                         Copyright © YEAR
+                                                                                     2026 e-peas SA                                                                Confidential   13
+                                                                                    DATASHEET                                                   AEM10300
+
+    4. Functional Block Diagram
+                                                                                                       LDCDC
+
+                                                                                 CSRC
+
+
+
+
+                                                                                                 LIN
+                                                                     BUFSRC
+
+
+
+
+                                                                                                           LOUT
+                                                                                                                                                         VINT
+                                                                                                                                                  VINT
+
+                                    R_MPP[2:0]
+                      GND or VINT
+                                                                                                                                                           CINT
+                      GND or VINT
+                                    T_MPP[1:0]                                                         DCDC
+                                                    MPP
+                                    ZMPP           Control
+                       Optional
+
+
+                                                                                                                                                                VSTO
+                           RZMPP
+                                                                                                                                                   STO
+
+
+                                    SRC                                                                                                                                 Supercap.
+                    SOURCE                                                              5V                                   Balance
+                                                                                                                                                   BAL                   or
+                                                                          VINT
+                                                                                             -                                                                          Battery
+                                    CS_IN
+                                                                                             +
+                                                   Cold-start
+
+
+
+
+                                                     Vref
+                                                                                                                                                ST_STO
+
+                                                                      State
+                                                                    Monitor
+                                    STO_CFG[3:0]
+                      GND or VINT
+                                                             STO
+                                                                         +
+                                                                                                                        Controller
+             VSTO
+                                                                         -
+      Optional
+                                                             VINT
+             R4
+                                                                         +                                                                   EN_STO_FT
+                                                                                                                                                          GND or VINT
+                                    STO_OVDIS                            -                                                                   EN_STO_CH
+                                                                                                                                                          GND or VINT
+             R3                                                                                                                                 EN_HP
+                                                                                                                                                          GND or VINT
+                                    STO_RDY
+
+             R2
+                                    STO_OVCH
+
+             R1                                                                                                   POR                Clock
+
+
+                                                                                                        GND
+
+
+
+
+                                                                      Figure 5: Functional Block Diagram
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                                    Copyright © YEAR
+                                                                                2026 e-peas SA                                                             Confidential             14
+                                                                         DATASHEET                                           AEM10300
+
+                                                                                    LDCDC
+
+                                                        CSRC
+
+
+
+
+                                                                             LIN
+                                                               BUFSRC
+
+
+
+
+                                                                                        LOUT
+                                                                                                         M6
+                                                                                                                VINT
+
+
+                                                                                                                            CINT
+                                                  M1                    M2                       M5
+                                         SRC
+                           SOURCE
+                                                                                                          M7
+                                                                                                                 STO
+
+                                                                             M3         M4
+                                                                                                                               STORAGE
+                                                                                                                               ELEMENT
+
+
+
+
+                                               Figure 6: Simplified Schematic View of the AEM10300
+
+    5. Theory of Operation
+    5.1. DCDC Converter
+    The DCDC converter converts the voltage available at BUFSRC                             Depending on its input voltage and its output voltage, the
+    to a level suitable for charging the storage element STO or to                          DCDC converter will work as a boost converter, a buck
+    regulate the internal supply VVINT. The switching transistors of                        converter or a buck-boost converter. The maximum power
+    the DCDC converter are M2, M3, M4 and M5. Thanks to M6                                  that can be harvested and supplied to the output depends on
+    and M7, the controller selects between VINT and STO                                     the power mode (HIGH POWER MODE or LOW POWER
+    respectively as the converter output. STO is selected as an                             MODE), which is configured through the EN_HP pin (see
+    output only when VINT does not needs to be supplied.                                    Section 6.4).
+    The reactive power component of this converter is the
+    external inductor LDCDC. Periodically, the MPP control circuit
+    disconnects the source from BUFSRC pin with the transistor
+    M1 in order to let the harvester on SRC rise to its open-circuit
+    voltage VOC and measure it. This is done to define the optimal
+    voltage level VMPP, which is determined by applying the MPP
+    ratio on VOC. BUFSRC is decoupled by the capacitor CSRC,
+    which smooths the voltage against the current pulses pulled
+    by the DCDC converter. The storage element is connected to
+    the STO pin.
+
+                                    DCDC Converter Mode                            Input Voltage / Output Voltage
+                                    Boost                                                      VIN < VOUT - 250 mV
+                                    Buck                                                       VIN > VOUT + 250 mV
+                                    Buck - Boost                                   VOUT - 250 mV < VIN < VOUT + 250 mV
+                                                        Table 8: DCDC Converter Modes
+
+    5.2. Cold-Start Circuit                                                                 CS_IN is typically connected to SRC to allow the AEM10300 to
+                                                                                            coldstart from the energy available on the harvester.
+    The AEM10300 is able to coldstart if the voltage on CS_IN is                            Nevertheless, any other energy source can be connected to
+    above 0.275 V. The minimum available power is:                                          CS_IN as long as it meets the electrical specifications
+         - 3 µW if VSTO is above VCHRDY.                                                    constraints described in Sections 3.4 and 3.5.
+
+         - 6 µW if VSTO is below VCHRDY.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                       Copyright © YEAR
+                                                                   2026 e-peas SA                                                        Confidential   15
+                                                           DATASHEET                                   AEM10300
+
+    5.3. AEM10300 States Description                                     - Due to a lack of power from the source, VSTO falls
+                                                                           below VOVDIS. In this case, ST_STO is set LOW and the
+                                                                           AEM10300 remains in SUPPLY STATE. ST_STO will
+                                                                           stay LOW until VSTO reaches VCHRDY again.
+                                    Reset State
+                                                                         - There is not enough power on SRC to maintain VVINT
+                                                                           to 2.2 V. In this case, the circuit enters in RESET
+                                            VSRC > 275mV                   STATE.
+                                              &
+                                            PSRC > 3μW
+                                                                    5.4. Maximum Power Point Tracking
+                                                                    In SUPPLY STATE, the voltage on SRC is regulated by an
+        VINT < 1.8V                                                 internal Maximum Power Point Tracking (MPPT) module. The
+                                     Wake-Up
+                                      State                         MPPT module evaluates VMPP, the voltage at which the
+                                                                    source provides the highest possible power, as a given
+                                            VINT > 2.2V             fraction of the open-circuit voltage of the source (VOC). This
+                                                                    ratio is set by the R_MPP[2:0] terminals according to Table 10.
+                                                                    The AEM10300 supports any VMPP levels in the range from
+                                    Supply State                    100 mV to 4.5 V. It offers a choice of seven values for the VMPP
+                                                                    / VOC fraction. It can also match the input impedance of the
+                                                                    DCDC converter with an impedance connected to the ZMPP
+              Figure 7: Diagram of the AEM10300 States              terminal as explained in Section 6.6.
+                                                                    The MPPT module evaluates periodically the open-circuit
+    5.3.1. Reset and Wake Up States                                 voltage (VOC) with the following sequence to ensure optimal
+    The RESET STATE is a state where all nodes are deeply           power extraction at any time:
+    discharged and there is no available energy to be harvested.         - The AEM10300 stops extracting power from the SRC
+    As soon as the required cold start voltage of 275 mV and a             during TMPPT,WAIT to allow the SRC voltage to rise to
+    sparse amount of power of just 3 µW become available on                VOC.
+    CS_IN (usually connected to SRC), the AEM10300 switches to
+    WAKE-UP STATE, and energy is extracted from SRC to make              - Once this delay elapses, the AEM10300 performs the
+    VVINT rise to 2.2 V. When VVINT reaches 2.2 V, the AEM10300            measurement of VOC during TMPPT,MEASURE.
+    switches to SUPPLY STATE.                                            - After the measurement, the AEM10300 resumes
+                                                                           extracting power by regulating the SRC voltage to the
+    5.3.2. Supply State                                                    newly determined VMPP.
+    In SUPPLY STATE, three scenarios are possible:                       - This MPP evaluation is repeated every TMPPT,PERIOD.
+         - There is enough power provided by the source (SRC)       TMPPT,WAIT and TMPPT,PERIOD are set according to Table 11 by
+           to keep VVINT at 2.2 V and to charge the storage         the T_MPP[1:0] terminals while TMPPT,MEASURE is constant for
+           element. When the voltage on VINT falls below its        any configuration (see Table 6).
+           2.2 V regulation set point because of the AEM10300
+           internal circuit current consumption discharging CINT,   The total time during which the AEM10300 does not extract
+           the DCDC converter switches its output to recharge       power correspond to the sum of TMPPT,WAIT and
+           CINT from SRC, thus, keeping VVINT regulated. The rest   TMPPT,MEASURE (see Figure 8).
+           of the time, the power on source is used to charge
+           the storage element on STO. In this case, the circuit
+           remains in SUPPLY STATE. If all nodes are fully
+           charged, the DCDC converter is disabled to prevent
+           over-charging the storage element, and the SRC pin is
+           set to high impedance.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                  Copyright © YEAR
+                                                              2026 e-peas SA                                      Confidential     16
+                                                            DATASHEET                                  AEM10300
+
+                                                                     If a dual-cell supercapacitor is connected on STO, BAL must be
+                                                                     connected to the node between both cells of the
+                                                                     supercapacitor. The balancing circuit will compensates for
+                                                                     any mismatch of the two cells that could lead to the over-
+                                                                     charge of one of two cells. The balancing circuit ensures that
+                                                                     BAL remains close to VSTO / 2.
+                                                                     The balancing circuit works as follows:
+                                                                          - The balancing circuit is enabled only when
+                                                                            VBAL > VBAL,MIN (see Table 6).
+
+                                                                                       V
+                                                                          - If V BAL  -----------
+                                                                                           STO : the AEM10300 enables a switch
+                                                                                           2
+                                                                             between BAL and GND to discharge the bottom
+    Figure 8: MPPT evaluation behavior (with TMPPT,WAIT of 4.4 ms)
+                                                                             supercapacitor cell to GND (up to 20 mA).
+
+    5.5. Balancing for Dual-Cell Supercapacitor                                        V   STO
+                                                                          - If V BAL  ----------- : the AEM10300 enables a switch
+                                                                                           2
+    The AEM10300 balancing feature allows to balance the                     between STO and BAL to discharge the top
+    internal voltage of a dual-cell supercapacitor connected to              supercapacitor cell to the bottom supercapacitor cell
+    STO in order to avoid damaging the supercapacitor because of             (up to 20 mA).
+    excessive voltage on one cell.
+    If a battery, a capacitor or a single-cell supercapacitor is
+    connected on STO, the balancing feature is not needed. In this
+    case, BAL must be connected to GND to disable the balancing.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                 Copyright © YEAR
+                                                             2026 e-peas SA                                      Confidential     17
+                                                                        DATASHEET                                        AEM10300
+
+    6. System Configuration
+    6.1. Storage Element Configuration                                               DISCLAIMER: storage element thresholds provided in the
+                                                                                     table below are indicative to support a wide range of storage
+    Through four configuration pins (STO_CFG[3:0]), the user can                     element variants. They are provided as is to the best
+    set a particular operating mode from a range that covers most                    knowledge of e-peas’s application laboratory. They should
+    application requirements, without any dedicated external                         not replace the actual values provided in the storage
+    component as shown in Table 9. The three threshold levels                        element manufacturer’s specifications and datasheet.
+    are defined as:
+          - VOVCH: maximum voltage accepted on the storage
+            element before disabling its charging.
+          - VCHRDY: minimum voltage required on the storage
+            element before setting ST_STO HIGH.
+          - VOVDIS: minimum voltage accepted on the storage
+            element before considering the storage element as
+            depleted, thus, setting ST_STO LOW.
+
+                                 Storage element threshold
+      Configuration pins
+                                          voltages                                                         Typical use
+          STO_CFG[3:0]           VOVDIS      VCHRDY       VOVCH
+      L      L      L      L      3.00 V      3.50 V      4.05 V      LiCoO2 battery, Li-Po battery, Lithium Titanate (3.8 V) battery (long life).
+      L      L      L      H      2.80 V      3.10 V      3.60 V      LiFePO4 battery, Lithium capacitor (LiC).
+      L      L      H      L      1.85 V      2.40 V      2.70 V      Dual-cell NiMH battery, Lithium-Titanate (2.4V) battery.
+      L      L      H      H      0.20 V      1.00 V      4.65 V      Dual-cell supercapacitor.
+      L      H      L      L      0.20 V      1.00 V      2.60 V      Single-cell supercapacitor.
+      L      H      L      H      1.00 V      1.20 V      2.95 V      Single-cell supercapacitor.
+      L      H      H      L      1.85 V      2.30 V      2.60 V      Lithium-Titanate battery (2.4V).
+      L      H      H      H                                       Custom Mode (single-cell NiMH battery, LiC, etc.)1.
+      H      L      L      L      1.10 V      1.25 V      1.50 V      Ni-Cd single-cell battery.
+      H      L      L      H      2.20 V      2.50 V      3.00 V      Ni-Cd dual-cell battery.
+      H      L      H      L      1.45 V      2.00 V      4.65 V      Dual-cell supercapacitor.
+      H      L      H      H      1.00 V      1.20 V      2.60 V      Single-cell supercapacitor.
+      H      H      L      L      2.00 V      2.30 V      2.60 V      Solid State battery.
+      H      H      L      H      3.00 V      3.50 V      4.35 V      LiCoO2 battery, Li-Po battery, Lithium Titanate (3.8 V) battery.
+      H      H      H      L      2.60 V      2.70 V      4.00 V      Tadiran TLI.
+      H      H      H      H      2.60 V      3.50 V      3.90 V      Tadiran HLC.
+                                                       Table 9: Storage Element Configuration Pins
+    1. An example of a single-cell NiMH batteries optimized custom mode setting can be found at Section 7.2.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                           Copyright © YEAR
+                                                                       2026 e-peas SA                                               Confidential     18
+                                                                   DATASHEET                                   AEM10300
+
+    6.2. Custom Mode Configuration                                         The resistors should have high values to make the additional
+                                                                           power consumption negligible. Moreover, the following
+                                                                           constraints must be respected to ensure the functionality of
+                     Optional
+                                VSTO                                       the chip:
+                                                                                 - V CHRDY + 0.05V  V OVCH  4.5V
+                               R4                                                - V OVDIS + 0.05V  V CHRDY  V OVCH – 0.05V
+                                                               STO_OVDIS         - 1V  V OVDIS
+
+                                                                           6.3. Disable Storage Element Charging
+                               R3
+                                                               STO_RDY
+                                                                           Pulling down EN_STO_CH pin to GND disables the charging of
+                               R2
+                                                                           the storage element connected to STO. This can be done for
+                                                               STO_OVCH
+                                                                           example to protect the storage element when the system
+                               R1                                          detects that the environment temperature is too low or too
+                                                                           high to safely charge the storage element.
+                                                                           While EN_STO_CH is pulled down, VINT can still be supplied
+                                                                           from SRC.
+                        Figure 9: Custom Mode Settings
+                                                                           To enable charging the storage element on STO, EN_STO_CH
+    When STO_CFG[3:0] = LHHH, the custom mode is selected                  must be pulled up to VINT or left floating (pin is pulled up
+    and all four configuration resistors must be wired as shown in         internally).
+    Figure 9. VOVCH, VCHRDY and, VOVDIS are defined thanks to R1,
+    R2, R3 and R4, which can be determined within the following            6.4. High Power / Low Power Mode
+    constraints:
+                                                                           When EN_HP is pulled to VINT, the DCDC converter is
+         - RT = R1 + R2 + R3 + R4                                          configured to HIGH POWER MODE. This allows higher
+         - 1M  R T  100M                                               currents to be extracted from the DCDC converter input (SRC)
+                            1V
+         - R 1 = R T  ---------------                                     to the DCDC converter output (STO) with a trade-off in
+                            V OVCH                                         efficiency.
+                                1V - ---------------
+                                              1V 
+         - R 2 = R T   ----------------- –
+                                                     
+                              V CHRDY       V OVCH
+
+                               1V - -----------------
+                                             1V - 
+         - R 3 = R T   ---------------- –
+                                                      
+                              V OVDIS      V CHRDY
+
+                                  1V - 
+         - R 4 = R T   1 – ----------------
+                                   V OVDIS   
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                          Copyright © YEAR
+                                                                      2026 e-peas SA                                     Confidential   19
+                                                                          DATASHEET                                   AEM10300
+
+    6.5. MPPT Configuration                                                       6.6. ZMPP Configuration
+    The MPPT module is configured through the following pins:                     Instead of working at a ratio of the open-circuit voltage, the
+                                                                                  AEM10300 can regulate the input impedance of the DCDC
+          - R_MPP[2:0] allows for configuring the VMPP / VOC
+            tracking ratio, that has to be chosen according to the                converter so that it matches a constant impedance RZMPP
+                                                                                  connected to the ZMPP pin (see Figure 10). In this case, the
+            characteristics of the source. Please note that if the
+                                                                                  AEM10300 regulates VSRC at a voltage that is the product of
+            selected mode is ZMPP, an external resistor must be
+                                                                                  the ZMPP resistance RZMPP and the current available at the
+            added to the circuit as explained in Section 6.6.
+                                                                                  SRC input.
+          - T_MPP[1:0] allows for configuring the duration of an
+                                                                                       - 10 Ω ≤ RZMPP ≤ 100 KΩ
+            MPP evaluation and the time between two MPP
+            evaluations.                                                                                                                        M
+                                                                                                                               ZMPP            Co
+                                                                                                          Optional
+                 Configuration pins                        MPPT ratio
+                     R_MPP[2:0]                            VMPP / VOC
+            L               L               L                   60%                                           RZMPP
+            L               L               H                   65%
+            L               H               L                   70%
+                                                                                                                               SRC
+            L               H               H                   75%                                 SOURCE
+           H                L               L                   80%
+           H                L               H                   85%                                                            CS_IN
+           H                H               L                   90%
+                                                                                                                                               Co
+                                                                                          Figure 10: RZMPP Connection to the AEM10300
+           H                H               H                  ZMPP
+                Table 10: MPPT Ratio Configuration Pins                           6.7. Source to Storage Element Feed-
+                                                                                  Through
+       Configuration pins                       MPPT timing
+                                                                                  When the harvester connected to SRC delivers a high amount
+                                     TMPPT,WAIT +
+           T_MPP[1:0]                                        TMPPT,PERIOD         of power, the AEM might not be able to pull enough current
+                                   TMPPT,MEASURE1
+                                                                                  to regulate VSRC to the MPP voltage, thus, increasing the
+           L            L               5.19 ms                  280 ms           voltage on SRC, eventually above 5V. To maximize the energy
+           L            H               70.8 ms                   4.5 s           extracted in that case, the AEM10300 can be configured to
+          H             L                280 ms                  17.9 s           create a direct feed-through current path from SRC to STO
+                                                                                  when VSRC is above 5V. This is measured when the AEM is
+          H             H                 1.12 s                 71.7 s
+                                                                                  pulling current from the source (not during an MPP
+                Table 11: MPPT Timing Configuration Pins                          evaluation).
+     1. The total duration of the open-circuit voltage evaluation is the sum of   If the MPPT module detects that VSRC is higher than 4 V and
+     TMPPT,WAIT and TMPPT,MEASURE. TMPPT,MEASURE is fixed, see Table 6).
+                                                                                  EN_STO_FT is set HIGH, the SRC is monitored. From that
+                                                                                  moment, if the AEM10300 detects that VSRC rises above 5 V
+                                                                                  and if the storage element is not fully charged, the switch
+                                                                                  between SRC and STO pins is closed until VSRC drops below 5
+                                                                                  V or until the storage element is fully charged.
+                                                                                  This feature is enabled by pulling up EN_STO_FT pin to VINT.
+                                                                                  However, it is disabled if the storage element is fully charged,
+                                                                                  or when a MPP evaluation is occurring. Therefore the circuit
+                                                                                  must still be protected from any overshoot voltage on SRC
+                                                                                  above 5.5 V, for instance by a zener diode.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                             Copyright © YEAR
+                                                                         2026 e-peas SA                                         Confidential     20
+                                                             DATASHEET                                   AEM10300
+
+    6.8. External Components
+    Refer to Figure 16 to have an illustration of the external        6.8.2. External Inductor Information
+    components wiring.
+                                                                      The AEM10300 operates with one standard miniature
+                                                                      inductor. LDCDC must sustain a peak current of at least 1 A and
+    6.8.1. Storage Element Information                                a switching frequency of at least 10 MHz. Low equivalent
+    The energy storage element of the AEM10300 can be a               series resistance (ESR) favors the power conversion efficiency
+    rechargeable battery, a supercapacitor or a capacitor. The        of the DCDC converter. The recommended value is 10 µH.
+    size of the storage element must be determined so that its
+    voltage does not fall below VOVDIS even during current peaks      6.8.3. External Capacitors Information
+    pulled by the application. If the internal resistance of the
+    storage element cannot sustain this voltage limit, it is          6.8.3.1. CSRC
+    advisable to decouple the battery with a capacitor.
+                                                                      This capacitor acts as an energy buffer at the input of the
+    If the application expects a disconnection of the battery (e.g.   DCDC converter. It prevents large voltage fluctuations when
+    because of a user removable connector), the PCB must              the DCDC converter is switching. The recommended nominal
+    include a capacitor CSTO of at least 100 μF connected between     value is 22 µF.
+    STO and GND. The leakage current of the storage element
+    should be small as leakage currents directly impact the           6.8.3.2. CINT
+    quiescent current of the whole subsystem.
+                                                                      This capacitor acts as an energy buffer for the internal voltage
+                                                                      supply. The recommended nominal value is 10 µF.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                  Copyright © YEAR
+                                                              2026 e-peas SA                                        Confidential     21
+                                                                   DATASHEET                                                AEM10300
+
+    7. Typical Application Circuits
+    7.1. Example Circuit 1
+
+                                                                     CSRC         LDCDC
+                                                                     22uF
+                                                                                  10uH
+
+
+
+                                                                                                          VINT
+
+
+
+
+                                                                            LIN
+                                                          BUFSRC
+
+
+
+
+                                                                                          LOUT
+                                      VINT   R_MPP[2]                                              VINT
+                                                                                                             CINT
+                                      VINT   R_MPP[1]
+                                                                                                             10uF
+                                      GND    R_MPP[0]
+
+
+                                      GND    T_MPP[1]
+                                      VINT   T_MPP[0]
+
+                                                                                                                  VSTO
+
+                            PV cell
+                                             ZMPP
+                                             SRC          AEM10300                                 STO
+
+                                             CS_IN
+                                                                                                                         Supercapacitor
+                                                                                                   BAL
+                                                                                                                         1.2F
+
+
+                                      GND    STO_CFG[3]
+                                      GND    STO_CFG[2]
+                                      VINT   STO_CFG[1]                                          ST_STO
+                                      VINT   STO_CFG[0]
+
+
+
+
+                                                                                         EN_STO_FT         VINT
+                                             STO_OVDIS
+                                                                                      EN_STO_CH            VINT
+                                             STO_RDY
+                                                                                                 EN_HP     GND
+                                             STO_OVCH
+                                                                      GND
+
+
+
+
+                                               Figure 11: Typical Application Circuit 1
+    The circuit is an example of a system with solar energy                    - STO_CFG[3:0] = LLHH: the storage element is a dual-
+    harvesting. It uses a pre-defined operating mode that uses                   cell supercapacitor, with:
+    standard components, and a supercapacitor as energy
+                                                                                          - VOVCH = 4.65 V
+    storage.
+                                                                                          - VCHRDY = 1.00 V
+         - Energy source: PV cell.
+                                                                                          - VOVDIS = 0.20 V
+         - R_MPP[2:0] = HHL: the MPP tracker ratio is set to
+           90%.                                                                - The balancing pin of the dual-cell supercapacitor is
+                                                                                 connected to BAL.
+         - T_MPP[1:0] = LH: the MPP evaluation period is 4.5 s
+           and the MPP wait duration is 70.8 ms.                               - EN_STO_CH is connected to VINT: the charging of the
+                                                                                 storage element on STO is enabled.
+                                                                               - EN_HP is connected to GND: the DCDC converter is in
+                                                                                 LOW POWER MODE.
+                                                                               - EN_STO_FT is connected to VINT: SRC to STO feed-
+                                                                                 through is enabled when VSRC is above 5 V.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                   Copyright © YEAR
+                                                               2026 e-peas SA                                                         Confidential   22
+                                                                                DATASHEET                                                     AEM10300
+
+    7.2. Example Circuit 2
+                                                                                   CSRC              LDCDC
+                                                                                   22uF
+                                                                                                     10uH
+
+
+
+                                                                                                                             VINT
+
+
+
+
+                                                                                               LIN
+                                                                       BUFSRC
+
+
+
+
+                                                                                                             LOUT
+                                              GND         R_MPP[2]                                                    VINT
+                                                                                                                                CINT
+                                              VINT        R_MPP[1]
+                                                                                                                                10uF
+                                              GND         R_MPP[0]
+
+
+                                              VINT        T_MPP[1]
+                                              GND         T_MPP[0]
+
+                                                                                                                             VSTO
+
+                               PV Cell
+                                                          ZMPP
+                                                          SRC          AEM10300                                       STO
+                                                                                                                                               NiMH
+                                                                                                                                              Battery
+                                                          CS_IN
+                                                                                                                      BAL
+
+
+
+                                              GND         STO_CFG[3]
+                                              VINT        STO_CFG[2]
+                          VSTO
+                                              VINT        STO_CFG[1]                                                ST_STO
+                                              VINT        STO_CFG[0]
+                          R4
+                       1 MΩ
+
+                          R3
+                      15 MΩ
+                                                                                                            EN_STO_FT         VINT
+                                                          STO_OVDIS
+                          R2                                                                             EN_STO_CH                     Control From
+                      11 MΩ
+                                                          STO_RDY                                                                      Application Circuit
+                                                                                                                    EN_HP     VINT
+                                                          STO_OVCH
+                          R1
+                                                                                   GND
+                      68 MΩ
+
+
+
+
+                                                            Figure 12: Typical Application Circuit 2
+                                                                                                                              1V - -----------------
+                                                                                                                                            1V - 
+    The circuit is an example of a system with solar energy                                             - R 3 = R T   ---------------- –
+                                                                                                                                                     
+                                                                                                                                                        15M
+                                                                                                                             V OVDIS      V CHRDY
+    harvesting. It uses a rechargeable NiMH battery as storage
+    element. The voltage thresholds are set by the custom mode.                                                                  1V - 
+                                                                                                        - R 4 = R T   1 – ----------------    1M
+                                                                                                                                   V OVDIS  
+         - Energy source: PV cell.
+         - R_MPP[2:0] = LHL: the MPP ratio is set to 70%.                                      - BAL is not used (not a dual-cell storage element) so it
+                                                                                                 is connected to GND.
+         - T_MPP[1:0] = HL: the MPP evaluation period is 17.9 s
+           and the MPP wait duration is 280 ms.                                                - EN_STO_CH: the charging of the storage element
+                                                                                                 present on STO is controlled by an external
+         - STO_CFG[3:0] = LHHH: the storage element is a NiMH
+                                                                                                 application circuit, typically by a micro-controller
+           rechargeable battery, used with custom mode:
+                                                                                                 GPIO output.
+              - VOVDIS = 1.00 V
+                                                                                               - EN_HP is connected to VINT: the DCDC converter is in
+              - VCHRDY = 1.20 V                                                                  HIGH POWER MODE.
+              - VOVCH = 1.40 V                                                                 - EN_STO_FT is connected to VINT: SRC to STO feed-
+                                                                                                 through is enabled when VSRC is above 5 V.
+         - Custom mode resistor divider calculations (values
+           have been chosen to match E24 series value):                                   NOTE: for LiC (Lithium-ion Capacitor) storage elements, or
+                                                                                          others that would not be covered by STO_CFG[3:0] presets,
+              - R T = 95M
+                                                                                          please apply the same equations as in the above example to
+                                 1V
+              - R 1 = R T  ---------------  68M                                        determine custom mode resistors values. E24 series values for
+                               V OVCH
+                                                                                          typical storage elements can be found in the AEM10300
+                                     1V - ---------------
+                                                   1V                                    Configuration Tool spreadsheet, to be downloaded on e-peas
+              - R 2 = R T   ----------------- –
+                                                          
+                                                             11M
+                                 V CHRDY    V OVCH                                        website.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                            Copyright © YEAR
+                                                                        2026 e-peas SA                                                                  Confidential   23
+                                                               DATASHEET                               AEM10300
+
+    8. Circuit Behavior
+    8.1. Wake-up state and Supply state
+    8.1.1. Configuration
+         - STO_CFG[3:0] = LLLL                                              - T_MPP[1:0] = LL (5.19 ms / 280 ms)
+               - VOVDIS = 3.00 V                                            - CSTO = 10 mF
+               - VCHRDY = 3.50 V                                            - SRC: 5 mA current source with 3 V voltage
+                                                                              compliance
+               - VOVCH = 4.05 V
+                                                                            - EN_HP = H (high power mode)
+         - R_MPP[2:0] = LLL (60%)
+                                                                            - EN_STO_CH = H (storage element charge enabled)
+
+    8.1.2. Observations
+
+                                                                SRC          STO            VINT
+
+                              5
+                                      WAKE UP                                   SUPPLY
+                                       STATE                                     STATE
+                                                       Vovch
+                              4
+                                                       Vchrdy
+                Voltage [V]
+
+
+
+
+                              3
+
+
+                              2
+
+
+                              1
+
+
+                              0
+                                  0      2         4             6             8             10          12              14
+                                                                        Time [s]
+
+                              1
+      ST STO
+                              0
+
+                                                Figure 13: Wake-up state and Supply state
+         - The AEM10300 is initially in WAKE-UP STATE. ST_STO               - In SUPPLY STATE, the AEM10300 charges the storage
+           is LOW, the storage element connected on STO is                    element connected on STO. VSRC is regulated to VMPP
+           depleted and no energy is applied on SRC.                          thanks to the MPPT module. The open circuit voltage
+                                                                              VOC is measured every TMPPT,PERIOD.
+         - Once the supply connected on SRC is switched on,
+           the AEM10300 coldstarts. VVINT rises around 2.2 V,               - Once VSTO reaches VCHRDY, ST_STO is asserted.
+           the AEM10300 switches to SUPPLY STATE.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                  Copyright © YEAR
+                                                              2026 e-peas SA                                       Confidential   24
+                                                           DATASHEET                                   AEM10300
+
+    8.2. Supply state
+    8.2.1. Configuration
+         - STO_CFG[3:0] = LLLL                                             - CSTO = 10 mF
+              - VOVDIS = 3.00 V                                            - SRC: 5 mA current source with 3 V voltage
+                                                                             compliance
+              - VCHRDY = 3.50 V
+                                                                           - EN_HP = H (high power mode)
+              - VOVCH = 4.05 V
+                                                                           - EN_STO_CH = H (storage element charge enabled)
+         - R_MPP[2:0] = LLL (60%)
+                                                                           - 1 kΩ between STO and GND, connected between 7 s
+         - T_MPP[1:0] = LL (5.19 ms / 280 ms)
+                                                                             and 25.5 s (no load on STO the rest of the time)
+
+    8.2.2. Observations
+
+                                                            SRC            STO             VINT
+
+                            5
+                                                                      SUPPLY
+                                                                       STATE
+                                                                                  Vovch
+                            4
+                                                                                  Vchrdy
+              Voltage [V]
+
+
+
+
+                                                                                  Vovdis
+                            3
+
+
+                            2
+
+
+                            1
+
+
+                            0
+                                0   5        10            15            20           25          30          35              40
+                                                                      Time [s]
+
+                            1
+     ST STO
+                            0
+                                                        Figure 14: Supply state
+         - The AEM10300 is in SUPPLY STATE and VVINT is                    - After 25.5 s, the load on STO is removed. The
+           regulated around 2.2 V the whole time.                            harvested power on SRC allows recharging VSTO.
+         - Before 7 s, VSTO is above VOVCH, no energy is                   - ST_STO is set LOW once VSTO drops below VOVDIS. It
+           harvested and the SRC pin is set to high impedance.               is set HIGH again once VSTO reaches VCHRDY.
+           VSRC is equal to the open-circuit voltage VOC.
+                                                                           - Once VSTO reaches VOVCH, the AEM10300 stops
+         - After 7 s, a load is connected on STO, causing VSTO to            charging the storage element connected on STO and
+           discharge below VOVCH. The AEM10300 starts                        the SRC pin is set to high impedance.
+           harvesting energy on SRC by regulating VSRC to VMPP
+           thanks to the MPPT module that measure VOC every
+           TMPPT,PERIOD. Since the power drained by the load is
+           higher than the harvested power, VSTO keeps
+           discharging.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                  Copyright © YEAR
+                                                              2026 e-peas SA                                   Confidential        25
+                                                           DATASHEET                                  AEM10300
+
+    8.3. Supply state and Reset state
+    8.3.1. Configuration
+         - STO_CFG[3:0] = LLLL                                             - T_MPP[1:0] = LL (5.19 ms / 280 ms)
+              - VOVDIS = 3.00 V                                            - CSTO = 10 mF
+              - VCHRDY = 3.50 V                                            - SRC: 5 mA current source with 3 V voltage
+                                                                             compliance (stopped after 19 seconds)
+              - VOVCH = 4.05 V
+                                                                           - EN_HP = H (high power mode)
+         - R_MPP[2:0] = LLL (60%)
+                                                                           - EN_STO_CH = H (storage element charge enabled)
+
+    8.3.2. Observations
+
+                                                            SRC            STO            VINT
+
+                            5
+                                                           SUPPLY                                             RESET
+                                                            STATE                                             STATE
+                                    Vovch
+                            4
+                                                                                                             Vchrdy
+              Voltage [V]
+
+
+
+
+                                                                                                             Vovdis
+                            3
+
+
+                            2
+
+
+                            1
+
+
+                            0
+                                0           5              10                    15              20                   25
+                                                                      Time [s]
+
+                            1
+     ST STO
+                            0
+                                                Figure 15: Supply state and Reset state
+         - The AEM10300 is initially in SUPPLY STATE with VVINT            - After 19 s, the power supply connect on SRC is
+           regulated around 2.2 V, VSRC regulated to VMPP with               switched off. The AEM10300 is unable to maintain
+           VOC evaluations every TMPPT,PERIOD and VSTO                       VVINT to 2.2 V.
+           charging.
+                                                                           - Once VVINT dropped below to reset voltage (1.8 V),
+         - ST_STO is asserted once VSTO is above VCHRDY.                     the AEM10300 goes into RESET STATE. ST_STO is set
+                                                                             LOW.
+         - Once VSTO reaches VOVCH, the AEM10300 stops
+           charging the storage element and the SRC pin is set to          - The AEM10300 will stay in RESET STATE until the
+           high impedance.                                                   minimum required power PSRC,CS is available on SRC
+                                                                             to coldstart again.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                Copyright © YEAR
+                                                            2026 e-peas SA                                        Confidential   26
+                                                                           DATASHEET                                                   AEM10300
+
+    9. Schematic
+                                                                          Optional                                                                         Optional
+                   Optional               U1A                               STO
+                                                                                                                                                            STO
+                                      1                              14                       Storage
+                                           ZMPP                STO
+                                                                                  CSTO        Element
+                                                                                  100uF
+                          RZMPP                    AEM10300                       6.3V                                U1B
+                                                                                                                                                                R4
+                                                                     13
+                                                               BAL                1206                  VINT      8                                 15
+                                                                                                                       R_MPP[2]       STO_OVDIS
+                                                                                                        VINT      9
+                                     2                                                                                 R_MPP[1]
+       Harvester                           SRC                                                          GND      11
+                                                                                                                       R_MPP[0]
+                                                                                                                                                                R3
+                                                                                                        VINT     22
+                                                                     10   VINT                                         T_MPP[1]
+                                                              VINT                                      GND      20                                 16
+                                                                                                                       T_MPP[0]        STO_RDY
+                                                                                     CINT
+                                     28
+                                           CS_IN
+                                                                                     0402                                    AEM10300
+                                                                                     6.3V                                                                       R2
+                                                                                     10uF
+                                                                                                        GND      18                                 17
+                                                                     5                                                 STO_CFG[3]     STO_OVCH
+                                                               LIN                                      VINT     25
+                                                                                                                       STO_CFG[2]
+                                                                          LDCDC                         VINT     24
+                                                                                                                       STO_CFG[1]                               R1
+                                                                          10μH                          VINT     23
+                                     4                                                                                 STO_CFG[0]
+                                           BUFSRC
+                                                                     6
+                                                    GND
+                                                    GND
+                                                    GND
+                                                    GND
+
+
+
+
+                              CSRC                            LOUT
+                              22uF                                                                      VINT     19
+                                                                                                                       EN_HP
+                              10V                                                                       VINT     12
+                                                                                                                       EN_STO_CH
+                              0603                                                                      GND      21                                 26    to application
+                                                    3
+                                                    7
+
+                                                   27
+                                                   29
+
+
+
+
+                                                                                                                       EN_STO_FT           ST_STO
+                                                                                                                                                          circuit
+
+
+                                                                     Figure 16: Schematic Example
+
+     Designator                   Description                                               Quantity    Manufacturer                Link
+     U1                           AEM10300 - Symbol QFN 28-pin                                 1        e-peas                      order at sales@e-peas.com
+     LDCDC                        Power inductor 10 µH - 1.76A                                 1        Murata                      DFE252010F-100M
+     CINT                         Ceramic Cap 10 µF, 6.3V, 20%, X5R 0402                       1        Murata                      GRM155R60J106ME15
+     CSRC                         Ceramic Cap 22 µF, 10V, 20%, X5R 0603                        1        Murata                      GRM188R61A226ME15
+     CSTO (optional)              Ceramic Cap 220 µF, 6.3V, 20%, X5R 1206                      1        Murata                      GRM31CR60J227ME11
+                                                                 Table 12: Minimal Bill of Materials
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                                Copyright © YEAR
+                                                                            2026 e-peas SA                                                           Confidential          27
+                                                             DATASHEET                               AEM10300
+
+    10. Layout
+    10.1. Guidelines
+    Good layout practices are mandatory in order to obtain good          - The external DC power connections (SRC and STO)
+    stability and best efficiency with the AEM10300. It also allows        must be connected to the AEM10300 with low
+    for minimizing electromagnetic interferences generated by              resistance tracks.
+    the AEM10300 DCDC converter.
+                                                                         - Connection between VINT and CINT must be
+    The following list, while not exhaustive, shows the main               moderately short for AEM10300 stability, even
+    attention points when routing a PCB with the AEM10300:                 though this pins does not carry large currents. Same
+         - The switching nodes (LIN and LOUT) must be kept as              for connection between CINT to GND.
+           short as possible, with minimal track resistance and          - If used, ZMPP must be connected to the AEM10300
+           minimal track capacitance. Low resistance is                    with a low resistance track, according to the
+           obtained by keeping track length as short as possible           expected SRC power.
+           and track width as large as possible between LDCDC
+           and the AEM10300 pins. Minimal capacitance is                 - The BAL pin connection track must be able to handle
+           obtained by keeping distance between LIN/LOUT and               at least 40 mA.
+           other signals. We recommend removing the ground               - The custom mode setting pins STO_OVDIS, STO_RDY
+           plane, the power plane and the bottom layer ground              and STO_OVCH are high impedance analog inputs
+           pour under LDCDC footprint, as well as adding                   typically connected to a resistive divider with high
+           distance between LIN/LOUT and the top ground                    resistor values, making those three nodes prone to
+           pour, as shown on Figure 17.                                    pickup noise. Thus, it is recommended to keep those
+         - The DCDC decoupling capacitors (CSRC - CSTO) must be            as short as possible and as far as possible to noise
+           placed as close as possible to the AEM10300, with               sources such as DCDC switching nodes.
+           direct connection and minimum track resistance for            - The configuration pins and the status pins have
+           the corresponding power nodes (BUFSRC and STO).                 minimal layout restrictions. CS_IN maximum current
+         - The GND return path between the DCDC decoupling                 is below 1 mA, so its layout restrictions are minimal
+           capacitors (CSRC - CSTO) and the AEM10300 thermal               as well.
+           pad, which is the AEM10300 main GND connection,
+           must be as direct and short as possible. This is
+           preferably done on the top layer when possible,
+           otherwise by internal/bottom plane, using low
+           resistance vias to decrease layer-to-layer connection
+           resistance.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                  Copyright © YEAR
+                                                              2026 e-peas SA                                   Confidential    28
+                                                         DATASHEET                                    AEM10300
+
+    10.2. Layout Example
+
+
+
+
+                              Figure 17: Layout Example for the AEM10300 and its Passive Components
+    NOTE: schematic, symbol and footprint for e-peas component
+    can be ordered by contacting e-peas support team at
+    support@e-peas.com
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                              Copyright © YEAR
+                                                          2026 e-peas SA                                Confidential   29
+                                                          DATASHEET                                                     AEM10300
+
+    11. Package Information
+    11.1. Moisture Sensitivity Level
+                     Parameter                                       Moisture sensitivity level (MSL)
+                     QFN 28-pin - 4x4mm                       Level 1, according to JEDEC-A113 standard
+                                               Table 13: Moisture sensitivity level
+
+    11.2. RoHS Compliance                                              11.3. REACH Compliance
+    e-peas product complies with RoHS requirement.                     The component and elements used by e-peas subcontractors
+                                                                       to manufacture e-peas PMICs and devices are REACH
+    e-peas defines “RoHS” to mean that semiconductor end-
+                                                                       compliant. For more detailed information, please contact
+    products are compliant with RoHS regulation for all 10 RoHS
+                                                                       e-peas sales team.
+    substances.
+    This applies to silicon, die attached adhesive, gold wire
+    bonding, lead frames, mold compound, and lead finish (pure
+    tin).
+
+    11.4. Tape and Reel Dimensions
+
+
+                                                                                   All dimensions are in mm
+
+
+
+
+                                                            W         P2         D         B         P         S         E         F
+                                                        12.00±0.30 2.00±0.10 1.50±0.10 5.28±0.07 4.00±0.10 8.00±0.10 1.75±0.10 5.50±0.10
+
+
+
+
+                                                Figure 18: Tape and reel dimensions
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                               Copyright © YEAR
+                                                           2026 e-peas SA                                                             Confidential   30
+                                                                        DATASHEET                                     AEM10300
+
+    11.5. Package Dimensions
+
+
+                                                             4.00 BSC
+
+
+
+
+                                                              EPEAS
+                                   4.00 BSC
+
+
+
+
+                                                       AEM10300
+                                                       <Wafer lot ID>
+                                                       <Date code>
+
+                                                                                                       0.75 ± 0.05
+                                                            2.70 ± 0.10
+                                                                                                                           0.203 REF
+                       0.40 BSC
+
+
+
+
+                                                                                         2.70 ± 0.10
+
+
+
+
+                                                                                                                4.00 BSC
+                                   0.20 ± 0.05
+
+
+
+
+                                                 1
+                     0.35 ± 0.05
+
+
+
+
+                                                      28
+
+
+
+
+                                                 Figure 19: QFN 28-pin 4x4mm Drawing (All Dimensions in mm)
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                            Copyright © YEAR
+                                                                        2026 e-peas SA                                            Confidential   31
+                                                 DATASHEET                                         AEM10300
+
+    11.6. Board Layout
+
+
+                                                                1.1 BSC
+                                   0.20                                   Ø 0.2
+                                                                          VIA
+
+                                            28
+                           0.80
+
+                                    1
+
+
+
+
+                                                                              2.70
+                                                                                     3.05
+
+                                                                                            4.00
+                         1.1 BSC
+
+
+
+
+                                                     0.40 BSC
+                                                    2.70
+                                                    3.05
+                                                    4.00
+
+
+                         Figure 20: Recommended Board Layout (All Dimensions in mm)
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                        Copyright © YEAR
+                                                    2026 e-peas SA                                   Confidential   32
+                                                             DATASHEET                                    AEM10300
+
+    12. Glossary
+    CINT                                                              TMPPT,PERIOD
+           Decoupling capacitor on VINT pin.                                 Period of the MPPT module VOC evaluations (see Section
+                                                                             5.4 and Section 6.5).
+    CSRC
+           Decoupling capacitor on BUFSRC pin.                        TSTO,MON
+                                                                             STO monitoring rate.
+    CSTO
+                                                                      VBAL
+           Decoupling capacitor on STO pin.
+                                                                             Voltage on BAL pin.
+    LDCDC
+           DCDC converter inductor.                                   VBAL,MIN
+                                                                             Minimum voltage on the BAL pin for the balancing circuit
+    IQ
+                                                                             to operate.
+           Quiescent current pulled from STO pin.
+                                                                      VOVDIS
+    PSRC,CS
+                                                                             Minimum voltage accepted on the storage element
+           Minimum source power required to coldstart the                    before reseting ST_STO.
+           AEM10300.
+                                                                      VCHRDY
+    MPP
+                                                                             Minimum voltage required on the storage element
+           Maximum Power Point.                                              before asserting ST_STO.
+    MPPT                                                              VOVCH
+           Maximum Power Point Tracking.                                     Maximum voltage accepted on the storage element
+    RMPPT                                                                    before disabling its charging.
+           For the DCDC converter, ratio between the open circuit     VVINT
+           voltage VOC and the voltage regulation VMPP determined            Voltage on VINT pin.
+           by the MPPT (see Section 5.4 and Section 6.5).
+                                                                      VSRC
+    RZMPP
+                                                                             Voltage on SRC pin.
+           Resistor used for ZMPP module, connected between SRC
+                                                                      VSRC,CS
+           and ZMPP (see Section 6.6).
+                                                                             Minimum source input voltage required to coldstart the
+    RT
+                                                                             AEM10300.
+           Sum of resistors to set the battery protection threshold
+                                                                      VSTO
+           voltages in custom mode. RT = R1 + R2 + R3 + R4.
+                                                                             Voltage on STO pin.
+    TGPIO,MON
+           GPIO monitoring rate.                                      VMPP
+                                                                             Target regulation voltage of the DCDC SRC input, as
+    TMPPT,WAIT
+                                                                             determined by the MPPT module.
+           Time during which the AEM10300 stops pulling current
+                                                                      VOC
+           from SRC to let the source voltage rise to VOC.
+                                                                             Open-circuit voltage of the harvester connected to SRC.
+    TMPPT,MEASURE
+           Duration of the harvester open-circuit voltage (VOC)
+           measure.
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                                    Copyright © YEAR
+                                                                2026 e-peas SA                                      Confidential    33
+                                                        DATASHEET                                     AEM10300
+
+    13. Revision History
+     Revision   Date             Description
+     1.0        June, 2021       First version of the document
+     1.1        August, 2021     Minor modifications
+                                      -   Various aesthetic improvements.
+                                      -   Explanations about BAL circuit.
+                                      -   Added EN_STO_FT in Configuration Pins table
+                                      -   Section with precisions about the use of CS_IN.
+                                      -   Fixed state machine graph.
+                                      -   Fixed footprint dimensions
+                                      -   New “behavior” oscilloscope graphs with improved description.
+     1.2        March, 2023           -   Moved various states description sections as sub-sections of a global section.
+                                      -   Supply State description: explanation about SRC being set to high impedance when all
+                                          nodes are fully charged.
+                                      -   Updated "Typical use" of storage element vs STO_CFG[3:0] configuration.
+                                      -   Replaced "asserted/de-asserted" by "HIGH/LOW".
+                                      -   Changed CSRC from 15µF/0402 to 22µF/0603.
+                                      -   Updated "Recommended Operation Conditions" with minimum capacitor values
+                                          including derating and tolerances.
+                                      -   Updated efficiency graphs.
+                                      -   Created section for pinout.
+                                      -   Updated schematics with new symbol.
+     1.3        November, 2023        -   Digital levels High/Low: replaced 0/1 notation by L/H.
+                                      -   Fixed example circuits errors.
+                                      -   Fixed typos and aesthetic issues.
+                                      -   Added layout guidelines with clearer layout examples.
+     1.4        February, 2024   Fixed wrong HIGH level of ST_STO in “Power and Status Pins” table.
+                                      -   Reworked the whole datasheet.
+                                      -   Added REACH and RoHS compliances.
+                                      -   Added GPIOs and STO monitoring rates.
+                                      -   Renamed the MPPT timings to TMPPT,WAIT, TMPPT,MEASURE, and TMPPT,PERIOD.
+                                      -   Fixed confusion between RZMPP and RMPPT in “Typical Electrical Characteristics” table.
+                                      -   Added VBAL,MIN and improved balancing circuit explanations.
+     1.5        July, 2026
+                                      -   Corrected SUPPLY STATE explanations when VSTO falls below VOVDIS.
+                                      -   Corrected “Typical Application Circuits” figures to match the descriptions.
+                                      -   Added cautionary statement along with storage element threshold voltages.
+                                      -   Added tape and reel dimensions.
+                                      -   Updated package and recommended board layout figures.
+                                      -   Added glossary.
+                                                   Table 14: Revision History
+
+
+
+
+DS-AEM10300-v1.5.0
+DS-AEM10300-v1.5                               Copyright © YEAR
+                                                           2026 e-peas SA                                        Confidential      34
+

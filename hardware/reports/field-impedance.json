@@ -1,0 +1,52 @@
+{
+  "method": "2D finite-volume electrostatic / quasi-TEM",
+  "board_mm": 0.8,
+  "substrate_mm": 0.73,
+  "copper_mm": 0.035,
+  "mask_mm": 0.02,
+  "Er": 4.5,
+  "mask_Er": 3.8,
+  "results": [
+    {
+      "width_mm": 0.75,
+      "gap_mm": 0.25,
+      "step_mm": 0.02,
+      "extent_mm": 3,
+      "capacitance_pF_per_m": 113.98509754589796,
+      "vacuum_pF_per_m": 38.342974070680405,
+      "Z_ohm": 50.45594696838191,
+      "effective_Er": 2.9727766379253966
+    },
+    {
+      "width_mm": 0.85,
+      "gap_mm": 0.25,
+      "step_mm": 0.02,
+      "extent_mm": 3,
+      "capacitance_pF_per_m": 120.80843417775877,
+      "vacuum_pF_per_m": 40.22020375686897,
+      "Z_ohm": 47.852930188364525,
+      "effective_Er": 3.003675339589164
+    },
+    {
+      "width_mm": 1.0,
+      "gap_mm": 0.25,
+      "step_mm": 0.02,
+      "extent_mm": 3,
+      "capacitance_pF_per_m": 130.10326979184322,
+      "vacuum_pF_per_m": 42.9258632249201,
+      "Z_ohm": 44.63501371933663,
+      "effective_Er": 3.0308830159136626
+    },
+    {
+      "width_mm": 0.75,
+      "gap_mm": 0.25,
+      "step_mm": 0.01,
+      "extent_mm": 3,
+      "capacitance_pF_per_m": 113.52991433935367,
+      "vacuum_pF_per_m": 38.20730410220873,
+      "Z_ohm": 50.646675658924586,
+      "effective_Er": 2.971419130636611
+    }
+  ],
+  "limitations": "Assumed FR4 and conformal mask; not a fabricator guarantee. Finite box boundaries and grid convergence reported. Pad launches and lumped matching require VNA tuning."
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "ref": "R404",
+    "pad": "1",
+    "old": "SOLAR_P",
+    "new": "/Battery protection, temperature and optional gauge/SOLAR_VALID"
+  },
+  {
+    "ref": "R401",
+    "pad": "1",
+    "old": "SOLAR_P",
+    "new": "/Battery protection, temperature and optional gauge/SOLAR_VALID"
+  },
+  {
+    "ref": "R402",
+    "pad": "1",
+    "old": "SOLAR_P",
+    "new": "/Battery protection, temperature and optional gauge/SOLAR_VALID"
+  }
+]

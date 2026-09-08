@@ -1,0 +1,62 @@
+[
+  {
+    "type": "segment",
+    "net": "RF1V55",
+    "item": "(segment (start 56.55 30.075) (end 56.5 30.025) (width 0.15) (layer \"F.Cu\") (net 24) (uuid \"2b3a6b8e-870c-41ad-bf92-8abf64767980\"))"
+  },
+  {
+    "type": "segment",
+    "net": "RF1V55",
+    "item": "(segment (start 59.645 30.075) (end 59.85 30.28) (width 0.15) (layer \"F.Cu\") (net 24) (uuid \"2c81a9c5-7e88-4793-85f8-ad7c09f54751\"))"
+  },
+  {
+    "type": "segment",
+    "net": "RF1V55",
+    "item": "(segment (start 58.25 30.075) (end 56.55 30.075) (width 0.15) (layer \"F.Cu\") (net 24) (uuid \"9d01c346-28a6-4ae7-9803-aa413078ba29\"))"
+  },
+  {
+    "type": "segment",
+    "net": "RF1V55",
+    "item": "(segment (start 58.25 30.075) (end 59.645 30.075) (width 0.15) (layer \"F.Cu\") (net 24) (uuid \"d57ff060-9216-4244-9c56-11910b1b1a9d\"))"
+  },
+  {
+    "type": "segment",
+    "net": "PACK_P",
+    "item": "(segment (start 74.6932 17.735) (end 74.0125 17.0543) (width 0.4) (layer \"F.Cu\") (net 79) (uuid \"4b756b4e-48b4-4be1-998d-f0edb394f58f\"))"
+  },
+  {
+    "type": "segment",
+    "net": "PACK_P",
+    "item": "(segment (start 74.0125 16.2175) (end 74.75 15.48) (width 0.4) (layer \"F.Cu\") (net 79) (uuid \"50b54261-bb6e-4366-9418-5816f9a4f8c3\"))"
+  },
+  {
+    "type": "segment",
+    "net": "PACK_P",
+    "item": "(segment (start 74.0125 17.0543) (end 74.0125 16.2175) (width 0.4) (layer \"F.Cu\") (net 79) (uuid \"9b79c4e1-b0ab-4ae1-aabb-c46a8c65df75\"))"
+  },
+  {
+    "type": "segment",
+    "net": "PACK_P",
+    "item": "(segment (start 74.75 17.735) (end 74.6932 17.735) (width 0.4) (layer \"F.Cu\") (net 79) (uuid \"a201ec80-3444-45d3-8b4c-b2ef1730df7a\"))"
+  },
+  {
+    "type": "segment",
+    "net": "RF_SW_SUPPLY",
+    "item": "(segment (start 74.7 28.4) (end 75.0517 28.4) (width 0.15) (layer \"F.Cu\") (net 83) (uuid \"0e5b6e41-f35f-4ec0-937b-101cebb8721b\"))"
+  },
+  {
+    "type": "segment",
+    "net": "RF_SW_SUPPLY",
+    "item": "(segment (start 76.5372 29.8855) (end 76.5372 30.8622) (width 0.15) (layer \"F.Cu\") (net 83) (uuid \"84442371-8c7c-4dd6-b33d-b711009824d1\"))"
+  },
+  {
+    "type": "segment",
+    "net": "RF_SW_SUPPLY",
+    "item": "(segment (start 76.5372 30.8622) (end 77.5 31.825) (width 0.15) (layer \"F.Cu\") (net 83) (uuid \"8931bb97-4685-4360-a5f8-6dbfa81d1d79\"))"
+  },
+  {
+    "type": "segment",
+    "net": "RF_SW_SUPPLY",
+    "item": "(segment (start 75.0517 28.4) (end 76.5372 29.8855) (width 0.15) (layer \"F.Cu\") (net 83) (uuid \"b6d1fa87-e134-4d2d-99db-74ca483ea2db\"))"
+  }
+]

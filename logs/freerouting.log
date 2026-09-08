@@ -1,0 +1,49 @@
+2026-09-05 14:28:18.127 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 14:35:03.661 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 14:35:03.688 [main] INFO  Settings were loaded from freerouting.json
+2026-09-05 14:35:03.690 [main] ERROR null
+java.awt.HeadlessException: null
+	at sun.awt.HeadlessToolkit.getScreenSize(HeadlessToolkit.java:186) ~[?:?]
+	at app.freerouting.gui.MainApplication.main(MainApplication.java:269) ~[freerouting-1.9.0.jar:unspecified]
+2026-09-05 14:35:03.699 [main] ERROR Exception in FRAnalytics.trackAnonymousAction: Cannot invoke "app.freerouting.management.SegmentClient.track(String, String, String, app.freerouting.management.segment.Properties)" because "app.freerouting.management.FRAnalytics.analytics" is null
+java.lang.NullPointerException: Cannot invoke "app.freerouting.management.SegmentClient.track(String, String, String, app.freerouting.management.segment.Properties)" because "app.freerouting.management.FRAnalytics.analytics" is null
+	at app.freerouting.management.FRAnalytics.trackAnonymousAction(FRAnalytics.java:139) [freerouting-1.9.0.jar:unspecified]
+	at app.freerouting.management.FRAnalytics.exceptionThrown(FRAnalytics.java:323) [freerouting-1.9.0.jar:unspecified]
+	at app.freerouting.gui.DefaultExceptionHandler.handleException(DefaultExceptionHandler.java:15) [freerouting-1.9.0.jar:unspecified]
+	at app.freerouting.gui.DefaultExceptionHandler.uncaughtException(DefaultExceptionHandler.java:29) [freerouting-1.9.0.jar:unspecified]
+	at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:695) [?:?]
+	at java.lang.ThreadGroup.uncaughtException(ThreadGroup.java:690) [?:?]
+	at java.lang.Thread.dispatchUncaughtException(Thread.java:2902) [?:?]
+2026-09-05 19:45:59.837 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 19:45:59.870 [main] INFO  Settings were loaded from freerouting.json
+2026-09-05 19:46:00.891 [main] INFO  Opening 'hardware/reports/mesh-node.dsn'...
+2026-09-05 19:46:01.243 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-05 19:46:22.209 [main] WARN  Multi-threaded route optimization is broken and it is known to generate clearance violations. It is highly recommended to use the single-threaded route optimization instead by setting the number of threads to 1 with the '-mt 1' command line argument.
+2026-09-05 19:46:22.218 [Thread-22] INFO  Starting auto-routing...
+2026-09-05 19:46:43.290 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 19:46:43.326 [main] INFO  Settings were loaded from freerouting.json
+2026-09-05 19:46:44.344 [main] INFO  Opening 'hardware/reports/mesh-node.dsn'...
+2026-09-05 19:46:44.693 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-05 19:47:05.690 [Thread-22] INFO  Starting auto-routing...
+2026-09-05 19:48:26.772 [Thread-22] INFO  Auto-routing was completed in 1 minute(s) 21.08 seconds.
+2026-09-05 19:48:26.874 [Thread-22] INFO  Starting route optimization on 1 thread...
+2026-09-05 19:48:37.830 [Thread-22] INFO  Route optimization was completed in 10.95 seconds.
+2026-09-05 19:48:37.852 [Thread-22] INFO  Saving 'hardware/reports/mesh-node.ses'...
+2026-09-05 20:01:55.030 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 20:01:55.057 [main] INFO  Settings were loaded from freerouting.json
+2026-09-05 20:01:56.078 [main] INFO  Opening 'hardware/reports/mesh-node.dsn'...
+2026-09-05 20:01:56.450 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-05 20:02:17.068 [Thread-22] INFO  Starting auto-routing...
+2026-09-05 20:04:12.251 [Thread-22] INFO  Auto-routing was completed in 1 minute(s) 55.18 seconds.
+2026-09-05 20:04:12.352 [Thread-22] INFO  Starting route optimization on 1 thread...
+2026-09-05 20:04:25.416 [Thread-22] INFO  Route optimization was completed in 13.06 seconds.
+2026-09-05 20:04:25.427 [Thread-22] INFO  Saving 'hardware/reports/mesh-node.ses'...
+2026-09-05 20:06:57.232 [main] INFO  Freerouting v1.9.0 (build-date: 2023-10-30)
+2026-09-05 20:06:57.261 [main] INFO  Settings were loaded from freerouting.json
+2026-09-05 20:06:58.281 [main] INFO  Opening 'hardware/reports/mesh-node.dsn'...
+2026-09-05 20:06:58.647 [ForkJoinPool.commonPool-worker-1] INFO  New version available: v2.4.1
+2026-09-05 20:07:19.372 [Thread-22] INFO  Starting auto-routing...
+2026-09-05 20:10:49.761 [Thread-22] INFO  Auto-routing was completed in 3 minute(s) 30.39 seconds.
+2026-09-05 20:10:49.862 [Thread-22] INFO  Starting route optimization on 1 thread...
+2026-09-05 20:10:56.276 [Thread-22] INFO  Route optimization was completed in 6.41 seconds.
+2026-09-05 20:10:56.286 [Thread-22] INFO  Saving 'hardware/reports/mesh-node.ses'...

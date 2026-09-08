@@ -1,0 +1,124 @@
+{
+  "method": "quasi-static grounded CPW conformal approximation",
+  "finished_board_mm": 0.8,
+  "core_assumption_mm": 0.73,
+  "copper_mm": 0.035,
+  "Er_assumed": 4.5,
+  "mask_thickness_assumed_mm": 0.02,
+  "mask_Er_assumed": 3.8,
+  "gap_mm": 0.25,
+  "solved_width_mm": 0.7513108810897072,
+  "selected_width_mm": 0.75,
+  "nominal_ohm": 50.034875203925,
+  "limitations": "Mask effective-upper-permittivity 1.08 is a sensitivity assumption, not a solved coating correction. Obtain fab stack and measure coupon.",
+  "sensitivity": [
+    {
+      "h": 0.65,
+      "Er": 4.2,
+      "upper": 1,
+      "Z": 50.450123605799256
+    },
+    {
+      "h": 0.65,
+      "Er": 4.2,
+      "upper": 1.16,
+      "Z": 49.8206485457107
+    },
+    {
+      "h": 0.65,
+      "Er": 4.5,
+      "upper": 1,
+      "Z": 48.99973033955183
+    },
+    {
+      "h": 0.65,
+      "Er": 4.5,
+      "upper": 1.16,
+      "Z": 48.422389991847886
+    },
+    {
+      "h": 0.65,
+      "Er": 4.8,
+      "upper": 1,
+      "Z": 47.66764243294666
+    },
+    {
+      "h": 0.65,
+      "Er": 4.8,
+      "upper": 1.16,
+      "Z": 47.13561731293101
+    },
+    {
+      "h": 0.73,
+      "Er": 4.2,
+      "upper": 1,
+      "Z": 51.82501484680845
+    },
+    {
+      "h": 0.73,
+      "Er": 4.2,
+      "upper": 1.16,
+      "Z": 51.15749440786822
+    },
+    {
+      "h": 0.73,
+      "Er": 4.5,
+      "upper": 1,
+      "Z": 50.34397525381981
+    },
+    {
+      "h": 0.73,
+      "Er": 4.5,
+      "upper": 1.16,
+      "Z": 49.73139952696714
+    },
+    {
+      "h": 0.73,
+      "Er": 4.8,
+      "upper": 1,
+      "Z": 48.983059491942534
+    },
+    {
+      "h": 0.73,
+      "Er": 4.8,
+      "upper": 1.16,
+      "Z": 48.41828342624237
+    },
+    {
+      "h": 0.81,
+      "Er": 4.2,
+      "upper": 1,
+      "Z": 52.91087275312809
+    },
+    {
+      "h": 0.81,
+      "Er": 4.2,
+      "upper": 1.16,
+      "Z": 52.21239046530819
+    },
+    {
+      "h": 0.81,
+      "Er": 4.5,
+      "upper": 1,
+      "Z": 51.406029502493375
+    },
+    {
+      "h": 0.81,
+      "Er": 4.5,
+      "upper": 1.16,
+      "Z": 50.76475610480102
+    },
+    {
+      "h": 0.81,
+      "Er": 4.8,
+      "upper": 1,
+      "Z": 50.02268859399313
+    },
+    {
+      "h": 0.81,
+      "Er": 4.8,
+      "upper": 1.16,
+      "Z": 49.43121946382235
+    }
+  ]
+}

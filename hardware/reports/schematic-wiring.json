@@ -1,0 +1,26 @@
+[
+  {
+    "page": "mesh-node",
+    "direct_connections": 34,
+    "net_labels": 59,
+    "connected_pins": 93
+  },
+  {
+    "page": "power",
+    "direct_connections": 51,
+    "net_labels": 34,
+    "connected_pins": 85
+  },
+  {
+    "page": "battery",
+    "direct_connections": 48,
+    "net_labels": 54,
+    "connected_pins": 102
+  },
+  {
+    "page": "radio",
+    "direct_connections": 92,
+    "net_labels": 76,
+    "connected_pins": 168
+  }
+]

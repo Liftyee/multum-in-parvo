@@ -1,0 +1,206 @@
+  32.768kHz SMD Crystal
+
+                   ABS07                                  Request Samples                  Check Inventory        3.2 x 1.5 x 0.9 mm
+                                                                                                                  RoHS/RoHS II Compliant
+                                                                                                                  MSL Level = N/A
+
+ Features                                                                      Applications
+ •     Low frequency in small size SMD                                         •     Wide range in communication & measuring
+ •     0.9mm height ideal for high density circuit boards                            equipment
+ •     Seam sealed ceramic package offers excellent                            •     Commercial & Industrial applications
+       environmental & heat resistance                                         •     Wireless communications
+ •     Extended temperature -55°C to +125°C for industrial
+       applications
+
+
+
+ Key Electrical Specifications
+
+            Parameters                  Min.                 Typ.                    Max.               Units            Notes
+
+          Frequency                                    32.768                                          kHz
+        Operation Mode                       Flexural Mode (Tuning Fork)
+                                                                                                                 Option “blank”; See
+     Operating Temperature             -40                                          +85                 ºC
+                                                                                                                       options
+      Storage Temperature              -55                                         +125                 ºC
+                                                                                                                 Option “blank”; See
+Frequency Tolerance @+25°C             -20                                          +20               ppm
+                                                                                                                       options
+  Temperature Coefficient:            -0.040              -0.036                                     ppm/T²
+   Turn-over temperature:              +20                 +25                      +30                ºC
+                                                                                     70                              -40 ~ +85°C
+ Equivalent series resistance
+                                                                                     95                kΩ           -40 ~ +125°C
+            (R1)
+                                                                                     95                             -55 ~ +125°C
+     Shunt capacitance (C0)                             0.9 ~ 1.2                   2.0                pF
+                                                                                                                 Option “blank”; See
+     Load capacitance (CL)                                  12.5                                       pF
+                                                                                                                       options
+          Drive Level                                      0.1                       0.5               µW
+            Q value                   10000               30000
+             Aging                      -3                                           +3               ppm       @25°C± 3°C First year
+     Insulation Resistance             500                                                            MΩ         @ 100Vdc ± 15V
+
+
+
+
+                                                5101 Hidden Creek Ln Spicewood TX 78669                                      ABRACON IS
+                                                Phone: 512-371-6159 | Fax: 512-351-8858              REVISED: 08-10-22       ISO9001-2015
+                                                For terms and conditions of sales, please visit:
+                                                                                                                             CERTIFIED
+                                                www.abracon.com
+32.768kHz SMD Crystal
+
+              ABS07                               Request Samples                Check Inventory        3.2 x 1.5 x 0.9 mm
+                                                                                                        RoHS/RoHS II Compliant
+                                                                                                        MSL Level = N/A
+
+
+
+Frequency vs. Temperature Characteristics
+
+
+
+
+                                        5101 Hidden Creek Ln Spicewood TX 78669                                    ABRACON IS
+                                        Phone: 512-371-6159 | Fax: 512-351-8858            REVISED: 08-10-22       ISO9001-2015
+                                        For terms and conditions of sales, please visit:
+                                                                                                                   CERTIFIED
+                                        www.abracon.com
+  32.768kHz SMD Crystal
+
+                 ABS07                                Request Samples                Check Inventory            3.2 x 1.5 x 0.9 mm
+                                                                                                                RoHS/RoHS II Compliant
+                                                                                                                MSL Level = N/A
+  Options and Part Identification (Left blank if standard)
+
+
+
+                 ABS07           - 32. 768 kHz -                       -         -             -
+
+
+   Height            Load Capacitance                                                     Freq. Tolerance              Packaging
+                                            Operating Temp. Range
+ Blank: 0.9mm          Blank: 12.5pF                                                       Blank: ±20ppm           Blank: Bulk
+                                                Blank: -40 ~ +85°C
+      max.                9: 9pF                                                             1: ±10ppm            T: 3k pcs / reel
+                                                 H: -40 ~ +125°C
+1: 0.65mm max.            7: 7pF                                                             4: ±30ppm
+                                                 W: -55 ~ +125°C
+                          6: 6pF
+                        4P: 4pF (*)
+
+
+
+   (*) Only available with standard height=0.9mm max
+
+
+
+
+                                            5101 Hidden Creek Ln Spicewood TX 78669                                          ABRACON IS
+                                            Phone: 512-371-6159 | Fax: 512-351-8858                REVISED: 08-10-22         ISO9001-2015
+                                            For terms and conditions of sales, please visit:
+                                                                                                                             CERTIFIED
+                                            www.abracon.com
+32.768kHz SMD Crystal
+
+            ABS07                               Request Samples                Check Inventory        3.2 x 1.5 x 0.9 mm
+                                                                                                      RoHS/RoHS II Compliant
+                                                                                                      MSL Level = N/A
+Mechanical Dimensions
+
+
+
+
+    Note: Due to material availability, the outline and finish color of the component may vary. This
+    variation in no way affects the electrical performance of the product.
+    Sealing Method = Seam Sealing
+
+    Dimensions: inches (mm)
+
+
+
+                                      5101 Hidden Creek Ln Spicewood TX 78669                                    ABRACON IS
+                                      Phone: 512-371-6159 | Fax: 512-351-8858            REVISED: 08-10-22       ISO9001-2015
+                                      For terms and conditions of sales, please visit:
+                                                                                                                 CERTIFIED
+                                      www.abracon.com
+32.768kHz SMD Crystal
+
+            ABS07                                                     Request Samples                     Check Inventory                           3.2 x 1.5 x 0.9 mm
+                                                                                                                                                    RoHS/RoHS II Compliant
+                                                                                                                                                    MSL Level = N/A
+Reflow Profile [JEDEC J-STD-020]
+
+
+
+
+                                                                                                                      Table 1
+                                                                                                                      SnPb Eutectic Process
+                                                                                                                      Classification Temperatures (Tc)
+                                                                                                                        Package       Volume mm3           Volume mm3
+                                                                                                                       Thickness          <350                 >350
+                                                                                                                        <2.5 mm            235 °C             220 °C
+                                                                                                                        >2.5 mm            220 °C             220 °C
+                                                                                                               Table 2
+                                                                                                               Pb-Free Process
+                                                                                                               Classification Temperatures (Tc)
+                                                                                                                     Package       Volume mm3         Volume mm3        Volume mm3
+                                                                                                                    Thickness          <350            350-2000            >2000
+                                                                                                                    <1.6 mm           260 °C             260 °C           260 °C
+                                                                                                               1.6 mm - 2.5 mm        260 °C             250 °C           245 °C
+                                                                                                                    >2.5 mm           250 °C             245 °C           245 °C
+
+
+
+
+                                                                                                                        Sn-Pb Eutectic                Pb-Free
+                Profile Feature
+                                                                                                                          Assembly                   Assembly
+                Preheat / soak
+                  Temperature minimum (Tsmin)                                                                                 100°C                    150°C
+                  Temperature maximum (Tsmax)                                                                                 150°C                    200°C
+                  Time (Tsmin to Tsmax) (ts)                                                                               60 - 120 sec.            60 - 120 sec.
+                Average ramp-up rate (Tsmax to TP)                                                                         3°C/sec. max             3°C/sec. max
+                Liquidous temperature (TL)                                                                                    183°C                    217°C
+                Time at liquidous (tL)                                                                                     60 - 150 sec.            60 - 150 sec.
+                Peak package body temperature (TP)*                                                                         see Table 1              see Table 2
+                Time (tp)** within 5°C of the specified classification temperature (TC)                                       20 sec.                  30 sec.
+                Ramp-down rate (Tp to Tsmax)                                                                               6°C/sec. max             6°C/sec. max
+                Time 25°C to peak temperature                                                                               6 min. max               8 min. max
+                Reflow cycles                                                                                                 2 max                    2 max
+                *Tolerance for peak profile temperature (TP) is defined as a supplier minimum and a user maximum.
+                **Tolerance for time at peak profile temperature (tp) is defined as supplier minimum and a user maximum.
+
+
+
+
+                                                          5101 Hidden Creek Ln Spicewood TX 78669                                                                   ABRACON IS
+                                                          Phone: 512-371-6159 | Fax: 512-351-8858                          REVISED: 08-10-22                        ISO9001-2015
+                                                          For terms and conditions of sales, please visit:
+                                                                                                                                                                       CERTIFIED
+                                                          www.abracon.com
+              32.768kHz SMD Crystal
+
+                                     ABS07                                                 Request Samples                  Check Inventory                    3.2 x 1.5 x 0.9 mm
+                                                                                                                                                               RoHS/RoHS II Compliant
+                                                                                                                                                               MSL Level = N/A
+               Packaging
+
+
+
+
+ATTENTION: Abracon LLC’s products are COTS – Commercial-Off-The-Shelf products; suitable for Commercial, Industrial and, where designated, Automotive Applications. Abracon’s products
+are not specifically designed for Military, Aviation, Aerospace, Life-dependent Medical applications or any application requiring high reliability where component failure could result in loss of life
+and/or property. For applications requiring high reliability and/or presenting an extreme operating environment, written consent and authorization from Abracon LLC is required. Please contact
+Abracon LLC for more information.
+
+
+                                                                                5101 Hidden Creek Ln Spicewood TX 78669                                                         ABRACON IS
+                                                                                Phone: 512-371-6159 | Fax: 512-351-8858                  REVISED: 08-10-22                      ISO9001-2015
+                                                                                For terms and conditions of sales, please visit:
+                                                                                                                                                                                 CERTIFIED
+                                                                                www.abracon.com
+
