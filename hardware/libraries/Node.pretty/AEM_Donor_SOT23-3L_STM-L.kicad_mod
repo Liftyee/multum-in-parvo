@@ -1,0 +1,160 @@
+(footprint "SOT23-3L_STM-L"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "QN_PG"
+		(at -4.2552 0.23623 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "08e035cd-7a98-49e4-8a69-fe1730c0ab65")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.2)
+			)
+		)
+	)
+	(property "Value" "MOSFET Canal N, 60 V, 230 mA, 2.2 ohm, Vgsth 1.4V max, low leakage"
+		(at 48.068805 5.309402 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "32c59a39-a81e-47a1-b725-89bf6f61b087")
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "25202733-edd2-4113-853a-882a1adbdfbb")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "72f3ac06-795d-4640-9f30-9399143e6c69")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c1a4f57b-6982-4784-bfdc-1cba7e8ac1b7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -1.651 -0.6985)
+		(end -0.58674 -0.6985)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "598b93d3-c176-4770-8497-e2dcf21d71a4")
+	)
+	(fp_line
+		(start -1.651 0.9525)
+		(end -1.651 -0.6985)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "21595ec2-e4c7-4150-a2fc-ce2cf037fdba")
+	)
+	(fp_line
+		(start -0.36326 0.9525)
+		(end 0.36326 0.9525)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "aba29824-8053-437b-ba4a-2a013732e13a")
+	)
+	(fp_line
+		(start 0.58674 -0.6985)
+		(end 1.651 -0.6985)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "e595a014-b60d-4bda-a8b3-26539fb70332")
+	)
+	(fp_line
+		(start 1.651 0.9525)
+		(end 1.651 -0.6985)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4bf65517-4239-4c20-be15-5ce8ec099db0")
+	)
+	(fp_circle
+		(center -1.524 1.143)
+		(end -1.524 1.0668)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "81a47cca-99c6-4754-8523-9c4c59def2d3")
+	)
+	(pad "1" smd roundrect
+		(at -0.95 1.0922)
+		(size 0.5588 1.016)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "27487239-b68b-4bd5-b7e8-fefbb3b0af92")
+	)
+	(pad "2" smd roundrect
+		(at 0.95 1.0922)
+		(size 0.5588 1.016)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "5c90349a-805f-4479-a744-d6fa19c47b13")
+	)
+	(pad "3" smd roundrect
+		(at 0 -0.8382)
+		(size 0.5588 1.016)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.1)
+		(uuid "de7f2c44-6750-4bcd-94d2-f4f6b5bf5f7f")
+	)
+	(model "${KIPRJMOD}/ALTIUM_EMBEDDED_MODELS/SOT23-3L_STM.step"
+		(offset
+			(xyz 0.00012 -0.12688 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 0)
+		)
+	)
+)

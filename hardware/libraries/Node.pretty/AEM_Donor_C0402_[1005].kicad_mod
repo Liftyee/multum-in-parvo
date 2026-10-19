@@ -1,0 +1,90 @@
+(footprint "C0402_[1005]"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "CINT"
+		(at 0.192 -0.98419 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "2dd3e864-ed16-40d6-8a33-fd24808ab4e0")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.2)
+			)
+		)
+	)
+	(property "Value" "10uF"
+		(at 2.22164 2.048002 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "90eb2675-0644-47e9-9e48-40e0598c2e84")
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "72efe54b-1585-4e45-beeb-92479b610dd6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "520a61fe-5244-413a-8ec7-f2dbff2864ea")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c81756ce-0c83-41ff-b327-914db78b0f04")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.5 0 180)
+		(size 0.5 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "3adab4ec-1081-40b3-9739-e75bcfe1a89a")
+	)
+	(pad "2" smd rect
+		(at 0.5 0 180)
+		(size 0.5 0.6)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "8a361500-e5af-4ce4-901e-2e97aa4703c1")
+	)
+	(model "${KIPRJMOD}/ALTIUM_EMBEDDED_MODELS/step_temp.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 0)
+		)
+	)
+)

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="180"
+   height="180"
+   viewBox="0 0 180 180"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="logo.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="10.488889"
+     inkscape:cx="66.308263"
+     inkscape:cy="71.599576"
+     inkscape:window-width="3840"
+     inkscape:window-height="2091"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g14" />
+  <defs
+     id="defs1">
+    <rect
+       x="134.72218"
+       y="97.098285"
+       width="181.08374"
+       height="71.718005"
+       id="rect10" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g10"
+       inkscape:label="g10">
+      <text
+         xml:space="preserve"
+         id="text10"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3386px;line-height:1;font-family:FreeMono;-inkscape-font-specification:FreeMono;writing-mode:lr-tb;white-space:pre;shape-inside:url(#rect10);display:inline;fill:#000000;fill-opacity:1;stroke:#ffffff;stroke-width:0.5;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1" />
+    </g>
+    <g
+       id="g13">
+      <g
+         id="g14"
+         transform="translate(35.770421,23.815258)">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.8976px;line-height:1;font-family:'Adobe Caslon Pro';-inkscape-font-specification:'Adobe Caslon Pro';fill:#000000;stroke:#000000;stroke-width:0.498898;stroke-dasharray:none"
+           x="39.394794"
+           y="65.669197"
+           id="text2"><tspan
+             sodipodi:role="line"
+             id="tspan2"
+             x="39.394794"
+             y="65.669197"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Adobe Caslon Pro';-inkscape-font-specification:'Adobe Caslon Pro';stroke-width:0.498898;stroke-dasharray:none">multum</tspan><tspan
+             sodipodi:role="line"
+             x="39.394794"
+             y="84.566795"
+             id="tspan3"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3386px;font-family:FreeMono;-inkscape-font-specification:FreeMono;stroke-width:0.498898;stroke-dasharray:none" /></text>
+        <text
+           xml:space="preserve"
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.3386px;line-height:1;font-family:'Adobe Caslon Pro';-inkscape-font-specification:'Adobe Caslon Pro Italic';writing-mode:lr-tb;fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-dasharray:none"
+           x="38.862144"
+           y="77.396637"
+           id="text9"><tspan
+             sodipodi:role="line"
+             id="tspan9"
+             x="38.862144"
+             y="77.396637"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FreeMono;-inkscape-font-specification:FreeMono;fill:#000000;fill-opacity:1">in parvo</tspan></text>
+        <g
+           id="g9"
+           transform="matrix(1.1300776,0,0,1.1300306,-6.5904737,-10.408777)"
+           style="fill:#000000;fill-opacity:1;stroke-width:0.884914">
+          <rect
+             style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.442457;stroke-linecap:butt;stroke-dasharray:none"
+             id="rect9"
+             width="23.087675"
+             height="23.487644"
+             x="12.473945"
+             y="55.967972" />
+          <text
+             xml:space="preserve"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.8976px;line-height:1;font-family:'Adobe Caslon Pro';-inkscape-font-specification:'Adobe Caslon Pro Italic';writing-mode:vertical-lr;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.442457;stroke-dasharray:none;stroke-opacity:1"
+             x="16.770721"
+             y="71.548012"
+             id="text7"
+             inkscape:label="text7"><tspan
+               sodipodi:role="line"
+               id="tspan7"
+               x="16.770721"
+               y="71.548012"
+               style="writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.442457;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1">m</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

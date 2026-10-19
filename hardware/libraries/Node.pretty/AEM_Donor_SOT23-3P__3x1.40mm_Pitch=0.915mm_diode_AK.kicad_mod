@@ -1,0 +1,247 @@
+(footprint "SOT23-3P  3x1.40mm Pitch=0.915mm diode AK"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "D5V"
+		(at 0.0222 2.4194 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "0d84414b-61e1-42c2-97d9-645ee0d5fca5")
+		(effects
+			(font
+				(size 0.9 0.9)
+				(thickness 0.2)
+			)
+		)
+	)
+	(property "Value" "5V1"
+		(at 0.697925 3.191002 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "1bbba5ff-34cc-43fa-b93c-9ed2455ac1f0")
+		(effects
+			(font
+				(size 1.524 1.524)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fae9c278-cd21-4bb8-b2ee-c63fe0e8c7b0")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8e21c6f8-851f-4f1e-acb7-65de2d61127d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "86c3d8ce-13f0-4383-a18e-0573ba16ee87")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_line
+		(start -0.2 -1.5)
+		(end 0.7 -1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ac9424bc-4f93-4922-8062-7ae3048ff9dd")
+	)
+	(fp_line
+		(start -0.2 1.5)
+		(end 0.7 1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "30391b4b-020d-4509-9c73-31d4449920a1")
+	)
+	(fp_line
+		(start 0.7 -0.8)
+		(end 0.7 -1.5)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "434aac76-5a40-4bb2-8285-8fa99c10716c")
+	)
+	(fp_line
+		(start 0.7 1.5)
+		(end 0.7 0.8)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b1de383f-7548-470f-97f3-a8a0dada001b")
+	)
+	(fp_circle
+		(center -1 -1.85)
+		(end -1 -1.975)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "7925945d-8e45-4dfd-b12e-c529fb627964")
+	)
+	(fp_line
+		(start -1.55 -1.6)
+		(end 1.55 -1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "6b7a8cff-d8cb-4591-90e4-6145ae40f3e0")
+	)
+	(fp_line
+		(start -1.55 1.6)
+		(end -1.55 -1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "59d2bfaa-f345-4fc3-9f3e-91acce96e43e")
+	)
+	(fp_line
+		(start -1.55 1.6)
+		(end 1.55 1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "0ea67d66-86ca-41da-a97e-76064f19a0aa")
+	)
+	(fp_line
+		(start -0.5 0)
+		(end 0.5 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "748c16d8-7a31-4a8b-b4d9-b99957957c14")
+	)
+	(fp_line
+		(start 0 0.5)
+		(end 0 -0.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "c3553bb2-066c-42a9-86c5-c11987a763d8")
+	)
+	(fp_line
+		(start 1.55 1.6)
+		(end 1.55 -1.6)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "Eco1.User")
+		(uuid "6b40a1b9-01fc-4cdd-845f-a4425f45bc3a")
+	)
+	(fp_line
+		(start -0.7 -1.5)
+		(end 0.7 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "B.Fab")
+		(uuid "7207b182-9ab7-4515-9515-8943048a1c10")
+	)
+	(fp_line
+		(start -0.7 1.5)
+		(end -0.7 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "B.Fab")
+		(uuid "ea828c09-be30-4039-9200-4028724c835a")
+	)
+	(fp_line
+		(start -0.7 1.5)
+		(end 0.7 1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "B.Fab")
+		(uuid "6a37564e-0632-4d42-abbf-5e96a43bff4b")
+	)
+	(fp_line
+		(start 0.7 1.5)
+		(end 0.7 -1.5)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "B.Fab")
+		(uuid "dc65553d-13b1-475a-8290-19f71a017402")
+	)
+	(pad "A" smd rect
+		(at -1 -0.915 90)
+		(size 0.8 0.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "a3de29df-1758-41e9-9912-11f6536a44e9")
+	)
+	(pad "K" smd rect
+		(at 1 0 90)
+		(size 0.8 0.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "e4f26d18-b8c8-4961-839e-d1b26a631bd5")
+	)
+	(pad "NC" smd rect
+		(at -1 0.915 90)
+		(size 0.8 0.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "bd3a708b-1b16-4efe-bb2c-c0971541a05d")
+	)
+	(model "${KIPRJMOD}/ALTIUM_EMBEDDED_MODELS/SOT90P240X110-3L.step"
+		(offset
+			(xyz 0 -0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 0)
+		)
+	)
+)
